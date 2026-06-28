@@ -1,17 +1,7 @@
 import Link from "next/link";
 import { ArrowIcon, CalculatorIcon, GuideIcon, ShieldIcon, SparkIcon } from "@/components/icons";
-
-const calculators = [
-  { title: "Mortgage Affordability", text: "See how much you could borrow based on your income and commitments.", icon: "£" },
-  { title: "Mortgage Repayment", text: "Estimate monthly repayments across different rates and terms.", icon: "↗" },
-  { title: "Stamp Duty", text: "Calculate the property tax you may need to pay when buying.", icon: "%" },
-  { title: "Remortgage Savings", text: "Compare your current mortgage against a potential new deal.", icon: "↓" },
-  { title: "Life Insurance", text: "Estimate the level of protection your family could need.", icon: "+" },
-  { title: "Income Protection", text: "Explore the cover that could support your monthly income.", icon: "⌁" },
-  { title: "Critical Illness Cover", text: "Understand how much cover may suit your circumstances.", icon: "♡" },
-  { title: "Overpayment Calculator", text: "See how overpayments could reduce your term and interest.", icon: "−" },
-  { title: "Buy To Let", text: "Assess rental yield, coverage and potential borrowing.", icon: "⌂" },
-];
+import { CalculatorCard } from "@/components/calculator-card";
+import { calculators } from "@/lib/calculators";
 
 const guides = [
   { category: "Mortgages", title: "Your complete guide to buying your first home", text: "From deposits to completion, understand every stage of the journey.", time: "8 min read", tone: "mint" },
@@ -43,7 +33,7 @@ export default function Home() {
               <strong>£286,000</strong>
               <div className="meter"><span /></div>
               <div className="card-stats"><span>Monthly payment<br /><b>£1,248</b></span><span>Interest rate<br /><b>4.28%</b></span></div>
-              <button>View your results <ArrowIcon /></button>
+              <Link className="mock-result-link" href="/calculators/mortgage-affordability">View your results <ArrowIcon /></Link>
             </div>
             <div className="float-card mini-card mini-top"><span>£</span><div><b>Mortgage Calculator</b><small>Instant personalised result</small></div></div>
             <div className="float-card mini-card mini-bottom"><span>%</span><div><b>Bank Rate</b><small>Market data, explained</small></div></div>
@@ -58,10 +48,10 @@ export default function Home() {
 
       <section className="section-pad"><div className="container">
         <div className="section-heading"><div><span className="kicker">USEFUL TOOLS</span><h2>Make the numbers make sense.</h2><p>Quick, easy-to-use calculators built to give you a clearer picture.</p></div><Link href="/calculators">View all calculators <ArrowIcon /></Link></div>
-        <div className="three-grid">{calculators.map((item) => <article className="content-card calculator-card" key={item.title}><div className="calculator-icon">{item.icon}</div><span className="time-pill">FREE · INSTANT RESULT</span><h3>{item.title}</h3><p>{item.text}</p><Link href="/calculators">Try calculator <ArrowIcon /></Link></article>)}</div>
+        <div className="three-grid">{calculators.map((item) => <CalculatorCard item={item} key={item.slug} />)}</div>
       </div></section>
 
-      <section className="market-section"><div className="container"><div className="section-heading"><div><span className="kicker">CURRENT MARKET SNAPSHOT</span><h2>Today’s mortgage market, at a glance.</h2><p>Indicative mock data for educational purposes.</p></div><small>Last updated 28 June 2026</small></div><div className="market-grid">{[["Bank of England Base Rate","4.25%"],["Average 2-Year Fixed","4.82%"],["Average 5-Year Fixed","4.61%"],["Lowest Live Rate","3.89%"]].map(([label,value])=><article key={label}><small>{label}</small><strong>{value}</strong><span>View context →</span></article>)}</div></div></section>
+      <section className="market-section"><div className="container"><div className="section-heading"><div><span className="kicker">CURRENT MARKET SNAPSHOT</span><h2>Today’s mortgage market, at a glance.</h2><p>Indicative / example data for educational purposes only. These figures are not live rates.</p></div><small>Example data · 28 June 2026</small></div><div className="market-grid">{[["Bank of England Base Rate","4.25%"],["Average 2-Year Fixed","4.82%"],["Average 5-Year Fixed","4.61%"],["Lowest Live Rate","3.89%"]].map(([label,value])=><article key={label}><small>{label}</small><strong>{value}</strong><span>View context →</span></article>)}</div></div></section>
 
       <section className="section-pad soft-bg"><div className="container">
         <div className="section-heading"><div><span className="kicker">LATEST GUIDES</span><h2>Guidance for the decisions that matter.</h2></div><Link href="/guides">Explore all guides <ArrowIcon /></Link></div>
