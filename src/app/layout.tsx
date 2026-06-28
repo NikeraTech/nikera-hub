@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   keywords: ["financial calculators", "mortgage advice", "protection", "financial guides", "Nikera Hub"],
   authors: [{ name: "Nikera Technologies", url: "https://nikera.co.uk" }],
   creator: "Nikera Technologies",
+  icons: {
+    icon: [{ url: "/nikera-logo.png", type: "image/png" }],
+    shortcut: "/nikera-logo.png",
+    apple: "/nikera-logo.png",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website", locale: "en_GB", url: "/", siteName: "Nikera Hub",

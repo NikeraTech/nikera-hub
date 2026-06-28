@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { ArrowIcon } from "@/components/icons";
-const pages: Record<string, { title: string; description: string }> = {
-  "mortgage-protection": { title: "Mortgage & Protection", description: "Clear guidance and practical tools for your home and the people you care about." },
-  calculators: { title: "Financial Calculators", description: "Simple tools designed to make important financial numbers easier to understand." },
-  guides: { title: "Expert Guides", description: "Plain-English guidance for the financial decisions that matter." },
-  blogs: { title: "Latest Insights", description: "Useful perspectives and timely financial knowledge from the Hub team." },
-  about: { title: "About Hub", description: "Hub is a standalone knowledge platform by Nikera Technologies." },
-  contact: { title: "Contact Hub", description: "Ask a question or request guidance from a trusted professional." },
-  privacy: { title: "Privacy", description: "How Nikera Hub handles and protects your information." },
-  terms: { title: "Terms", description: "The terms that apply when using Nikera Hub." },
-};
-export function generateStaticParams() { return Object.keys(pages).map((slug) => ({ slug })); }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const page = pages[slug]; return page ? { title: page.title, description: page.description } : {}; }
-export default async function ContentPage({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const page = pages[slug]; if (!page) notFound(); const description = slug === "about" ? <>Hub is a standalone knowledge platform by <a className="company-link" href="https://nikera.co.uk">Nikera Technologies</a>.</> : slug === "privacy" ? <>How <a className="company-link" href="https://nikera.co.uk">Nikera Hub</a> handles and protects your information.</> : slug === "terms" ? <>The terms that apply when using <a className="company-link" href="https://nikera.co.uk">Nikera Hub</a>.</> : page.description; return <main id="main" className="basic-page"><div className="container"><span className="kicker">NIKERA HUB</span><h1>{page.title}</h1><p>{description}</p><div className="coming-panel"><span>Content in progress</span><h2>We’re building something useful here.</h2><p>This section is ready for the next set of trusted resources and practical tools.</p><Link href="/">Return home <ArrowIcon /></Link></div></div></main>; }
+import { AboutPage, BlogsPage, ContactPage, GuidesPage, MortgagePage, PrivacyPage, TermsPage } from "@/components/content-pages";
+
+const pages={
+ "mortgage-protection":{title:"Mortgage & Protection",description:"Practical mortgage calculators, plain-English protection guidance and access to professional support.",component:MortgagePage},
+ guides:{title:"Expert Guides",description:"Plain-English guides for mortgages, protection, remortgaging and buying a home.",component:GuidesPage},
+ blogs:{title:"Mortgage & Protection Insights",description:"Useful articles explaining mortgage markets, affordability, protection and property finance.",component:BlogsPage},
+ about:{title:"About Hub",description:"Learn why Nikera Hub exists and how we approach financial education and practical tools.",component:AboutPage},
+ contact:{title:"Contact Hub",description:"Contact Nikera Hub, ask a question or request professional mortgage and protection guidance.",component:ContactPage},
+ privacy:{title:"Privacy Notice",description:"How Nikera Hub collects, uses, protects and shares personal information.",component:PrivacyPage},
+ terms:{title:"Terms of Use",description:"The terms that apply when accessing Nikera Hub content, calculators and enquiry services.",component:TermsPage},
+} as const;
+type PageSlug=keyof typeof pages;
+export function generateStaticParams(){return Object.keys(pages).map(slug=>({slug}))}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const{slug}=await params,page=pages[slug as PageSlug];return page?{title:page.title,description:page.description,alternates:{canonical:`/${slug}`}}:{}}
+export default async function ContentPage({params}:{params:Promise<{slug:string}>}){const{slug}=await params,page=pages[slug as PageSlug];if(!page)notFound();const Component=page.component;return <Component/>}
