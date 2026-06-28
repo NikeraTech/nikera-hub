@@ -97,6 +97,14 @@ nav a { font-size:14px; font-weight:600; color:#435757; transition:.2s; } nav a:
 .developer-credit { display:inline-flex;align-items:center;gap:9px;color:#b6bdc8;font-size:12px;font-weight:500;transition:opacity .2s; }
 .developer-credit:hover { opacity:.82; }
 .developer-credit strong { color:#168de2;font-weight:750; }
+.developer-credit img { width:22px;height:20px;object-fit:contain;filter:none; }
+.footer a[href="https://nikera.co.uk"],.company-link { text-decoration:none; }
+.footer-brand small a,.footer-bottom>span a,.company-link { color:var(--teal);font-weight:700; }
+.footer-brand small a:hover,.footer-bottom>span a:hover,.company-link:hover { text-decoration:underline; }
+.footer-logo-lockup { display:inline-grid;grid-template-columns:38px auto;column-gap:11px;align-items:center; }
+.footer-logo-lockup .logo { display:contents; }
+.footer-logo-lockup .logo img { grid-row:1 / span 2; }
+.footer-logo-lockup>a:last-child { grid-column:2;color:#77918e;font-size:7px;font-weight:650;letter-spacing:.25px; }
 .credit-mark { position:relative;display:inline-grid;place-items:center;width:20px;height:20px;color:#0c8be8;font:900 0/1 var(--font-display); }
 .credit-mark::before,.credit-mark::after { content:"";position:absolute;inset:2px 8px 2px 3px;background:linear-gradient(160deg,#12a8f4,#0759b8);clip-path:polygon(0 0,45% 0,100% 100%,55% 100%); }
 .credit-mark::after { inset:2px 2px 2px 9px;clip-path:polygon(0 0,45% 0,100% 100%,55% 100%);opacity:.55; }
