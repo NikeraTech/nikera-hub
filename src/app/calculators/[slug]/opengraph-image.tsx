@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getCalculator } from "@/lib/calculators";
-import { createOgImage, ogContentType, ogSize } from "@/lib/og";
+import { createOgImage, getOgTheme, ogContentType, ogSize } from "@/lib/og";
 
 export const alt = "Nikera Hub calculator preview";
 export const size = ogSize;
@@ -19,5 +19,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
     title: calculator.title,
     description: calculator.description,
     footer: "Illustrative result • No obligation",
+    theme: getOgTheme(`${calculator.category} calculator ${calculator.slug}`),
   });
 }

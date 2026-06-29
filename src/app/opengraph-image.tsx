@@ -11,5 +11,6 @@ export default function Image() {
     description:
       "Trusted calculators, practical guides and expert financial resources for UK mortgage and protection decisions.",
     footer: "hub.nikera.co.uk",
+    theme: "default",
   });
 }

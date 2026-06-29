@@ -11,5 +11,6 @@ export default function Image() {
     description:
       "Explore mortgage, remortgage, buy-to-let and protection tools with clear assumptions and instant illustrative results.",
     footer: "Free tools from Nikera Hub",
+    theme: "calculator",
   });
 }

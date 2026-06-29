@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { createOgImage, ogContentType, ogSize } from "@/lib/og";
+import { createOgImage, getOgTheme, ogContentType, ogSize } from "@/lib/og";
 
 const pages = {
   "mortgage-protection": {
@@ -63,5 +63,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
     title: page.title,
     description: page.description,
     footer: "hub.nikera.co.uk",
+    theme: getOgTheme(page.eyebrow),
   });
 }

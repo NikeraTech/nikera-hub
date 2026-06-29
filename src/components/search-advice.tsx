@@ -4,13 +4,13 @@ import Link from "next/link";
 import { FormEvent, useEffect, useId, useState } from "react";
 
 const items = [
-  ["Mortgage Affordability Calculator", "Calculator", "/calculators"],
-  ["Mortgage Repayment Calculator", "Calculator", "/calculators"],
-  ["Stamp Duty Calculator", "Calculator", "/calculators"],
-  ["Life Insurance Calculator", "Calculator", "/calculators"],
-  ["First Time Buyer Guide", "Guide", "/guides"],
-  ["Remortgaging Explained", "Guide", "/guides"],
-  ["Income Protection Guide", "Guide", "/guides"],
+  ["Mortgage Affordability Calculator", "Calculator", "/calculators/mortgage-affordability"],
+  ["Mortgage Repayment Calculator", "Calculator", "/calculators/mortgage-repayment"],
+  ["Stamp Duty Calculator", "Calculator", "/calculators/stamp-duty"],
+  ["Protection Needs Calculator", "Calculator", "/calculators/protection-needs"],
+  ["First Time Buyer Guide", "Guide", "/guides/first-time-buyer-guide"],
+  ["Remortgaging Explained", "Guide", "/guides/remortgaging-explained"],
+  ["Income Protection Guide", "Guide", "/guides/income-protection-guide"],
   ["Mortgage & Protection", "Category", "/mortgage-protection"],
   ["Latest mortgage articles", "Blog", "/blogs"],
 ] as const;
@@ -32,7 +32,7 @@ export function SearchAndAdvice() {
         setAdvice(false);
       }
 
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
         setSearch(true);
       }
@@ -83,10 +83,10 @@ export function SearchAndAdvice() {
 
   return (
     <>
-      <button className="search-trigger" onClick={() => setSearch(true)} aria-label="Search Hub">
+      <button type="button" className="search-trigger" onClick={() => setSearch(true)} aria-label="Search Hub">
         <span>⌕</span> Search <kbd>⌘ K</kbd>
       </button>
-      <button className="floating-advice" onClick={() => setAdvice(true)}>
+      <button type="button" className="floating-advice" onClick={() => setAdvice(true)}>
         <span>↗</span>
         <b>Need Mortgage Advice?</b>
       </button>
@@ -101,18 +101,28 @@ export function SearchAndAdvice() {
             onMouseDown={(e) => e.stopPropagation()}
           >
             <div className="search-input">
-              <span>⌕</span>
+              <span aria-hidden="true">⌕</span>
+              <label className="sr-only" htmlFor="hub-search-input">
+                Search Hub content
+              </label>
               <input
+                id="hub-search-input"
                 autoFocus
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search calculators, guides, blogs…"
+                aria-describedby="hub-search-help"
               />
-              <button onClick={() => setSearch(false)}>ESC</button>
+              <button type="button" onClick={() => setSearch(false)}>
+                ESC
+              </button>
             </div>
-            <div className="search-results">
+            <p id="hub-search-help" className="sr-only">
+              Search suggested calculators, guides and blog content.
+            </p>
+            <div className="search-results" role="list">
               {results.map(([name, type, url]) => (
-                <a href={url} key={name}>
+                <a href={url} key={name} role="listitem">
                   <span>{type}</span>
                   <b>{name}</b>
                   <i>→</i>
@@ -133,7 +143,7 @@ export function SearchAndAdvice() {
             aria-labelledby={titleId}
             onMouseDown={(e) => e.stopPropagation()}
           >
-            <button className="modal-close" onClick={() => setAdvice(false)} aria-label="Close">
+            <button type="button" className="modal-close" onClick={() => setAdvice(false)} aria-label="Close">
               ×
             </button>
             <span className="kicker">PROFESSIONAL GUIDANCE</span>
@@ -152,11 +162,18 @@ export function SearchAndAdvice() {
               </label>
               <label>
                 Phone number
-                <input name="phone" required type="tel" inputMode="tel" pattern="[0-9+()\-\s]{7,20}" autoComplete="tel" />
+                <input
+                  name="phone"
+                  required
+                  type="tel"
+                  inputMode="tel"
+                  pattern="[0-9+()\\-\\s]{7,20}"
+                  autoComplete="tel"
+                />
               </label>
               <label>
                 Preferred contact time
-                <select name="time">
+                <select name="time" defaultValue="Morning">
                   <option>Morning</option>
                   <option>Afternoon</option>
                   <option>Evening</option>
@@ -187,7 +204,9 @@ export function SearchAndAdvice() {
                 </p>
               )}
             </form>
-            <small>Submitting sends your enquiry securely to hello@nikera.co.uk. Automated submissions are blocked.</small>
+            <small>
+              Submitting sends your enquiry securely to hello@nikera.co.uk. Automated submissions are blocked.
+            </small>
           </section>
         </div>
       )}

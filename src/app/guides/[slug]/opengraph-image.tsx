@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getResource } from "@/lib/resources";
-import { createOgImage, ogContentType, ogSize } from "@/lib/og";
+import { createOgImage, getOgTheme, ogContentType, ogSize } from "@/lib/og";
 
 export const alt = "Nikera Hub guide preview";
 export const size = ogSize;
@@ -19,5 +19,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
     title: resource.title,
     description: resource.description,
     footer: `${resource.readTime} • Updated ${resource.updated}`,
+    theme: getOgTheme(resource.category),
   });
 }
