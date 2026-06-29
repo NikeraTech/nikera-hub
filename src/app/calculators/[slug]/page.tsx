@@ -3,6 +3,87 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalculatorTool } from "@/components/calculator-tool";
 import { calculators, getCalculator } from "@/lib/calculators";
-export function generateStaticParams(){return calculators.map(({slug})=>({slug}));}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const{slug}=await params,item=getCalculator(slug);return item?{title:item.title,description:item.description,alternates:{canonical:`/calculators/${slug}`}}:{};}
-export default async function CalculatorPage({params}:{params:Promise<{slug:string}>}){const{slug}=await params,item=getCalculator(slug);if(!item)notFound();const schema={"@context":"https://schema.org","@type":"WebApplication",name:item.title,description:item.description,applicationCategory:"FinanceApplication",operatingSystem:"Web",offers:{"@type":"Offer",price:"0",priceCurrency:"GBP"}};return <main id="main" className="calculator-page"><div className="container"><nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/calculators">Calculators</Link><span>/</span><span>{item.shortTitle}</span></nav><header className="calculator-header"><span className="kicker">FREE · INSTANT RESULT</span><h1>{item.title}</h1><p>{item.description}</p></header><CalculatorTool calculator={item}/>{slug==="stamp-duty"&&<p className="source-note">Stamp Duty bands reflect published rates for England and Northern Ireland from 1 April 2025. Confirm your liability using the <a href="https://www.gov.uk/stamp-duty-land-tax/residential-property-rates">official GOV.UK guidance</a>.</p>}<section className="calculator-disclaimer"><h2>Important information</h2><p>This calculator provides an illustrative estimate only. It is not a mortgage offer, insurance recommendation, tax advice or financial advice. Actual eligibility, costs and cover depend on your circumstances and provider criteria.</p></section></div><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></main>}
+import { buildMetadata } from "@/lib/seo";
+
+export function generateStaticParams() {
+  return calculators.map(({ slug }) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const item = getCalculator(slug);
+
+  return item
+    ? buildMetadata({
+        title: item.title,
+        description: item.description,
+        path: `/calculators/${slug}`,
+        keywords: [item.title, item.shortTitle, item.category, "Nikera Hub calculator"],
+        category: item.category,
+      })
+    : {};
+}
+
+export default async function CalculatorPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const item = getCalculator(slug);
+
+  if (!item) notFound();
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: item.title,
+    description: item.description,
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
+  };
+
+  return (
+    <main id="main" className="calculator-page">
+      <div className="container">
+        <nav className="breadcrumbs" aria-label="Breadcrumb">
+          <Link href="/">Home</Link>
+          <span>/</span>
+          <Link href="/calculators">Calculators</Link>
+          <span>/</span>
+          <span>{item.shortTitle}</span>
+        </nav>
+        <header className="calculator-header">
+          <span className="kicker">FREE · INSTANT RESULT</span>
+          <h1>{item.title}</h1>
+          <p>{item.description}</p>
+        </header>
+        <CalculatorTool calculator={item} />
+        {slug === "stamp-duty" && (
+          <p className="source-note">
+            Stamp Duty bands reflect published rates for England and Northern Ireland from 1 April
+            2025. Confirm your liability using the{" "}
+            <a href="https://www.gov.uk/stamp-duty-land-tax/residential-property-rates">
+              official GOV.UK guidance
+            </a>
+            .
+          </p>
+        )}
+        <section className="calculator-disclaimer">
+          <h2>Important information</h2>
+          <p>
+            This calculator provides an illustrative estimate only. It is not a mortgage offer,
+            insurance recommendation, tax advice or financial advice. Actual eligibility, costs and
+            cover depend on your circumstances and provider criteria.
+          </p>
+        </section>
+      </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    </main>
+  );
+}

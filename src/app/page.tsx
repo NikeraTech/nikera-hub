@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowIcon, CalculatorIcon, GuideIcon, ShieldIcon, SparkIcon } from "@/components/icons";
 import { CalculatorCard } from "@/components/calculator-card";
 import { calculators } from "@/lib/calculators";
 import { formatMarketDate, getMarketSnapshot } from "@/lib/market-data";
+import { buildMetadata, defaultSeoKeywords } from "@/lib/seo";
 
 const guides = [
   { category: "Mortgages", title: "Your complete guide to buying your first home", text: "From deposits to completion, understand every stage of the journey.", time: "8 min read", tone: "mint" },
@@ -11,6 +13,15 @@ const guides = [
 ];
 
 const categories = ["Mortgage & Protection", "Lettings", "Estate Agency", "Investments", "Business"];
+
+export const metadata: Metadata = buildMetadata({
+  title: "Hub by Nikera | Financial Knowledge & Tools",
+  description:
+    "Trusted financial calculators, practical guides and expert resources to help you make better UK mortgage and protection decisions.",
+  path: "/",
+  keywords: [...defaultSeoKeywords, "mortgage protection", "UK mortgage tools", "mortgage guides"],
+  category: "Finance",
+});
 
 export default async function Home() {
   const marketSnapshot = await getMarketSnapshot();

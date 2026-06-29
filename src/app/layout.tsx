@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Manrope } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { defaultSeoKeywords } from "@/lib/seo";
 import "./globals.css";
 
 const body = DM_Sans({ subsets: ["latin"], variable: "--font-body" });
@@ -11,9 +12,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://hub.nikera.co.uk"),
   title: { default: "Hub by Nikera | Financial Knowledge & Tools", template: "%s | Nikera Hub" },
   description: "Trusted financial calculators, practical guides and expert resources to help you make better financial decisions.",
-  keywords: ["financial calculators", "mortgage advice", "protection", "financial guides", "Nikera Hub"],
+  keywords: defaultSeoKeywords,
   authors: [{ name: "Nikera Technologies", url: "https://nikera.co.uk" }],
   creator: "Nikera Technologies",
+  publisher: "Nikera Technologies",
+  applicationName: "Nikera Hub",
+  referrer: "origin-when-cross-origin",
   icons: {
     icon: [{ url: "/nikera-logo.png", type: "image/png" }],
     shortcut: "/nikera-logo.png",
@@ -24,8 +28,14 @@ export const metadata: Metadata = {
     type: "website", locale: "en_GB", url: "/", siteName: "Nikera Hub",
     title: "Hub by Nikera | Knowledge. Tools. Confidence.",
     description: "Trusted calculators, practical guides and expert financial resources.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nikera Hub | Knowledge. Tools. Confidence." }],
   },
-  twitter: { card: "summary_large_image", title: "Hub by Nikera", description: "Knowledge. Tools. Confidence." },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hub by Nikera",
+    description: "Knowledge. Tools. Confidence.",
+    images: ["/opengraph-image"],
+  },
   robots: { index: true, follow: true },
 };
 
