@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { ProfessionalAdviceForm } from "./professional-advice-form";
+import { getSuggestedAdviceTopic } from "@/lib/advice";
 import type { Calculator } from "@/lib/calculators";
 
 type Field = {
@@ -405,17 +407,14 @@ export function CalculatorTool({ calculator }: { calculator: Calculator }) {
 
   const result = useMemo(() => calculate(calculator.slug, values), [calculator.slug, values]);
 
-  const adviceHref = useMemo(() => {
-    const params = new URLSearchParams({
-      topic: calculator.category === "Protection" ? "Protection advice" : "Mortgage advice",
-      calculator: calculator.title,
-      calculatorContext: buildCalculatorContext(calculator, fields, values, result),
-    });
-    return `/contact?${params.toString()}`;
-  }, [calculator, fields, result, values]);
+  const adviceContext = useMemo(
+    () => buildCalculatorContext(calculator, fields, values, result),
+    [calculator, fields, result, values],
+  );
 
   return (
-    <div className="tool-grid">
+    <div className="calculator-tool-stack">
+      <div className="tool-grid">
       <form className="calculator-form" onSubmit={(e) => e.preventDefault()}>
         <h2>Your details</h2>
         <p>Adjust the figures to update your result instantly.</p>
@@ -453,9 +452,24 @@ export function CalculatorTool({ calculator }: { calculator: Calculator }) {
         <div className="result-advice">
           <b>Need personalised advice?</b>
           <p>A trusted adviser can review your circumstances and explain your options.</p>
-          <Link href={adviceHref}>Request professional advice →</Link>
+          <Link href="#professional-advice">Request professional advice →</Link>
         </div>
       </aside>
+      </div>
+      <ProfessionalAdviceForm
+        pageKind="calculator"
+        pageSlug={calculator.slug}
+        pageTitle={calculator.title}
+        pageCategory={calculator.category}
+        calculatorName={calculator.title}
+        calculationResults={adviceContext}
+        defaultTopic={getSuggestedAdviceTopic({
+          slug: calculator.slug,
+          title: calculator.title,
+          category: calculator.category,
+          kind: "calculator",
+        })}
+      />
     </div>
   );
 }

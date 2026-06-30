@@ -7,6 +7,7 @@ import {
   GuidesPage,
   MortgagePage,
   PrivacyPage,
+  RequestAdvicePage,
   TermsPage,
 } from "@/components/content-pages";
 import { buildMetadata } from "@/lib/seo";
@@ -49,6 +50,14 @@ const pages = {
       "Contact Nikera Hub, ask a question or request professional UK mortgage and protection guidance.",
     component: ContactPage,
     keywords: ["contact Nikera Hub", "UK mortgage enquiry", "request advice"],
+    category: "Contact",
+  },
+  "request-advice": {
+    title: "Request Professional Advice",
+    description:
+      "Request professional UK mortgage and protection advice with a no-obligation enquiry through Nikera Hub.",
+    component: RequestAdvicePage,
+    keywords: ["request mortgage advice", "UK protection advice", "Nikera Hub advice request"],
     category: "Contact",
   },
   privacy: {

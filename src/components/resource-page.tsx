@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ProfessionalAdviceForm } from "./professional-advice-form";
+import { getSuggestedAdviceTopic } from "@/lib/advice";
 import { getCalculator } from "@/lib/calculators";
 import { articles, guides, type Resource } from "@/lib/resources";
 
@@ -194,7 +196,7 @@ export function ResourcePage({ resource }: { resource: Resource }) {
             <span>NEED PERSONAL GUIDANCE?</span>
             <h2>Speak with a professional.</h2>
             <p>Discuss your circumstances and the options that may be relevant to you.</p>
-            <Link className="button button-primary" href="/contact">
+            <Link className="button button-primary" href="#professional-advice">
               Request advice
             </Link>
           </aside>
@@ -223,6 +225,23 @@ export function ResourcePage({ resource }: { resource: Resource }) {
           )}
         </div>
       </div>
+      <section className="resource-advice-section">
+        <div className="container">
+          <ProfessionalAdviceForm
+            standalone
+            pageKind={resource.kind === "guide" ? "guide" : "article"}
+            pageSlug={resource.slug}
+            pageTitle={resource.title}
+            pageCategory={resource.category}
+            defaultTopic={getSuggestedAdviceTopic({
+              slug: resource.slug,
+              title: resource.title,
+              category: resource.category,
+              kind: resource.kind === "guide" ? "guide" : "article",
+            })}
+          />
+        </div>
+      </section>
     </main>
   );
 }

@@ -32,6 +32,12 @@ const pages = {
     description:
       "Ask a question, share feedback or request a conversation about your mortgage and protection needs.",
   },
+  "request-advice": {
+    eyebrow: "Request advice",
+    title: "Professional Mortgage & Protection guidance.",
+    description:
+      "Tell us what you need help with and we’ll safely pass your enquiry to a trusted adviser for a no-obligation review.",
+  },
   privacy: {
     eyebrow: "Privacy notice",
     title: "Your information, explained clearly.",

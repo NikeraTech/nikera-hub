@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useId, useState } from "react";
+import { useEffect, useState } from "react";
 
 const items = [
   ["Mortgage Affordability Calculator", "Calculator", "/calculators/mortgage-affordability"],
@@ -12,24 +12,18 @@ const items = [
   ["Remortgaging Explained", "Guide", "/guides/remortgaging-explained"],
   ["Income Protection Guide", "Guide", "/guides/income-protection-guide"],
   ["Mortgage & Protection", "Category", "/mortgage-protection"],
+  ["Request Professional Advice", "Advice", "/request-advice"],
   ["Latest mortgage articles", "Blog", "/blogs"],
 ] as const;
 
-type FormState = "idle" | "sending" | "sent" | "error";
-
 export function SearchAndAdvice() {
   const [search, setSearch] = useState(false);
-  const [advice, setAdvice] = useState(false);
   const [query, setQuery] = useState("");
-  const [status, setStatus] = useState<FormState>("idle");
-  const [errorMessage, setErrorMessage] = useState("");
-  const titleId = useId();
 
   useEffect(() => {
     const close = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setSearch(false);
-        setAdvice(false);
       }
 
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
@@ -46,50 +40,15 @@ export function SearchAndAdvice() {
     `${name} ${type}`.toLowerCase().includes(query.toLowerCase()),
   );
 
-  async function submit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setErrorMessage("");
-    setStatus("sending");
-
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const response = await fetch("/api/advice", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        type: "Professional advice request",
-        name: data.get("name"),
-        email: data.get("email"),
-        phone: data.get("phone"),
-        preferredTime: data.get("time"),
-        notes: data.get("notes"),
-        sourcePage: location.href,
-        consent: data.get("consent") === "yes",
-        company: data.get("company"),
-        startedAt: data.get("startedAt"),
-      }),
-    });
-
-    if (response.ok) {
-      setStatus("sent");
-      form.reset();
-      return;
-    }
-
-    const payload = await response.json().catch(() => null);
-    setErrorMessage(payload?.error ?? "We could not send your request right now. Please try again.");
-    setStatus("error");
-  }
-
   return (
     <>
       <button type="button" className="search-trigger" onClick={() => setSearch(true)} aria-label="Search Hub">
         <span>⌕</span> Search <kbd>⌘ K</kbd>
       </button>
-      <button type="button" className="floating-advice" onClick={() => setAdvice(true)}>
+      <Link href="/request-advice" className="floating-advice">
         <span>↗</span>
         <b>Need Mortgage Advice?</b>
-      </button>
+      </Link>
 
       {search && (
         <div className="modal-backdrop" onMouseDown={() => setSearch(false)}>
@@ -130,83 +89,6 @@ export function SearchAndAdvice() {
               ))}
               {!results.length && <p>No results found. Try another search.</p>}
             </div>
-          </section>
-        </div>
-      )}
-
-      {advice && (
-        <div className="modal-backdrop" onMouseDown={() => setAdvice(false)}>
-          <section
-            className="advice-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby={titleId}
-            onMouseDown={(e) => e.stopPropagation()}
-          >
-            <button type="button" className="modal-close" onClick={() => setAdvice(false)} aria-label="Close">
-              ×
-            </button>
-            <span className="kicker">PROFESSIONAL GUIDANCE</span>
-            <h2 id={titleId}>Request mortgage advice</h2>
-            <p>A trusted mortgage adviser can review your needs and discuss the options available.</p>
-            <form onSubmit={submit}>
-              <input className="hp-field" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-              <input type="hidden" name="startedAt" value={new Date().toISOString()} />
-              <label>
-                Full name
-                <input name="name" required minLength={2} maxLength={120} autoComplete="name" />
-              </label>
-              <label>
-                Email
-                <input name="email" required type="email" maxLength={160} autoComplete="email" />
-              </label>
-              <label>
-                Phone number
-                <input
-                  name="phone"
-                  required
-                  type="tel"
-                  inputMode="tel"
-                  pattern="[0-9+()\\-\\s]{7,20}"
-                  autoComplete="tel"
-                />
-              </label>
-              <label>
-                Preferred contact time
-                <select name="time" defaultValue="Morning">
-                  <option>Morning</option>
-                  <option>Afternoon</option>
-                  <option>Evening</option>
-                </select>
-              </label>
-              <label className="full">
-                Additional notes
-                <textarea name="notes" rows={3} required minLength={10} maxLength={4000} />
-              </label>
-              <label className="consent full">
-                <input type="checkbox" name="consent" value="yes" required />
-                <span>
-                  I agree that my details may be stored and used to respond to this enquiry. See the{" "}
-                  <Link href="/privacy">privacy notice</Link>.
-                </span>
-              </label>
-              <button className="full" type="submit" disabled={status === "sending"}>
-                {status === "sending" ? "Sending..." : "Request Professional Advice →"}
-              </button>
-              {status === "sent" && (
-                <p className="form-status full" role="status">
-                  Thanks. Your Nikera Hub advice request has been sent.
-                </p>
-              )}
-              {status === "error" && (
-                <p className="form-status form-status-error full" role="alert">
-                  {errorMessage}
-                </p>
-              )}
-            </form>
-            <small>
-              Submitting sends your enquiry securely to hello@nikera.co.uk. Automated submissions are blocked.
-            </small>
           </section>
         </div>
       )}

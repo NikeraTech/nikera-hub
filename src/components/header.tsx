@@ -31,8 +31,8 @@ export function Header() {
         </nav>
         <div className="header-actions">
           <SearchAndAdvice />
-          <Link href="/contact" className="header-cta">
-            Contact us <ArrowIcon />
+          <Link href="/request-advice" className="header-cta">
+            Request advice <ArrowIcon />
           </Link>
           <button
             type="button"
@@ -56,8 +56,8 @@ export function Header() {
                 {name}
               </Link>
             ))}
-            <Link href="/contact" className="mobile-nav-contact" onClick={() => setMenuOpen(false)}>
-              Contact us <ArrowIcon />
+            <Link href="/request-advice" className="mobile-nav-contact" onClick={() => setMenuOpen(false)}>
+              Request advice <ArrowIcon />
             </Link>
           </nav>
         </div>
