@@ -15,11 +15,17 @@ const guides = [
 const categories = ["Mortgage & Protection", "Lettings", "Estate Agency", "Investments", "Business"];
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hub by Nikera | Financial Knowledge & Tools",
+  title: "Hub by Nikera | UK Mortgage Calculators, Guides & Protection Tools",
   description:
     "Trusted financial calculators, practical guides and expert resources to help you make better UK mortgage and protection decisions.",
   path: "/",
-  keywords: [...defaultSeoKeywords, "mortgage protection", "UK mortgage tools", "mortgage guides"],
+  keywords: [
+    ...defaultSeoKeywords,
+    "UK mortgage protection",
+    "UK mortgage tools",
+    "UK mortgage guides",
+    "UK protection calculators",
+  ],
   category: "Finance",
 });
 

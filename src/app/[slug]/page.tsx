@@ -15,40 +15,40 @@ const pages = {
   "mortgage-protection": {
     title: "Mortgage & Protection",
     description:
-      "Practical mortgage calculators, plain-English protection guidance and access to professional support.",
+      "Practical UK mortgage calculators, plain-English protection guidance and access to professional support.",
     component: MortgagePage,
-    keywords: ["mortgage protection", "mortgage calculators", "life insurance guidance"],
+    keywords: ["UK mortgage protection", "UK mortgage calculators", "UK life insurance guidance"],
     category: "Mortgage & protection",
   },
   guides: {
     title: "Expert Guides",
-    description: "Plain-English guides for mortgages, protection, remortgaging and buying a home.",
+    description: "Plain-English UK guides for mortgages, protection, remortgaging and buying a home.",
     component: GuidesPage,
-    keywords: ["mortgage guides", "protection guides", "first-time buyer guides"],
+    keywords: ["UK mortgage guides", "UK protection guides", "UK first-time buyer guides"],
     category: "Guides",
   },
   blogs: {
     title: "Mortgage & Protection Insights",
     description:
-      "Useful articles explaining mortgage markets, affordability, protection and property finance.",
+      "Useful UK-focused articles explaining mortgage markets, affordability, protection and property finance.",
     component: BlogsPage,
-    keywords: ["mortgage articles", "market updates", "remortgage insights"],
+    keywords: ["UK mortgage articles", "UK market updates", "UK remortgage insights"],
     category: "Articles",
   },
   about: {
     title: "About Hub",
     description:
-      "Learn why Nikera Hub exists and how we approach financial education and practical tools.",
+      "Learn why Nikera Hub exists and how we approach UK financial education and practical tools.",
     component: AboutPage,
-    keywords: ["about Nikera Hub", "financial education", "mortgage knowledge"],
+    keywords: ["about Nikera Hub", "UK financial education", "UK mortgage knowledge"],
     category: "About",
   },
   contact: {
     title: "Contact Hub",
     description:
-      "Contact Nikera Hub, ask a question or request professional mortgage and protection guidance.",
+      "Contact Nikera Hub, ask a question or request professional UK mortgage and protection guidance.",
     component: ContactPage,
-    keywords: ["contact Nikera Hub", "mortgage enquiry", "request advice"],
+    keywords: ["contact Nikera Hub", "UK mortgage enquiry", "request advice"],
     category: "Contact",
   },
   privacy: {

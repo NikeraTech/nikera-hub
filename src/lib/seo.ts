@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 const siteName = "Nikera Hub";
 const siteTitle = "Hub by Nikera";
 const defaultLocale = "en_GB";
+const defaultLanguageTag = "en-GB";
 
 type MetadataInput = {
   title: string;
@@ -42,6 +43,9 @@ export function buildMetadata({
     category,
     alternates: {
       canonical: path,
+      languages: {
+        [defaultLanguageTag]: path,
+      },
     },
     openGraph: {
       type,
@@ -78,15 +82,18 @@ export function buildMetadata({
     },
     other: {
       "apple-mobile-web-app-title": siteTitle,
+      "content-language": defaultLanguageTag,
     },
   };
 }
 
 export const defaultSeoKeywords = [
-  "mortgage calculators",
-  "mortgage advice",
-  "remortgage guidance",
-  "protection insurance",
-  "financial tools",
+  "UK mortgage calculators",
+  "UK mortgage advice",
+  "UK remortgage guidance",
+  "UK protection insurance",
+  "UK financial tools",
   "Nikera Hub",
+  "UK mortgage guides",
+  "UK protection guides",
 ];
