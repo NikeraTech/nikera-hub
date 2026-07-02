@@ -144,6 +144,112 @@ export function MortgagePage() {
   );
 }
 
+export function ExpatMortgagesPage() {
+  const expatArticles = resourceArticles.filter((article) => article.category.toLowerCase().includes("expat"));
+
+  return (
+    <main id="main">
+      <PageHero
+        eyebrow="EXPAT MORTGAGES"
+        title="UK mortgage guidance for expats and returning residents."
+        intro="Understand the practical issues around UK mortgages while living abroad, returning to the UK or remortgaging an existing property from overseas."
+      />
+      <section className="inner-section">
+        <div className="container">
+          <div className="about-grid">
+            <div>
+              <span className="kicker">WHAT MAKES EXPAT CASES DIFFERENT?</span>
+              <h2>Fewer lenders. More policy detail. More preparation.</h2>
+              <p>
+                Expat mortgage cases often depend on residency, income currency, employment
+                structure, property purpose and the quality of your documentation. The broad UK
+                mortgage market is not always the market that applies to you.
+              </p>
+              <p>
+                Hub helps you understand the moving parts, test the numbers with illustrative tools
+                and request professional support where the case needs lender-specific judgement.
+              </p>
+            </div>
+            <aside>
+              <ShieldIcon />
+              <b>Important</b>
+              <p>
+                Expat mortgage content on Hub is general information only. Eligibility, deposit
+                requirements, accepted currencies and product availability depend on lender policy
+                and your own circumstances.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section className="inner-section soft-bg">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="kicker">START WITH THE BASICS</span>
+              <h2>Useful tools for expat mortgage planning</h2>
+            </div>
+            <Link href="/calculators">
+              View all calculators <ArrowIcon />
+            </Link>
+          </div>
+          <div className="three-grid">
+            {calculators
+              .filter((x) =>
+                ["mortgage-affordability", "deposit", "remortgage-savings"].includes(x.slug),
+              )
+              .map((x) => (
+                <CalculatorCard key={x.slug} item={x} />
+              ))}
+          </div>
+        </div>
+      </section>
+      <section className="inner-section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="kicker">EXPAT ARTICLES</span>
+              <h2>Read the details that matter before you apply</h2>
+            </div>
+            <Link href="/blogs">
+              Browse all articles <ArrowIcon />
+            </Link>
+          </div>
+          <div className="feature-grid">
+            {expatArticles.map((article) => (
+              <article className="resource-tile" key={article.slug}>
+                <GuideIcon />
+                <small>
+                  {article.category} · {article.readTime}
+                </small>
+                <h3>{article.title}</h3>
+                <p>{article.description}</p>
+                <Link href={`/blogs/${article.slug}`}>
+                  Read article <ArrowIcon />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="inner-section">
+        <div className="container">
+          <ProfessionalAdviceForm
+            pageKind="page"
+            pageSlug="expat-mortgages"
+            pageTitle="Expat Mortgages"
+            pageCategory="Expat mortgages"
+            defaultTopic="General Mortgage Advice"
+          />
+        </div>
+      </section>
+      <section className="container">
+        <CTA />
+      </section>
+    </main>
+  );
+}
+
 export function GuidesPage() {
   return (
     <main id="main">
@@ -160,6 +266,7 @@ export function GuidesPage() {
             <span>Protection</span>
             <span>First-time buyers</span>
             <span>Remortgaging</span>
+            <Link href="/expat-mortgages">Expats</Link>
           </div>
           <div className="feature-grid">
             {resourceGuides.map((guide) => (
@@ -212,9 +319,14 @@ export function BlogsPage() {
               <span className="kicker">RELATED TOOLS</span>
               <h2>Turn knowledge into useful numbers.</h2>
             </div>
-            <Link className="button button-primary" href="/calculators">
-              Browse calculators <ArrowIcon />
-            </Link>
+            <div className="button-row">
+              <Link className="button button-primary" href="/calculators">
+                Browse calculators <ArrowIcon />
+              </Link>
+              <Link className="button button-secondary" href="/expat-mortgages">
+                Explore expat mortgages
+              </Link>
+            </div>
           </div>
         </div>
       </section>

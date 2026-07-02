@@ -3,12 +3,13 @@ import { calculators } from "@/lib/calculators";
 import { articles, guides } from "@/lib/resources";
 
 const baseUrl = "https://hub.nikera.co.uk";
-const staticLastModified = "2026-06-30";
+const staticLastModified = "2026-07-02";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/`, lastModified: staticLastModified, changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/mortgage-protection`, lastModified: staticLastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/expat-mortgages`, lastModified: staticLastModified, changeFrequency: "weekly", priority: 0.82 },
     { url: `${baseUrl}/calculators`, lastModified: staticLastModified, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/guides`, lastModified: staticLastModified, changeFrequency: "weekly", priority: 0.85 },
     { url: `${baseUrl}/blogs`, lastModified: staticLastModified, changeFrequency: "weekly", priority: 0.85 },

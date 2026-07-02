@@ -871,6 +871,391 @@ export const articles: Resource[] = [
       },
     ],
   },
+  {
+    slug: "uk-mortgages-for-expats",
+    kind: "article",
+    category: "Expat mortgages",
+    title: "Getting a UK mortgage when you live abroad",
+    description: "What UK expats are usually asked for, why lender choice narrows and how to prepare a stronger case.",
+    readTime: "12 min read",
+    published: "2026-07-02",
+    updated: "2026-07-02",
+    relatedCalculatorSlug: "mortgage-affordability",
+    relatedCalculatorEyebrow: "CHECK AFFORDABILITY",
+    relatedCalculatorTitle: "See an illustrative UK borrowing range",
+    relatedCalculatorCta: "Check affordability",
+    sections: [
+      {
+        heading: "Why expat mortgage cases are treated differently",
+        paragraphs: [
+          "A UK expat mortgage is usually treated as a more specialist case because the lender is assessing income, tax position, currency exposure and identity checks from outside the UK. That does not mean the case is impossible. It means fewer lenders are likely to fit and the documentation standard often needs to be tighter.",
+          "Many borrowers are surprised by this because they may still be British citizens, may already own UK property or may intend to return in the future. From the lender’s perspective, however, residency affects risk, administration and policy. An applicant living in Dubai, Singapore or Australia is not usually assessed in quite the same way as someone paid in pounds and living in Manchester.",
+          "The practical consequence is that expat borrowers should expect lender selection to matter more than headline rate shopping. The strongest early move is usually understanding which lenders actually lend in your circumstances rather than assuming the broad UK residential market is fully open to you.",
+        ],
+      },
+      {
+        heading: "Income and currency are central to the decision",
+        paragraphs: [
+          "Lenders commonly look closely at the source of income, the currency it is paid in, how stable it is and how easy it is to verify. Some are comfortable with major foreign currencies. Others prefer sterling income or apply haircuts when income is paid in a different currency from the mortgage.",
+          "This matters because affordability is not only about the amount you earn. Exchange-rate movements can affect how that income looks against a sterling mortgage payment. Even where the salary is high, a lender may still discount it to reflect currency risk or income structure risk.",
+          "Bonus, commission and self-employed income can add another layer. If your income is variable, earned through a company structure or spread across jurisdictions, the case can become more document-heavy and lender-specific. The issue is not always affordability itself. Often it is how comfortably the lender can evidence and rely on that income.",
+        ],
+        bullets: [
+          "Check whether the lender accepts your income currency",
+          "Expect some lenders to discount foreign-currency income",
+          "Prepare clear evidence for bonus, commission or self-employed earnings",
+        ],
+      },
+      {
+        heading: "Documents usually matter more than borrowers expect",
+        paragraphs: [
+          "Expat cases often move more smoothly when documents are gathered before a property search becomes urgent. Lenders may ask for proof of address overseas, passport identification, employment contracts, payslips, bank statements, tax documents and details of existing UK commitments.",
+          "If the case includes foreign-language documents, translated or certified copies may be needed. Time-zone differences and overseas banking arrangements can also slow verification if the paperwork is incomplete or inconsistent. What feels like a small missing detail to the borrower can create a larger delay during underwriting.",
+          "That is why preparation matters disproportionately for expat borrowing. A clean pack of documents will not guarantee approval, but it often makes the lender’s decision easier and reduces avoidable friction later in the process.",
+        ],
+      },
+      {
+        heading: "Deposit, property type and intended use all affect options",
+        paragraphs: [
+          "Expat borrowers are often asked for larger deposits than standard UK residential applicants, particularly where the case is more complex or where the property use is less straightforward. Some lenders also draw sharper lines around flats, new-build property, unusual construction or investment-led purchases.",
+          "Purpose matters too. Buying a home for your own use on return, purchasing a family property while working abroad, and building a UK buy-to-let portfolio can each fall into different parts of the lending market. The same borrower can look acceptable in one context and much harder to place in another.",
+          "This is one reason broad mortgage headlines are not very useful for expat planning. The real question is whether lenders in the relevant expat niche like your residency profile, property plan, deposit position and income structure together.",
+        ],
+      },
+      {
+        heading: "Credit profile and UK footprint still matter",
+        paragraphs: [
+          "Living abroad does not remove the importance of UK credit history. Some lenders are more comfortable where the borrower has existing UK accounts, electoral roll links from prior residency, previous mortgage history or a continuing financial footprint that is easy to trace.",
+          "That does not mean a thinner UK footprint is fatal. It does mean identity, anti-money-laundering checks and credit interpretation can become more sensitive. Borrowers who have been away for many years sometimes find that their UK file is lighter than expected, even though their finances are strong overall.",
+          "Where that applies, it helps to review what UK credit data still exists and avoid making assumptions about how visible your profile will be to a lender before you apply.",
+        ],
+      },
+      {
+        heading: "How to prepare a stronger expat mortgage case",
+        paragraphs: [
+          "Start with clarity on four points: where you live, how you are paid, what you want to buy and when you need to act. From there, build a realistic deposit plan, organise documents early and treat affordability calculators as planning tools rather than lender decisions.",
+          "An expat case usually becomes easier once the lender universe is narrowed properly. That means matching the case to policy appetite first, then comparing costs among the lenders that genuinely fit, rather than trying to force a mainstream route that was never likely to work well.",
+          "Used that way, early planning can save time and improve the quality of the eventual application. It also gives you a better basis for deciding whether to proceed now, adjust the structure or wait until your circumstances are easier to place.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "returning-to-the-uk-mortgage-planning",
+    kind: "article",
+    category: "Expat mortgages",
+    title: "Planning a mortgage if you are returning to the UK",
+    description: "How returning expats should think about timing, evidence, employment changes and buying before or after relocation.",
+    readTime: "12 min read",
+    published: "2026-07-02",
+    updated: "2026-07-02",
+    relatedCalculatorSlug: "deposit",
+    relatedCalculatorEyebrow: "PLAN YOUR DEPOSIT",
+    relatedCalculatorTitle: "Estimate the deposit you may need",
+    relatedCalculatorCta: "Estimate deposit",
+    sections: [
+      {
+        heading: "Returning home does not automatically simplify the mortgage",
+        paragraphs: [
+          "Many returning expats assume that once they plan to move back to the UK, the mortgage becomes a standard residential case. Sometimes it does. Often it does not, at least not immediately. Timing, employment status and residency at the point of application still matter.",
+          "A lender may ask whether you are already back in the UK, when overseas employment ends, whether you have a UK job lined up and how soon you expect to occupy the property. If several of those answers are still uncertain, the case may remain in specialist territory even if the long-term intention is clear.",
+          "The core issue is that lenders prefer certainty. A return plan can be perfectly genuine and still leave underwriting questions if income, residence or occupation dates are not yet settled.",
+        ],
+      },
+      {
+        heading: "Buying before you return versus after you return",
+        paragraphs: [
+          "There is no universal right answer. Buying before relocation can help if you want a home ready for your return, but it may mean applying while still treated as an expat borrower. Buying after relocation may widen lender choice, but it can also delay your plans and require temporary housing or a transitional arrangement.",
+          "The better option depends on how stable your timeline is. If you already have a confirmed UK role, a defined return date and a straightforward deposit source, buying ahead of the move may be workable. If employment or residency status is still moving, waiting can sometimes create a cleaner and cheaper case.",
+          "This is a good example of why mortgage planning for returning expats is not only about affordability. It is also about which application route is likely to be simpler, more credible and better priced.",
+        ],
+      },
+      {
+        heading: "Employment evidence can change quickly during relocation",
+        paragraphs: [
+          "A common pressure point is the employment transition. If you are moving from overseas employment to a UK role, the lender may want to know when the new salary starts, whether probation applies, how guaranteed the role is and whether there is a gap between jobs.",
+          "Even where the new income is strong, the way it is evidenced can affect lender choice. Some lenders are comfortable with signed contracts starting soon. Others want payslips from the new role or a longer settled period back in the UK.",
+          "Borrowers should therefore avoid assuming that future UK income will always be treated the same as current salaried income. It may be acceptable, but policy detail matters.",
+        ],
+      },
+      {
+        heading: "Deposit source, savings movement and anti-money-laundering checks",
+        paragraphs: [
+          "Returning expats also need to think about where the deposit is held and how it will be moved. Overseas savings, foreign bank statements and cross-border transfers are normal, but they need to be evidenced clearly. Lenders and conveyancers usually want a clean trail showing where the money came from and how it reached the purchase.",
+          "This becomes especially important if funds are being consolidated from several accounts, converted between currencies or supplemented by family support. None of those situations is unusual, but each one creates more scope for delay if the audit trail is weak.",
+          "The practical lesson is simple: treat deposit-source paperwork as an early task, not an afterthought once a property has already been found.",
+        ],
+        bullets: [
+          "Keep clear statements for overseas savings accounts",
+          "Document significant transfers and currency conversions",
+          "Prepare evidence early if part of the deposit is gifted",
+        ],
+      },
+      {
+        heading: "Budgeting for the real cost of a return",
+        paragraphs: [
+          "Mortgage planning should also account for the wider cost of relocating. The purchase may sit alongside moving expenses, shipping, temporary accommodation, school changes, travel, furnishing and a period of readjustment to UK living costs.",
+          "That matters because a technically affordable mortgage can still feel too tight if the relocation itself absorbs more cash than expected. Returning households often benefit from protecting a larger cash buffer than they would use in a simple domestic move.",
+          "A lender’s maximum figure is therefore only one part of the decision. Your own comfort after the move matters just as much.",
+        ],
+      },
+      {
+        heading: "A practical return-to-UK mortgage strategy",
+        paragraphs: [
+          "Start by deciding which of three scenarios best describes you: buying while still abroad, buying after a confirmed UK role is in place, or buying after you have already returned and re-established UK residency. Each route can work, but they are not equally easy from a lending perspective.",
+          "Once the route is clear, map out the evidence the lender is likely to want: income proof, job contracts, passport and residency documents, deposit-source records and an honest view of when you will occupy the property. That usually produces a much more robust plan than beginning with headline mortgage rates alone.",
+          "The better the timeline and documentation are defined, the easier it becomes to choose whether to apply now or position the case for a stronger application a little later.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "expat-remortgage-what-to-check",
+    kind: "article",
+    category: "Expats and remortgaging",
+    title: "What expats should check before remortgaging a UK property",
+    description: "The key issues for expats reviewing a UK mortgage, from rates and fees to lender policy, tenancy status and evidence.",
+    readTime: "11 min read",
+    published: "2026-07-02",
+    updated: "2026-07-02",
+    relatedCalculatorSlug: "remortgage-savings",
+    relatedCalculatorEyebrow: "COMPARE SAVINGS",
+    relatedCalculatorTitle: "Estimate whether remortgaging could save money",
+    relatedCalculatorCta: "Compare remortgage savings",
+    sections: [
+      {
+        heading: "The cheapest-looking deal may not be available to you",
+        paragraphs: [
+          "Expats reviewing an existing UK mortgage often start with the same question as any other borrower: can I get a lower rate? That is a fair question, but expat remortgaging usually turns first on eligibility and policy fit, then on headline price.",
+          "A lender may be comfortable with a UK-resident remortgage case and much less comfortable once the borrower is living overseas, the income is foreign-currency based or the property use has changed since the original mortgage was taken. The gap between market headline rates and realistic expat options can therefore be wider than borrowers expect.",
+          "That does not mean remortgaging is poor value. It means the comparison needs to begin with lenders that genuinely accept the case as it stands today rather than with products aimed at a different borrower profile.",
+        ],
+      },
+      {
+        heading: "Check how the property is currently used",
+        paragraphs: [
+          "A property that is owner-occupied, let to tenants, temporarily empty or intended for your return may sit in different lending categories. If the use of the property has changed since the current mortgage was arranged, that can materially affect the remortgage route.",
+          "For example, a property originally bought for personal occupation may now be tenanted while you work abroad. In that situation, the lender’s view of risk, affordability and documentation may differ from the original application. Product transfers and external remortgages can both be affected by that change.",
+          "The practical point is that expats should review the case based on the property’s current reality, not on how the mortgage was first set up years ago.",
+        ],
+      },
+      {
+        heading: "Total cost still matters more than headline rate",
+        paragraphs: [
+          "As with any remortgage, fees, early repayment charges, valuation costs and legal work all matter. In expat cases, those costs sit alongside the narrower lender pool, so the right deal is often the best realistic total-cost option rather than the lowest publicised rate in the wider UK market.",
+          "Some borrowers also underestimate the cost of staying where they are. Reverting to a lender’s follow-on rate or missing the review window can be expensive, particularly where the lender does not offer an attractive internal option for overseas borrowers.",
+          "A disciplined comparison should therefore include current lender options, external remortgage options that genuinely fit the case, and the cost of doing nothing.",
+        ],
+        bullets: [
+          "Check the exact early repayment charge end date",
+          "Compare internal product-transfer options as well as external switches",
+          "Assess fees over the period you expect to keep the new deal",
+        ],
+      },
+      {
+        heading: "Income, residency and lender evidence can all have changed",
+        paragraphs: [
+          "Even if the property and loan feel familiar, a remortgage is still a new lending decision. The lender may reassess income evidence, overseas residency, tax position, tenancy details, bank statements and the source of any funds being introduced to the mortgage.",
+          "Cases often become harder not because the borrower has done anything wrong, but because the current circumstances are more specialist than when the mortgage was first arranged. A move into self-employment, a change of country, a company-ownership structure or foreign-currency income can all narrow options.",
+          "That is why expats should avoid assuming that a good payment history on the existing mortgage automatically means another lender will accept the case with minimal checks.",
+        ],
+      },
+      {
+        heading: "Loan-to-value and property value can change the outcome",
+        paragraphs: [
+          "The remortgage picture can improve significantly if the property value has risen or the balance has reduced enough to move the case into a better loan-to-value band. The reverse can also happen if the valuation comes back lower than expected or the available equity is tighter than assumed.",
+          "For expat borrowers, that valuation point can be particularly important because the lender pool is already smaller. A weaker LTV can sometimes remove some of the more attractive specialist options and leave only a narrower range of deals.",
+          "It is therefore worth testing the remortgage decision against more than one valuation assumption rather than building the whole plan around a best-case estimate.",
+        ],
+      },
+      {
+        heading: "How to review an expat remortgage sensibly",
+        paragraphs: [
+          "Start several months before the current deal ends. Confirm your property use, residency position, income structure and likely loan-to-value. Then compare the current lender’s options with lenders that actively support expat cases matching your profile.",
+          "Use the numbers to test whether a switch genuinely saves money after fees, but do not stop at the numbers alone. Also ask whether the chosen route is realistic on evidence, timing and policy fit. That is the difference between a remortgage idea that looks good on paper and one that actually completes cleanly.",
+          "In many expat cases, the best outcome comes from balancing three things at once: cost, lender appetite and operational simplicity.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "buy-to-let-for-uk-expats-what-changes",
+    kind: "article",
+    category: "Expat buy to let",
+    title: "Buy-to-let for UK expats: what usually changes",
+    description: "What overseas borrowers should expect when a UK property plan is investment-led rather than owner-occupied.",
+    readTime: "11 min read",
+    published: "2026-07-02",
+    updated: "2026-07-02",
+    relatedCalculatorSlug: "buy-to-let",
+    relatedCalculatorEyebrow: "CHECK RENTAL COVER",
+    relatedCalculatorTitle: "See whether the rent may support the mortgage",
+    relatedCalculatorCta: "Check rental cover",
+    sections: [
+      {
+        heading: "Expat buy-to-let is its own lending niche",
+        paragraphs: [
+          "A UK expat buying or refinancing a rental property is usually entering a more specialist market than a standard domestic buy-to-let borrower. The lender is not only looking at the property and the rent. It is also assessing overseas residency, income structure, tax position and how easy the case is to verify.",
+          "That matters because some lenders are comfortable with straightforward domestic landlords but much more selective when the applicant lives abroad. The product pool can narrow quickly, and the right route often depends on policy detail rather than on generic buy-to-let headlines.",
+          "For borrowers, the practical takeaway is that an expat buy-to-let case should be approached as a specialist placement exercise first and a rate comparison exercise second.",
+        ],
+      },
+      {
+        heading: "Rental stress testing still matters, but it is not the whole picture",
+        paragraphs: [
+          "Most lenders still want the expected rent to support the mortgage under a stress test. However, passing the rental calculation does not automatically mean the case will fit. Residency, currency, experience as a landlord and property type may still affect which lenders are prepared to proceed.",
+          "This is why some overseas borrowers are confused when a buy-to-let calculator suggests the rent looks strong enough but the eventual lender pool still feels limited. The property numbers may work while the borrower profile remains more specialist.",
+          "Used properly, the rental stress figure is a useful checkpoint. It just should not be mistaken for lender approval.",
+        ],
+      },
+      {
+        heading: "Tax and ownership structure can influence the plan",
+        paragraphs: [
+          "Some expat landlords buy in personal names, some through companies and others as part of broader property structures. The mortgage route, tax treatment and lender appetite can vary materially between those setups.",
+          "Hub does not provide tax advice, but borrowers should recognise that tax planning and mortgage planning often interact in buy-to-let cases. A structure that appears efficient from one angle may create different financing constraints from another.",
+          "That is one reason specialist professional advice tends to add more value in expat buy-to-let cases than in simpler mainstream borrowing scenarios.",
+        ],
+      },
+      {
+        heading: "Property type and location can narrow options further",
+        paragraphs: [
+          "Buy-to-let lenders already draw distinctions between flats, houses, HMOs, new-build units and properties with unusual construction or lease terms. When the borrower is also overseas, those distinctions can become sharper because the lender is stacking more than one policy filter at once.",
+          "A case can therefore become restricted for two separate reasons: the borrower profile and the property profile. Understanding both matters early so that a purchase search is not built around assumptions the lender market will not support.",
+          "This is especially relevant where a borrower is targeting a niche investment type because the yield looks attractive. Attractive yield does not automatically equal easy finance.",
+        ],
+      },
+      {
+        heading: "How to approach an expat buy-to-let case more sensibly",
+        paragraphs: [
+          "Start by testing the rent, the likely loan-to-value and the total deal costs, but also be clear about where you live, how you are paid and what ownership structure you intend to use. Those are all part of the placement, not background details to be dealt with later.",
+          "A stronger strategy is usually to narrow the realistic lender universe first, then compare products within that narrower group. That saves time and reduces the risk of overcommitting to a property plan that is harder to finance than expected.",
+          "In short, expat buy-to-let decisions work best when the investment idea and the financing route are checked together rather than separately.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "using-overseas-income-for-a-uk-mortgage",
+    kind: "article",
+    category: "Expat mortgages",
+    title: "Using overseas income for a UK mortgage",
+    description: "How lenders usually look at foreign-currency salary, variable earnings and evidence from abroad.",
+    readTime: "11 min read",
+    published: "2026-07-02",
+    updated: "2026-07-02",
+    relatedCalculatorSlug: "mortgage-affordability",
+    relatedCalculatorEyebrow: "TEST THE NUMBERS",
+    relatedCalculatorTitle: "Get an illustrative affordability starting point",
+    relatedCalculatorCta: "Check affordability",
+    sections: [
+      {
+        heading: "Overseas income can be acceptable, but not on the same terms everywhere",
+        paragraphs: [
+          "Many UK lenders that work in the expat space will consider overseas income, but the definition of acceptable income varies. Currency, employer type, country of residence, contract stability and how the income is documented can all change the lender pool.",
+          "That is why two borrowers with similar salaries can receive very different outcomes. One may be paid a stable salary in a widely accepted currency with clean documents. Another may have a similar total income but with bonus-heavy pay, company ownership or a less familiar currency, which can create more caution.",
+          "The central issue is not only how much you earn. It is how reliably the lender believes that income can be verified, converted and sustained against a sterling mortgage.",
+        ],
+      },
+      {
+        heading: "Foreign-currency income is often discounted",
+        paragraphs: [
+          "Some lenders apply a haircut to foreign-currency income to reflect exchange-rate risk. Others may accept only certain currencies or may become less comfortable where the mortgage payment would be in pounds but earnings are exposed to more volatility.",
+          "This can be frustrating for borrowers because the nominal salary may look more than sufficient. From the lender’s side, the concern is that currency moves can change affordability without the borrower’s underlying job changing at all.",
+          "As a result, an expat affordability estimate should be treated as a planning tool rather than a promise that every lender will use the same income figure in the same way.",
+        ],
+      },
+      {
+        heading: "Variable income and self-employment need stronger evidence",
+        paragraphs: [
+          "Bonus, commission, dividends and self-employed earnings are often usable, but they tend to require more evidence and more selective lender matching than a simple salaried case. Trends over time matter, and some lenders want a longer track record before relying on that income fully.",
+          "This does not mean variable earnings are a problem by default. It means the case becomes more documentation-sensitive. The better the evidence pack is, the easier it is for a suitable lender to understand the story behind the numbers.",
+          "Borrowers who assume that one year of strong earnings will always be enough often end up disappointed. Stability and explainability usually matter as much as peak income.",
+        ],
+      },
+      {
+        heading: "What documents usually strengthen the case",
+        paragraphs: [
+          "Payslips, contracts, bank statements, tax evidence and proof of overseas address are common starting points. Where the income structure is more complex, borrowers may also need company accounts, accountant references or extra evidence of how earnings are received.",
+          "Consistency across those documents matters. If the lender sees unexplained differences between salary, bank credits and tax treatment, extra questions usually follow. Those questions are often manageable, but they can slow the case and narrow lender confidence if the answer is not ready.",
+          "The practical way to think about this is that expat lending is often won by preparation rather than by rushing into an application first and fixing gaps later.",
+        ],
+        bullets: [
+          "Gather income evidence before property search urgency builds",
+          "Be ready to explain income structure in plain terms",
+          "Check whether your currency and country are widely accepted",
+        ],
+      },
+      {
+        heading: "How to use affordability tools properly",
+        paragraphs: [
+          "An affordability calculator can help you frame a likely budget, compare deposit levels and stress-test whether a plan feels comfortable. What it cannot do is reflect the exact way a given lender will treat your income, currency or evidence.",
+          "The best use of a calculator is to prepare sensible questions and narrow the property range you are exploring. Once the plan looks viable, the next step is usually lender-specific assessment rather than more generic headline comparisons.",
+          "That approach is especially valuable for expats because policy differences between lenders are often wider than borrowers expect.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "expat-deposit-source-checklist",
+    kind: "article",
+    category: "Expat mortgages",
+    title: "Expat deposit source checks: what to prepare early",
+    description: "How overseas savings, gifted deposits and cross-border transfers are usually checked in a UK property purchase.",
+    readTime: "10 min read",
+    published: "2026-07-02",
+    updated: "2026-07-02",
+    relatedCalculatorSlug: "deposit",
+    relatedCalculatorEyebrow: "ESTIMATE DEPOSIT",
+    relatedCalculatorTitle: "Estimate the deposit level you may need",
+    relatedCalculatorCta: "Estimate deposit",
+    sections: [
+      {
+        heading: "The deposit is not only about the amount",
+        paragraphs: [
+          "For expat borrowers, the size of the deposit matters, but the source and movement of the money often matter just as much. Lenders and conveyancers usually want to understand where the funds came from, how long they have been held and how they reached the UK purchase.",
+          "This is not unique to expat cases, but overseas accounts, currency conversion and multiple cross-border transfers make the trail easier to disrupt if documents are collected late. A perfectly legitimate deposit can still cause delay if the paper trail is incomplete.",
+          "The right way to think about this is that deposit-source evidence is part of the mortgage preparation process, not just part of the legal process after an offer is accepted.",
+        ],
+      },
+      {
+        heading: "Overseas savings should be easy to trace",
+        paragraphs: [
+          "If the deposit has been built from salary or retained savings abroad, statements should show how the money accumulated and where it was held. Large unexplained jumps in balances are more likely to trigger questions than regular visible saving behaviour.",
+          "Where funds move between countries or accounts, keep records of the transfers and any currency conversions. A missing step in the chain often creates more friction than borrowers expect because the professionals involved need to be comfortable that the funds are legitimate and clearly sourced.",
+          "This is one area where tidy records save disproportionate time later.",
+        ],
+      },
+      {
+        heading: "Gifted deposits and family support need clean evidence",
+        paragraphs: [
+          "If part of the deposit is a gift, lenders and conveyancers usually want to know who the donor is, where the money came from and whether it is repayable. The answers may sound obvious within a family, but they still need to be formalised in a way the lender can rely on.",
+          "This can become more involved where the donor is also overseas, where funds move across jurisdictions or where the money has passed through several accounts before reaching the buyer. None of that is inherently a problem. It simply means more clarity is required.",
+          "The earlier that gifted-deposit documents are prepared, the less likely the purchase is to stall later.",
+        ],
+      },
+      {
+        heading: "Cross-border timing can affect the property process",
+        paragraphs: [
+          "Currency transfers, banking checks and certified documentation can all take longer than borrowers expect. If the purchase timetable is already tight, delays in moving or evidencing funds can put pressure on exchange and completion planning.",
+          "That is why expat buyers should think beyond the headline deposit percentage. The practical question is whether the money can be shown, moved and relied on in time for the transaction.",
+          "In some cases it is worth organising the fund path before property negotiations become serious, even if the final amount is not yet fixed.",
+        ],
+      },
+      {
+        heading: "A practical expat deposit checklist",
+        paragraphs: [
+          "Before you make an offer, gather statements for the main deposit accounts, note any major transfers, keep records of currency conversion and identify whether any part of the deposit is a gift. If there is family support, make sure the donor is ready to provide the documents likely to be requested.",
+          "This preparation does not remove every question, but it makes the questions much easier to answer. That usually means a smoother legal and mortgage process once the property search turns into a live purchase.",
+          "In expat buying, document quality often creates more momentum than people expect.",
+        ],
+        bullets: [
+          "Keep statements for the full deposit trail",
+          "Record transfers and foreign-exchange movements clearly",
+          "Prepare donor documents early if there is family help",
+        ],
+      },
+    ],
+  },
 ];
 
 export const resources = [...guides, ...articles];

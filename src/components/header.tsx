@@ -9,6 +9,7 @@ import { SearchAndAdvice } from "./search-advice";
 const links = [
   ["Home", "/"],
   ["Mortgage & Protection", "/mortgage-protection"],
+  ["Expat Mortgages", "/expat-mortgages"],
   ["Calculators", "/calculators"],
   ["Guides", "/guides"],
   ["Blogs", "/blogs"],

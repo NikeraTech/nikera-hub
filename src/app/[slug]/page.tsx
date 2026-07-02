@@ -4,6 +4,7 @@ import {
   AboutPage,
   BlogsPage,
   ContactPage,
+  ExpatMortgagesPage,
   GuidesPage,
   MortgagePage,
   PrivacyPage,
@@ -20,6 +21,19 @@ const pages = {
     component: MortgagePage,
     keywords: ["UK mortgage protection", "UK mortgage calculators", "UK life insurance guidance"],
     category: "Mortgage & protection",
+  },
+  "expat-mortgages": {
+    title: "UK Expat Mortgages",
+    description:
+      "UK-focused guidance for expat mortgages, returning residents and overseas borrowers reviewing property plans.",
+    component: ExpatMortgagesPage,
+    keywords: [
+      "UK expat mortgages",
+      "mortgage for UK expats",
+      "returning to the UK mortgage",
+      "expat remortgage UK",
+    ],
+    category: "Expat mortgages",
   },
   guides: {
     title: "Expert Guides",
