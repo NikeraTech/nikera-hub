@@ -465,6 +465,36 @@ export const guides: Resource[] = [
           "Approaching the process with clear priorities, organised paperwork and a realistic budget usually leads to better decisions than chasing a headline maximum or rushing because a property feels emotionally compelling.",
         ],
       },
+      {
+        heading: "Why preparing early saves more than time",
+        paragraphs: [
+          "Early preparation also reduces decision pressure. When you already know how the deposit will be evidenced, you can focus more clearly on the property, the budget and the mortgage route instead of trying to solve documentation problems in the middle of a live transaction.",
+          "That matters because many purchase delays are not caused by one major issue. They come from several smaller uncertainties building up at once. Deposit-source clarity is one of the easier areas to strengthen before the case becomes urgent.",
+          "For expat buyers in particular, smoother evidence usually creates more confidence across both the mortgage and legal sides of the process.",
+        ],
+      },
+      {
+        heading: "What buyers should do before the offer stage",
+        paragraphs: [
+          "Before making an offer, it helps to decide which account will ultimately provide the deposit, whether any money still needs to be transferred and whether any donor documents or translations are still missing. Solving those questions early reduces the chance that the property process moves faster than the evidence pack.",
+          "This is especially relevant where several family members, jurisdictions or currencies are involved. The more moving parts there are, the more valuable early simplification becomes.",
+          "A cleaner fund path is not only easier to evidence. It is also easier to manage when exchange, completion dates and solicitor requests begin to accelerate.",
+        ],
+      },
+      {
+        heading: "Why deposit preparation supports the whole case",
+        paragraphs: [
+          "Good deposit records do more than satisfy a checklist. They help the mortgage, legal and anti-money-laundering parts of the transaction move with less friction. In expat purchases, that joined-up benefit is often underestimated until a delay appears.",
+          "Put simply, the earlier you can make the money trail obvious, the more space you create to focus on the actual buying decision instead of on document recovery under time pressure.",
+        ],
+      },
+      {
+        heading: "What a well-prepared expat deposit file usually includes",
+        paragraphs: [
+          "A strong file usually includes the main account statements, a clear explanation of any large inbound transfers, records of currency conversion where relevant and early identification of any gifted element. If money has moved across several accounts, it helps to map that movement clearly rather than expect the solicitor or lender to infer it from fragmented statements alone.",
+          "That level of preparation may feel administrative, but it often removes the kind of uncertainty that slows otherwise viable cases. For cross-border purchases especially, clarity around funds is one of the simplest ways to strengthen the whole transaction before it becomes time-sensitive.",
+        ],
+      },
     ],
   },
 ];
@@ -533,6 +563,21 @@ export const articles: Resource[] = [
           "Those questions help turn market commentary into something useful. They also make it easier to avoid overreacting to isolated headlines that may not be relevant to your own position.",
         ],
       },
+      {
+        heading: "Why the same market update lands differently for different borrowers",
+        paragraphs: [
+          "A rate cut in the wider market does not automatically improve every borrower’s real options by the same amount. Someone with a strong deposit, straightforward income and a standard property may feel the benefit more quickly than someone with a higher loan-to-value, a more specialist property or a narrower lender pool.",
+          "This is one reason public mortgage commentary can feel misleading when taken too literally. The market may genuinely be improving, but your own accessible product range may still depend more on deposit size, income structure, property type and timing than on the headline itself.",
+          "That is why the most useful response to mortgage-rate news is usually to test what it changes for your own circumstances. Once you do that, the headlines become more practical and less noisy.",
+        ],
+      },
+      {
+        heading: "A sensible next step after reading rate headlines",
+        paragraphs: [
+          "If you are buying or remortgaging soon, a better next step than chasing headlines is to compare realistic monthly payments, likely fees and the strength of your own application profile. That turns market commentary into an actual decision framework instead of background noise.",
+          "Used that way, mortgage-rate coverage becomes useful context rather than something that pushes you into reactive decisions. The goal is not to predict every move perfectly. It is to make a decision that still stands up well in the market you are actually in.",
+        ],
+      },
     ],
   },
   {
@@ -598,6 +643,14 @@ export const articles: Resource[] = [
         paragraphs: [
           "Start by looking at the property price range you are realistically targeting, then estimate the deposit required at a few LTV levels rather than using one single number. After that, add likely purchase costs and decide how much cash you still want available after completion.",
           "That approach gives you a target that is grounded in the real transaction, not just the headline percentage. It also makes it easier to judge whether saving a little longer is likely to improve your position meaningfully or only marginally.",
+        ],
+      },
+      {
+        heading: "When saving longer may help and when it may not",
+        paragraphs: [
+          "Saving for longer can make a real difference if it moves you into a better loan-to-value band, improves the monthly payment to a more comfortable level or leaves you with a healthier buffer after completion. In that situation you are not only increasing the deposit. You are also buying more resilience.",
+          "At the same time, waiting is not automatically the right answer in every case. If another few months of saving changes very little in product access or monthly affordability, the bigger question becomes whether the overall purchase plan already works well enough for your budget and timescale.",
+          "A more useful target is often the deposit level that lets you buy without stretching the wider plan too far, rather than the biggest number you could theoretically keep chasing.",
         ],
       },
     ],
@@ -671,6 +724,28 @@ export const articles: Resource[] = [
           "That process makes it easier to see whether you are genuinely saving money or simply moving costs around.",
         ],
       },
+      {
+        heading: "When switching is not automatically the best route",
+        paragraphs: [
+          "A full remortgage is not always the right answer. Sometimes a product transfer with the current lender is cheaper or simpler once valuation costs, legal work and timing risk are considered. In other cases, staying put looks easy but proves poorer value once the total cost is compared properly.",
+          "That is why borrowers should treat convenience as one factor rather than the answer on its own. The decision is usually between staying, switching or timing the move differently, not simply between one headline rate and another.",
+          "Once you compare those routes deliberately, it becomes much easier to see whether you are genuinely improving the mortgage or just moving costs into a different shape.",
+        ],
+      },
+      {
+        heading: "Questions worth asking before you commit",
+        paragraphs: [
+          "Before choosing a deal, ask how long you are likely to keep it, whether moving home is realistic, whether overpayments matter and whether a future early repayment charge could become restrictive. Those questions often reveal trade-offs that are easy to miss when the focus stays only on the monthly saving.",
+          "A product with slightly higher cost can still be the more useful option if it suits your next likely move better. Practical flexibility is part of value, not something separate from it.",
+        ],
+      },
+      {
+        heading: "Why timing still matters even when the comparison looks positive",
+        paragraphs: [
+          "A remortgage that looks worthwhile on paper can still be handled badly if the timing is poor. Leaving the review too late can reduce choice and create avoidable pressure, while moving too early can mean paying charges that wipe out the benefit.",
+          "The strongest remortgage decisions usually come from starting early enough to compare the options calmly, confirm the true costs and choose deliberately rather than react at the last minute.",
+        ],
+      },
     ],
   },
   {
@@ -741,6 +816,13 @@ export const articles: Resource[] = [
           "The right decision usually comes from matching the cover to the specific outcome you want to protect against rather than assuming similar-sounding policies are interchangeable.",
         ],
       },
+      {
+        heading: "Why price alone can lead to the wrong decision",
+        paragraphs: [
+          "Budget matters, but a cheaper premium is not automatically better value if the cover does not match the financial problem you are trying to solve. The more useful question is whether the policy would change the outcome meaningfully for your household if the event actually happened.",
+          "Once you frame the decision around the real need rather than the product label alone, it becomes easier to judge whether life cover, critical illness cover or a combination deserves priority within the budget you have available.",
+        ],
+      },
     ],
   },
   {
@@ -800,6 +882,35 @@ export const articles: Resource[] = [
         paragraphs: [
           "If you want a more useful estimate, start with realistic income inputs, include committed monthly costs honestly and compare the result with your own comfortable budget, not only the maximum figure shown.",
           "Then use that estimate to narrow your search and identify where advice or lender-specific checks may matter most. That is usually a better approach than chasing the highest headline borrowing figure available.",
+        ],
+      },
+      {
+        heading: "Why early lender indications and final decisions can still differ",
+        paragraphs: [
+          "Borrowers are often surprised when an agreement in principle appears supportive but the full application is assessed more cautiously. In many cases that happens because the earlier stage uses a narrower set of inputs and assumptions than the later underwriting stage.",
+          "Once the lender reviews documents, property details and fuller spending information, the picture can change. That does not make the earlier result useless. It simply means it was an initial checkpoint rather than the final lending decision.",
+          "Used properly, an affordability estimate helps you avoid unrealistic searches and prepare for lender-specific questions. It should not be treated as confirmation that the final answer cannot move.",
+        ],
+      },
+      {
+        heading: "How borrowers can reduce unpleasant surprises",
+        paragraphs: [
+          "A practical way to reduce affordability surprises is to stress-test your own case honestly before applying. Think about which income is variable, whether any commitments are easy to overlook and whether the property or repayment basis could create extra policy sensitivity.",
+          "That preparation does not remove lender differences, but it usually makes the gap between a broad online estimate and a real underwriting outcome easier to understand and manage.",
+        ],
+      },
+      {
+        heading: "Why the most generous figure is not always the most useful one",
+        paragraphs: [
+          "Borrowers sometimes focus on the highest number any calculator or lender might produce, but that can distract from the more useful question of what payment level still feels comfortable once the wider budget is taken seriously. A bigger number is not automatically a better outcome if it reduces resilience after you move.",
+          "That is why affordability planning works best when it combines lender-style estimates with your own realistic view of spending, future flexibility and comfort under pressure. The goal is sustainable borrowing, not simply maximum borrowing.",
+        ],
+      },
+      {
+        heading: "Why a careful budget often beats a bigger headline number",
+        paragraphs: [
+          "The most useful affordability figure is usually the one that still leaves room for real life after the mortgage starts. That means considering not just whether borrowing is theoretically available, but whether it remains comfortable when rates, repairs and day-to-day costs are viewed realistically.",
+          "In that sense, a slightly lower but more sustainable figure can be far more useful than a larger number that only works under optimistic assumptions.",
         ],
       },
     ],
@@ -867,6 +978,20 @@ export const articles: Resource[] = [
         paragraphs: [
           "Treat the lender’s stress test as a financing checkpoint, not as proof that the deal is a good investment. It tells you whether the lender is likely to be comfortable with the rent relative to the mortgage under its policy assumptions.",
           "A better decision usually comes from combining that lender view with your own cash-flow analysis. When both line up, the case is usually more robust. When they do not, it is worth understanding why before moving forward.",
+        ],
+      },
+      {
+        heading: "What to compare alongside the lender result",
+        paragraphs: [
+          "A useful landlord review usually goes beyond the stress figure and looks at mortgage cost, likely rent after realistic void assumptions, maintenance, insurance, tax position and a reserve for irregular repairs. The lender result tells you whether the case may finance. It does not tell you whether the property still feels commercially strong once real ownership costs are included.",
+          "That distinction matters because some cases look acceptable for lending but feel far tighter once the investor’s own cash-flow view is applied. The broader analysis is what helps turn finance eligibility into a more confident investment decision.",
+        ],
+      },
+      {
+        heading: "Why passing the stress test is only the starting point",
+        paragraphs: [
+          "Even where a case passes comfortably, landlords still need to ask whether the property remains attractive after realistic costs and whether the deal fits the broader portfolio or investment plan. A lender’s willingness to lend is useful, but it is not the same thing as confirming that the property is the right commercial decision for you.",
+          "That is why the strongest buy-to-let decisions usually combine lender affordability, cash-flow realism and strategic fit rather than relying on a single metric in isolation.",
         ],
       },
     ],
@@ -1132,6 +1257,21 @@ export const articles: Resource[] = [
           "In short, expat buy-to-let decisions work best when the investment idea and the financing route are checked together rather than separately.",
         ],
       },
+      {
+        heading: "What often catches expat landlords out",
+        paragraphs: [
+          "One common mistake is assuming a strong yield automatically means the finance will be easy. In practice, unusual property types, overseas residency and ownership-structure choices can narrow lender appetite even when the rent looks attractive on paper.",
+          "Another is focusing on the initial mortgage payment while underestimating the ongoing cost of management, compliance, insurance and repairs. Where the case is already specialist, those commercial details matter even more because the financing route may be less flexible than in the broad domestic market.",
+          "The more robust approach is to test the property as both an investment and a mortgage case from the beginning. That reduces the risk of finding a property first and discovering later that the finance is far less comfortable than expected.",
+        ],
+      },
+      {
+        heading: "A stronger expat buy-to-let process",
+        paragraphs: [
+          "The cases that tend to go best are the ones where the borrower tests lender appetite, rental strength and ownership structure together before becoming emotionally committed to a particular property. That sequence reduces avoidable surprises and usually produces a better financing conversation from the start.",
+          "For overseas landlords, that extra preparation often matters more than small differences in headline pricing because the wrong property or structure can narrow options far more than expected.",
+        ],
+      },
     ],
   },
   {
@@ -1193,6 +1333,20 @@ export const articles: Resource[] = [
           "That approach is especially valuable for expats because policy differences between lenders are often wider than borrowers expect.",
         ],
       },
+      {
+        heading: "Why clear presentation of income makes a difference",
+        paragraphs: [
+          "Where the income structure is more complex, it helps to be able to explain it simply. What is fixed salary, what is variable, what currency is it paid in, how long has it been earned and which documents prove that clearly? Those questions are often more useful than assuming a high headline income will speak for itself.",
+          "A lender-friendly case is usually one where the documents tell a consistent story quickly. That does not guarantee acceptance, but it does make the policy discussion easier and can widen the realistic lender pool compared with a rushed or poorly organised application.",
+        ],
+      },
+      {
+        heading: "What this means in practical mortgage planning",
+        paragraphs: [
+          "The practical implication is that overseas borrowers should build plans around realistic lender treatment of income rather than around the highest theoretical salary number. Once you do that, property ranges, deposit levels and timing decisions tend to become clearer and more defensible.",
+          "That approach does not make the case simple, but it usually makes it more predictable. And in expat borrowing, predictability is often one of the most useful things you can create early.",
+        ],
+      },
     ],
   },
   {
@@ -1252,6 +1406,22 @@ export const articles: Resource[] = [
           "Keep statements for the full deposit trail",
           "Record transfers and foreign-exchange movements clearly",
           "Prepare donor documents early if there is family help",
+        ],
+      },
+      {
+        heading: "What buyers should do before the offer stage",
+        paragraphs: [
+          "Before making an offer, it helps to decide which account will ultimately provide the deposit, whether any money still needs to be transferred and whether any donor documents or translations are still missing. Solving those questions early reduces the chance that the property process moves faster than the evidence pack.",
+          "This is especially relevant where several family members, jurisdictions or currencies are involved. The more moving parts there are, the more valuable early simplification becomes.",
+          "A cleaner fund path is not only easier to evidence. It is also easier to manage when exchange, completion dates and solicitor requests begin to accelerate.",
+        ],
+      },
+      {
+        heading: "Why deposit preparation supports the whole case",
+        paragraphs: [
+          "Good deposit records do more than satisfy a checklist. They help the mortgage, legal and anti-money-laundering parts of the transaction move with less friction. In expat purchases, that joined-up benefit is often underestimated until a delay appears.",
+          "Put simply, the earlier you can make the money trail obvious, the more space you create to focus on the actual buying decision instead of on document recovery under time pressure.",
+          "For cross-border purchases, that clarity can be one of the simplest ways to improve the overall quality of the case before it becomes urgent.",
         ],
       },
     ],
