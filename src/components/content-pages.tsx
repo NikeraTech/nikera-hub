@@ -6,6 +6,7 @@ import { ArrowIcon, GuideIcon, ShieldIcon } from "./icons";
 import { ProfessionalAdviceForm } from "./professional-advice-form";
 import { getSuggestedAdviceTopic } from "@/lib/advice";
 import { calculators } from "@/lib/calculators";
+import { buildContentTopics } from "@/lib/content-architecture";
 import { articles as resourceArticles, guides as resourceGuides } from "@/lib/resources";
 
 function PageHero({
@@ -251,6 +252,16 @@ export function ExpatMortgagesPage() {
 }
 
 export function GuidesPage() {
+  const { liveTopics } = buildContentTopics({
+    guides: resourceGuides,
+    articles: resourceArticles,
+  });
+  const guideTopics = liveTopics.filter((topic) =>
+    ["mortgage-basics", "first-time-buyers", "remortgaging", "protection", "self-employed"].includes(
+      topic.slug,
+    ),
+  );
+
   return (
     <main id="main">
       <PageHero
@@ -261,12 +272,44 @@ export function GuidesPage() {
       <section className="inner-section">
         <div className="container">
           <div className="filter-pills" aria-label="Guide topics">
-            <span>All guides</span>
-            <span>Mortgages</span>
-            <span>Protection</span>
-            <span>First-time buyers</span>
-            <span>Remortgaging</span>
+            <span>Guide architecture</span>
+            {guideTopics.map((topic) => (
+              <span key={topic.slug}>
+                {topic.title} · {topic.count}
+              </span>
+            ))}
             <Link href="/expat-mortgages">Expats</Link>
+          </div>
+          <div className="section-heading">
+            <div>
+              <span className="kicker">TOPIC STRUCTURE</span>
+              <h2>How guide content is organised</h2>
+              <p>
+                Guides are now grouped around stable decision areas so future content can expand
+                without turning the hub into an unstructured blog archive.
+              </p>
+            </div>
+            <Link href="/blogs">
+              See supporting articles <ArrowIcon />
+            </Link>
+          </div>
+          <div className="architecture-grid">
+            {guideTopics.map((topic) => (
+              <article className="architecture-card" key={topic.slug}>
+                <small>
+                  {topic.count} LIVE {topic.count === 1 ? "PAGE" : "PAGES"}
+                </small>
+                <h3>{topic.title}</h3>
+                <p>{topic.description}</p>
+                <div className="architecture-links">
+                  {topic.items.slice(0, 3).map((item) => (
+                    <Link key={item.href} href={item.href}>
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </article>
+            ))}
           </div>
           <div className="feature-grid">
             {resourceGuides.map((guide) => (
@@ -291,6 +334,27 @@ export function GuidesPage() {
 }
 
 export function BlogsPage() {
+  const phase1LanguageArticles = resourceArticles.filter((article) =>
+    article.slug.includes("speaking-mortgage-adviser-in-the-uk"),
+  );
+  const phase2LanguageArticles = resourceArticles.filter((article) =>
+    article.slug.includes("speaking-insurance-adviser-in-the-uk"),
+  );
+  const phase3SpecialistArticles = resourceArticles.filter((article) =>
+    [
+      "getting-a-uk-mortgage-on-a-skilled-worker-visa",
+      "uk-mortgage-planning-on-a-spouse-visa",
+      "self-employed-mortgage-documents-what-lenders-usually-check",
+      "how-self-employed-borrowers-can-improve-mortgage-affordability",
+      "gifted-deposit-from-family-in-india-to-buy-a-uk-home",
+      "using-family-support-for-a-uk-deposit-what-lenders-check",
+    ].includes(article.slug),
+  );
+  const { liveTopics, plannedTopics } = buildContentTopics({
+    guides: resourceGuides,
+    articles: resourceArticles,
+  });
+
   return (
     <main id="main">
       <PageHero
@@ -298,6 +362,176 @@ export function BlogsPage() {
         title="Useful context for financial decisions."
         intro="Accessible articles that explain market changes, common questions and the details worth understanding."
       />
+      <section className="inner-section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="kicker">CONTENT ARCHITECTURE</span>
+              <h2>Explore Hub by topic, not just by publish date</h2>
+              <p>
+                This structure is designed to support future SEO growth around mortgages,
+                protection, expats, community-language journeys and specialist borrowing cases.
+              </p>
+            </div>
+            <Link href="/request-advice">
+              Request advice <ArrowIcon />
+            </Link>
+          </div>
+          <div className="architecture-grid">
+            {liveTopics.map((topic) => (
+              <article className="architecture-card" key={topic.slug}>
+                <small>
+                  {topic.count} LIVE {topic.count === 1 ? "PAGE" : "PAGES"}
+                </small>
+                <h3>{topic.title}</h3>
+                <p>{topic.description}</p>
+                <div className="architecture-links">
+                  {topic.items.slice(0, 3).map((item) => (
+                    <Link key={item.href} href={item.href}>
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+                {topic.note ? <div className="architecture-note">{topic.note}</div> : null}
+                {topic.ctaHref && topic.ctaLabel ? (
+                  <Link href={topic.ctaHref}>
+                    {topic.ctaLabel} <ArrowIcon />
+                  </Link>
+                ) : null}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      {phase1LanguageArticles.length > 0 && (
+        <section className="inner-section soft-bg">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="kicker">PHASE 1 LANGUAGE GUIDES</span>
+                <h2>Mortgage adviser guides by language</h2>
+                <p>
+                  Built for users who want mortgage guidance explained more clearly before speaking
+                  to a professional.
+                </p>
+              </div>
+              <Link href="/request-advice">
+                Request advice <ArrowIcon />
+              </Link>
+            </div>
+            <div className="feature-grid">
+              {phase1LanguageArticles.map((article) => (
+                <article className="resource-tile" key={article.slug}>
+                  <GuideIcon />
+                  <small>
+                    {article.category} · {article.readTime}
+                  </small>
+                  <h3>{article.title}</h3>
+                  <p>{article.description}</p>
+                  <Link href={`/blogs/${article.slug}`}>
+                    Read article <ArrowIcon />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {phase2LanguageArticles.length > 0 && (
+        <section className="inner-section">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="kicker">PHASE 2 LANGUAGE GUIDES</span>
+                <h2>Insurance adviser guides by language</h2>
+                <p>
+                  Built for users who want life insurance and protection guidance explained more
+                  clearly before speaking to a professional.
+                </p>
+              </div>
+              <Link href="/calculators/protection-needs">
+                Check protection needs <ArrowIcon />
+              </Link>
+            </div>
+            <div className="feature-grid">
+              {phase2LanguageArticles.map((article) => (
+                <article className="resource-tile" key={article.slug}>
+                  <GuideIcon />
+                  <small>
+                    {article.category} Â· {article.readTime}
+                  </small>
+                  <h3>{article.title}</h3>
+                  <p>{article.description}</p>
+                  <Link href={`/blogs/${article.slug}`}>
+                    Read article <ArrowIcon />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {phase3SpecialistArticles.length > 0 && (
+        <section className="inner-section soft-bg">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="kicker">PHASE 3 SPECIALIST GUIDES</span>
+                <h2>Visa, self-employed and family-support content</h2>
+                <p>
+                  Higher-intent articles built around specialist mortgage situations that usually
+                  need more than a broad market explanation.
+                </p>
+              </div>
+              <Link href="/request-advice">
+                Request advice <ArrowIcon />
+              </Link>
+            </div>
+            <div className="feature-grid">
+              {phase3SpecialistArticles.map((article) => (
+                <article className="resource-tile" key={article.slug}>
+                  <GuideIcon />
+                  <small>
+                    {article.category} Â· {article.readTime}
+                  </small>
+                  <h3>{article.title}</h3>
+                  <p>{article.description}</p>
+                  <Link href={`/blogs/${article.slug}`}>
+                    Read article <ArrowIcon />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      <section className="inner-section soft-bg">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="kicker">NEXT EXPANSION PRIORITIES</span>
+              <h2>What should be built next</h2>
+              <p>
+                These are the next content lanes that would improve long-term SEO and lead quality
+                without diluting the current structure.
+              </p>
+            </div>
+            <Link href="/calculators">
+              Browse calculators <ArrowIcon />
+            </Link>
+          </div>
+          <div className="architecture-grid">
+            {plannedTopics.map((topic) => (
+              <article className="architecture-card architecture-card-muted" key={topic.slug}>
+                <small>PLANNED NEXT</small>
+                <h3>{topic.title}</h3>
+                <p>{topic.description}</p>
+                <div className="architecture-note">{topic.nextStep}</div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="inner-section">
         <div className="container">
           <div className="article-grid">

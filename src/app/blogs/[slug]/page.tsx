@@ -18,7 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: resource.title,
         description: resource.description,
         path: `/blogs/${resource.slug}`,
-        keywords: [resource.category, resource.title, "UK mortgage article", "Nikera Hub article"],
+        keywords: resource.keywords ?? [
+          resource.category,
+          resource.title,
+          "UK mortgage article",
+          "Nikera Hub article",
+        ],
         category: resource.category,
         type: "article",
         publishedTime: resource.published,

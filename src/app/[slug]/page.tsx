@@ -45,9 +45,15 @@ const pages = {
   blogs: {
     title: "Mortgage & Protection Insights",
     description:
-      "Useful UK-focused articles explaining mortgage markets, affordability, protection and property finance.",
+      "Structured UK-focused content covering mortgages, protection, expats, first-time buyers and language-specific adviser journeys.",
     component: BlogsPage,
-    keywords: ["UK mortgage articles", "UK market updates", "UK remortgage insights"],
+    keywords: [
+      "UK mortgage articles",
+      "UK protection articles",
+      "UK expat mortgage content",
+      "language-specific mortgage adviser guides",
+      "UK remortgage insights",
+    ],
     category: "Articles",
   },
   about: {
