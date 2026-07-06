@@ -4,6 +4,13 @@ import Link from "next/link";
 import { FormEvent, useId, useMemo, useState } from "react";
 import { ArrowIcon, ShieldIcon } from "./icons";
 import {
+  type AdviceFormPayload,
+  trackAdviceFormError,
+  trackAdviceFormStart,
+  trackAdviceFormSubmit,
+  trackAdviceFormSuccess,
+} from "@/lib/analytics";
+import {
   adviceTopics,
   contactMethods,
   contactTimes,
@@ -77,6 +84,7 @@ export function ProfessionalAdviceForm({
   const [state, setState] = useState<FormState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [context, setContext] = useState<HiddenContext>(() => getClientContext());
+  const [hasTrackedStart, setHasTrackedStart] = useState(false);
   const radioId = useId();
   const topic =
     defaultTopic ??
@@ -95,15 +103,49 @@ export function ProfessionalAdviceForm({
     [calculatorName, calculationResults, context.currentPage],
   );
 
+  const analyticsContext = useMemo<AdviceFormPayload>(
+    () => ({
+      pageType:
+        pageKind === "guide" || pageKind === "article" || pageKind === "calculator"
+          ? pageKind
+          : pageSlug === "request-advice"
+            ? "request-advice"
+            : "page",
+      pageSlug: pageSlug ?? "",
+      pageTitle: pageTitle ?? "",
+      pageCategory: pageCategory ?? "",
+      section: "professional-advice-form",
+      calculatorName: calculatorName || "",
+      hasCalculationResults: Boolean(calculationResults),
+      adviceTopic: topic,
+      standalone,
+    }),
+    [calculationResults, calculatorName, pageCategory, pageKind, pageSlug, pageTitle, standalone, topic],
+  );
+
+  function handleFormStart() {
+    if (hasTrackedStart) {
+      return;
+    }
+
+    setHasTrackedStart(true);
+    trackAdviceFormStart(analyticsContext);
+  }
+
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setErrorMessage("");
+    handleFormStart();
 
     if (typeof window !== "undefined") {
       const last = window.sessionStorage.getItem(dedupeKey);
       if (last && Date.now() - Number(last) < 90_000) {
         setState("error");
         setErrorMessage("This request was just sent. Please wait a moment before submitting again.");
+        trackAdviceFormError({
+          ...analyticsContext,
+          errorType: "duplicate_submission_blocked",
+        });
         return;
       }
     }
@@ -133,6 +175,13 @@ export function ProfessionalAdviceForm({
       startedAt: data.get("startedAt"),
     };
 
+    trackAdviceFormSubmit({
+      ...analyticsContext,
+      preferredContactMethod: String(payload.preferredContactMethod ?? ""),
+      preferredTime: String(payload.preferredTime ?? ""),
+      consent: payload.consent,
+    });
+
     const response = await fetch("/api/advice", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -144,6 +193,10 @@ export function ProfessionalAdviceForm({
         window.sessionStorage.setItem(dedupeKey, String(Date.now()));
       }
       setState("sent");
+      trackAdviceFormSuccess({
+        ...analyticsContext,
+        preferredContactMethod: String(payload.preferredContactMethod ?? ""),
+      });
       form.reset();
       setContext(getClientContext());
       return;
@@ -152,6 +205,10 @@ export function ProfessionalAdviceForm({
     const body = await response.json().catch(() => null);
     setState("error");
     setErrorMessage(body?.error ?? "We could not send your enquiry right now. Please try again.");
+    trackAdviceFormError({
+      ...analyticsContext,
+      errorType: body?.error ? "api_error" : "unknown_error",
+    });
   }
 
   return (
@@ -197,7 +254,7 @@ export function ProfessionalAdviceForm({
           </div>
         </div>
 
-        <form className="professional-advice-form" onSubmit={submit}>
+        <form className="professional-advice-form" onSubmit={submit} onFocusCapture={handleFormStart}>
           <div className="form-wide professional-form-card-header">
             <span className="kicker">COMPLETE THE FORM BELOW</span>
             <h3>Request a professional review</h3>

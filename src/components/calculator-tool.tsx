@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ProfessionalAdviceForm } from "./professional-advice-form";
 import { getSuggestedAdviceTopic } from "@/lib/advice";
+import { trackCalculatorResult, trackCalculatorStart, trackContentCtaClick } from "@/lib/analytics";
 import type { Calculator } from "@/lib/calculators";
 
 type Field = {
@@ -404,6 +405,9 @@ function getInitialValues(fields: Field[]) {
 export function CalculatorTool({ calculator }: { calculator: Calculator }) {
   const fields = configs[calculator.slug];
   const [values, setValues] = useState<Record<string, number>>(() => getInitialValues(fields));
+  const [hasStarted, setHasStarted] = useState(false);
+  const initialFingerprint = useRef(JSON.stringify(values));
+  const lastTrackedFingerprint = useRef("");
 
   const result = useMemo(() => calculate(calculator.slug, values), [calculator.slug, values]);
 
@@ -411,6 +415,64 @@ export function CalculatorTool({ calculator }: { calculator: Calculator }) {
     () => buildCalculatorContext(calculator, fields, values, result),
     [calculator, fields, result, values],
   );
+
+  useEffect(() => {
+    if (!hasStarted) {
+      return;
+    }
+
+    const fingerprint = JSON.stringify({
+      values,
+      result: {
+        label: result.label,
+        value: result.value,
+      },
+    });
+
+    if (fingerprint === lastTrackedFingerprint.current) {
+      return;
+    }
+
+    const timeout = window.setTimeout(() => {
+      trackCalculatorResult({
+        pageType: "calculator",
+        pageSlug: calculator.slug,
+        pageTitle: calculator.title,
+        pageCategory: calculator.category,
+        section: "result-panel",
+        calculatorSlug: calculator.slug,
+        calculatorTitle: calculator.title,
+        calculatorCategory: calculator.category,
+        resultLabel: result.label,
+        resultValue: result.value,
+      });
+      lastTrackedFingerprint.current = fingerprint;
+    }, 500);
+
+    return () => window.clearTimeout(timeout);
+  }, [calculator.category, calculator.slug, calculator.title, hasStarted, result.label, result.value, values]);
+
+  function handleCalculatorStart(nextValues: Record<string, number>) {
+    if (hasStarted) {
+      return;
+    }
+
+    if (JSON.stringify(nextValues) === initialFingerprint.current) {
+      return;
+    }
+
+    setHasStarted(true);
+    trackCalculatorStart({
+      pageType: "calculator",
+      pageSlug: calculator.slug,
+      pageTitle: calculator.title,
+      pageCategory: calculator.category,
+      section: "input-form",
+      calculatorSlug: calculator.slug,
+      calculatorTitle: calculator.title,
+      calculatorCategory: calculator.category,
+    });
+  }
 
   return (
     <div className="calculator-tool-stack">
@@ -429,7 +491,11 @@ export function CalculatorTool({ calculator }: { calculator: Calculator }) {
                 min={field.min ?? 0}
                 max={field.max}
                 step={field.step ?? 1}
-                onChange={(e) => setValues({ ...values, [field.key]: Number(e.target.value) })}
+                onChange={(e) => {
+                  const nextValues = { ...values, [field.key]: Number(e.target.value) };
+                  handleCalculatorStart(nextValues);
+                  setValues(nextValues);
+                }}
               />
               {field.suffix && <i>{field.suffix}</i>}
             </span>
@@ -449,7 +515,20 @@ export function CalculatorTool({ calculator }: { calculator: Calculator }) {
             </div>
           ))}
         </dl>
-        <div className="result-advice">
+        <div
+          className="result-advice"
+          onClick={() =>
+            trackContentCtaClick({
+              pageType: "calculator",
+              pageSlug: calculator.slug,
+              pageTitle: calculator.title,
+              pageCategory: calculator.category,
+              section: "result-advice",
+              ctaLabel: "Request professional advice",
+              destination: "#professional-advice",
+            })
+          }
+        >
           <b>Need personalised advice?</b>
           <p>A trusted adviser can review your circumstances and explain your options.</p>
           <Link href="#professional-advice">Request professional advice →</Link>

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ArrowIcon } from "./icons";
 import { Logo } from "./logo";
 import { SearchAndAdvice } from "./search-advice";
+import { trackContentCtaClick } from "@/lib/analytics";
 
 const links = [
   ["Home", "/"],
@@ -32,7 +33,18 @@ export function Header() {
         </nav>
         <div className="header-actions">
           <SearchAndAdvice />
-          <Link href="/request-advice" className="header-cta">
+          <Link
+            href="/request-advice"
+            className="header-cta"
+            onClick={() =>
+              trackContentCtaClick({
+                pageType: "header",
+                section: "desktop-header",
+                ctaLabel: "Request advice",
+                destination: "/request-advice",
+              })
+            }
+          >
             Request advice <ArrowIcon />
           </Link>
           <button
@@ -57,7 +69,19 @@ export function Header() {
                 {name}
               </Link>
             ))}
-            <Link href="/request-advice" className="mobile-nav-contact" onClick={() => setMenuOpen(false)}>
+            <Link
+              href="/request-advice"
+              className="mobile-nav-contact"
+              onClick={() => {
+                trackContentCtaClick({
+                  pageType: "header",
+                  section: "mobile-header",
+                  ctaLabel: "Request advice",
+                  destination: "/request-advice",
+                });
+                setMenuOpen(false);
+              }}
+            >
               Request advice <ArrowIcon />
             </Link>
           </nav>

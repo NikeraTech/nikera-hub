@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ProfessionalAdviceForm } from "./professional-advice-form";
+import { TrackedLink } from "./tracked-link";
 import { getSuggestedAdviceTopic } from "@/lib/advice";
 import { getCalculator } from "@/lib/calculators";
 import { getResourceConversionCopy } from "@/lib/resource-conversion";
@@ -139,17 +140,44 @@ export function ResourcePage({ resource }: { resource: Resource }) {
           </div>
           <div className="resource-action-strip">
             {relatedCalculator ? (
-              <Link className="button button-primary" href={`/calculators/${relatedCalculator.slug}`}>
+              <TrackedLink
+                className="button button-primary"
+                href={`/calculators/${relatedCalculator.slug}`}
+                label={resource.relatedCalculatorCta ?? "Try calculator"}
+                pageType={resource.kind}
+                pageSlug={resource.slug}
+                pageTitle={resource.title}
+                pageCategory={resource.category}
+                section="resource-header"
+              >
                 {resource.relatedCalculatorCta ?? "Try calculator"}
-              </Link>
+              </TrackedLink>
             ) : (
-              <Link className="button button-primary" href="#professional-advice">
+              <TrackedLink
+                className="button button-primary"
+                href="#professional-advice"
+                label="Request advice"
+                pageType={resource.kind}
+                pageSlug={resource.slug}
+                pageTitle={resource.title}
+                pageCategory={resource.category}
+                section="resource-header"
+              >
                 Request advice
-              </Link>
+              </TrackedLink>
             )}
-            <Link className="button button-secondary" href="#professional-advice">
+            <TrackedLink
+              className="button button-secondary"
+              href="#professional-advice"
+              label="Speak with a professional"
+              pageType={resource.kind}
+              pageSlug={resource.slug}
+              pageTitle={resource.title}
+              pageCategory={resource.category}
+              section="resource-header"
+            >
               Speak with a professional
-            </Link>
+            </TrackedLink>
             <p>
               {conversionCopy.actionNote}
             </p>
@@ -193,13 +221,31 @@ export function ResourcePage({ resource }: { resource: Resource }) {
                   <p>{conversionCopy.inlineDescription}</p>
                   <div className="resource-inline-actions">
                     {relatedCalculator ? (
-                      <Link className="button button-primary" href={`/calculators/${relatedCalculator.slug}`}>
+                      <TrackedLink
+                        className="button button-primary"
+                        href={`/calculators/${relatedCalculator.slug}`}
+                        label={resource.relatedCalculatorCta ?? "Try calculator"}
+                        pageType={resource.kind}
+                        pageSlug={resource.slug}
+                        pageTitle={resource.title}
+                        pageCategory={resource.category}
+                        section="resource-inline"
+                      >
                         {resource.relatedCalculatorCta ?? "Try calculator"}
-                      </Link>
+                      </TrackedLink>
                     ) : null}
-                    <Link className="button button-secondary" href="#professional-advice">
+                    <TrackedLink
+                      className="button button-secondary"
+                      href="#professional-advice"
+                      label="Request advice"
+                      pageType={resource.kind}
+                      pageSlug={resource.slug}
+                      pageTitle={resource.title}
+                      pageCategory={resource.category}
+                      section="resource-inline"
+                    >
                       Request advice
-                    </Link>
+                    </TrackedLink>
                   </div>
                   <div className="resource-inline-trust">
                     {conversionCopy.trustPoints.map((item) => (
@@ -260,9 +306,17 @@ export function ResourcePage({ resource }: { resource: Resource }) {
                     <small>CALCULATOR</small>
                     <h3>{resource.relatedCalculatorTitle ?? relatedCalculator.shortTitle}</h3>
                     <p>{relatedCalculator.description}</p>
-                    <Link href={`/calculators/${relatedCalculator.slug}`}>
+                    <TrackedLink
+                      href={`/calculators/${relatedCalculator.slug}`}
+                      label={resource.relatedCalculatorCta ?? "Try calculator"}
+                      pageType={resource.kind}
+                      pageSlug={resource.slug}
+                      pageTitle={resource.title}
+                      pageCategory={resource.category}
+                      section="related-tools"
+                    >
                       {resource.relatedCalculatorCta ?? "Try calculator"}
-                    </Link>
+                    </TrackedLink>
                   </article>
                 )}
                 {relatedResources.map((item) => {
@@ -303,13 +357,31 @@ export function ResourcePage({ resource }: { resource: Resource }) {
             </div>
             <div className="resource-end-cta-actions">
               {relatedCalculator ? (
-                <Link className="button button-primary" href={`/calculators/${relatedCalculator.slug}`}>
+                <TrackedLink
+                  className="button button-primary"
+                  href={`/calculators/${relatedCalculator.slug}`}
+                  label={resource.relatedCalculatorCta ?? "Try calculator"}
+                  pageType={resource.kind}
+                  pageSlug={resource.slug}
+                  pageTitle={resource.title}
+                  pageCategory={resource.category}
+                  section="resource-end-cta"
+                >
                   {resource.relatedCalculatorCta ?? "Try calculator"}
-                </Link>
+                </TrackedLink>
               ) : null}
-              <Link className="button button-secondary" href="#professional-advice">
+              <TrackedLink
+                className="button button-secondary"
+                href="#professional-advice"
+                label="Request advice"
+                pageType={resource.kind}
+                pageSlug={resource.slug}
+                pageTitle={resource.title}
+                pageCategory={resource.category}
+                section="resource-end-cta"
+              >
                 Request advice
-              </Link>
+              </TrackedLink>
             </div>
           </section>
         </article>
@@ -318,31 +390,55 @@ export function ResourcePage({ resource }: { resource: Resource }) {
             <span>NEED PERSONAL GUIDANCE?</span>
             <h2>Speak with a professional.</h2>
             <p>{conversionCopy.asideDescription}</p>
-            <Link className="button button-primary" href="#professional-advice">
+            <TrackedLink
+              className="button button-primary"
+              href="#professional-advice"
+              label="Request advice"
+              pageType={resource.kind}
+              pageSlug={resource.slug}
+              pageTitle={resource.title}
+              pageCategory={resource.category}
+              section="resource-aside"
+            >
               Request advice
-            </Link>
+            </TrackedLink>
           </aside>
           <aside className="resource-aside promo-card">
             <span>FOR ADVISERS</span>
             <h2>Explore Nikera Flow.</h2>
             <p>Mortgage CRM built for specialist mortgage journeys, protection workflows and adviser use cases.</p>
-            <a
+            <TrackedLink
               className="button button-primary"
               href="https://www.nikera.co.uk/products/nikera-flow"
+              label="Explore Nikera Flow"
+              pageType={resource.kind}
+              pageSlug={resource.slug}
+              pageTitle={resource.title}
+              pageCategory={resource.category}
+              section="resource-promo"
               target="_blank"
               rel="noreferrer"
             >
               Explore Nikera Flow
-            </a>
+            </TrackedLink>
           </aside>
           {relatedCalculator && (
             <aside className="resource-aside calculator-promo">
               <span>{resource.relatedCalculatorEyebrow ?? "CHECK YOUR ELIGIBILITY"}</span>
               <h2>{resource.relatedCalculatorTitle ?? relatedCalculator.shortTitle}</h2>
               <p>{relatedCalculator.description}</p>
-              <Link className="button button-primary" href={`/calculators/${relatedCalculator.slug}`}>
+              <TrackedLink
+                className="button button-primary"
+                href={`/calculators/${relatedCalculator.slug}`}
+                label={resource.relatedCalculatorCta ?? "Try calculator"}
+                pageType={resource.kind}
+                pageSlug={resource.slug}
+                pageTitle={resource.title}
+                pageCategory={resource.category}
+                section="resource-calculator-promo"
+              >
                 {resource.relatedCalculatorCta ?? "Try calculator"}
-              </Link>
+              </TrackedLink>
             </aside>
           )}
         </div>

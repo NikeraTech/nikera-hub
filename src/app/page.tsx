@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { TrackedLink } from "@/components/tracked-link";
 import { ArrowIcon, CalculatorIcon, GuideIcon, ShieldIcon, SparkIcon } from "@/components/icons";
 import { CalculatorCard } from "@/components/calculator-card";
 import { calculators } from "@/lib/calculators";
@@ -129,24 +130,42 @@ export default async function Home() {
                   <b>4.28%</b>
                 </span>
               </div>
-              <Link className="mock-result-link" href={heroAffordabilityHref}>
+              <TrackedLink
+                className="mock-result-link"
+                href={heroAffordabilityHref}
+                label="View your results"
+                pageType="home"
+                section="hero-card"
+              >
                 View your results <ArrowIcon />
-              </Link>
+              </TrackedLink>
             </div>
-            <Link className="float-card mini-card mini-top" href={heroRepaymentHref}>
+            <TrackedLink
+              className="float-card mini-card mini-top"
+              href={heroRepaymentHref}
+              label="Mortgage Calculator"
+              pageType="home"
+              section="hero-card"
+            >
               <span>£</span>
               <div>
                 <b>Mortgage Calculator</b>
                 <small>Instant personalised result</small>
               </div>
-            </Link>
-            <Link className="float-card mini-card mini-bottom" href="/blogs/understanding-mortgage-rates">
+            </TrackedLink>
+            <TrackedLink
+              className="float-card mini-card mini-bottom"
+              href="/blogs/understanding-mortgage-rates"
+              label="Bank Rate"
+              pageType="home"
+              section="hero-card"
+            >
               <span>%</span>
               <div>
                 <b>Bank Rate</b>
                 <small>Market data, explained</small>
               </div>
-            </Link>
+            </TrackedLink>
           </div>
         </div>
       </section>
@@ -218,9 +237,14 @@ export default async function Home() {
                     As of <time dateTime={figure.asOf}>{formatMarketDate(figure.asOf)}</time>
                   </span>
                   <div className="market-links">
-                    <Link href={figure.contextHref}>
+                    <TrackedLink
+                      href={figure.contextHref}
+                      label={figure.contextLabel}
+                      pageType="home"
+                      section="market-context"
+                    >
                       {figure.contextLabel} <ArrowIcon />
-                    </Link>
+                    </TrackedLink>
                     <a href={figure.href} target="_blank" rel="noreferrer">
                       Official source →
                     </a>
@@ -358,9 +382,15 @@ export default async function Home() {
                 Tell us what you need help with and we&apos;ll connect you with a trusted
                 professional.
               </p>
-              <Link className="button button-light" href="/request-advice">
+              <TrackedLink
+                className="button button-light"
+                href="/request-advice"
+                label="Request advice"
+                pageType="home"
+                section="advice-card"
+              >
                 Request advice <ArrowIcon />
-              </Link>
+              </TrackedLink>
               <small>No obligation. Just helpful guidance.</small>
             </aside>
             <aside className="advice-card promo-card">
@@ -370,14 +400,17 @@ export default async function Home() {
                 Mortgage CRM built for specialist mortgage journeys, protection workflows and
                 adviser use cases.
               </p>
-              <a
+              <TrackedLink
                 className="button button-light"
                 href="https://www.nikera.co.uk/products/nikera-flow"
+                label="Explore Nikera Flow"
+                pageType="home"
+                section="adviser-promo"
                 target="_blank"
                 rel="noreferrer"
               >
                 Explore Nikera Flow
-              </a>
+              </TrackedLink>
             </aside>
           </div>
         </div>
@@ -394,15 +427,33 @@ export default async function Home() {
             </p>
           </div>
           <div className="newsletter-actions">
-            <Link className="button button-primary" href="/blogs">
+            <TrackedLink
+              className="button button-primary"
+              href="/blogs"
+              label="Browse articles"
+              pageType="home"
+              section="newsletter"
+            >
               Browse articles <ArrowIcon />
-            </Link>
-            <Link className="button button-secondary" href="/expat-mortgages">
+            </TrackedLink>
+            <TrackedLink
+              className="button button-secondary"
+              href="/expat-mortgages"
+              label="Explore expat mortgages"
+              pageType="home"
+              section="newsletter"
+            >
               Explore expat mortgages
-            </Link>
-            <Link className="button button-secondary" href="/request-advice">
+            </TrackedLink>
+            <TrackedLink
+              className="button button-secondary"
+              href="/request-advice"
+              label="Request advice"
+              pageType="home"
+              section="newsletter"
+            >
               Request advice
-            </Link>
+            </TrackedLink>
             <small>
               General information only. Personal recommendations require an adviser review.
             </small>
