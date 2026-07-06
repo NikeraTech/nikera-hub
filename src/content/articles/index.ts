@@ -46,3 +46,7 @@ export const managedArticles = [
   ...phase3SpecialistBorrowingArticles,
   ...migratedLegacyArticles,
 ].map(withArticleTopic);
+
+export function getManagedArticleBySlug(slug: string): Resource | undefined {
+  return managedArticles.find((article) => article.slug === slug);
+}

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getResource } from "@/lib/resources";
+import { getManagedArticleBySlug } from "@/content/articles";
 import { createOgImage, getOgTheme, ogContentType, ogSize } from "@/lib/og";
 
 export const alt = "Nikera Hub article preview";
@@ -8,7 +8,7 @@ export const contentType = ogContentType;
 
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const resource = getResource("article", slug);
+  const resource = getManagedArticleBySlug(slug);
 
   if (!resource) {
     notFound();

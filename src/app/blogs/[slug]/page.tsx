@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ResourcePage } from "@/components/resource-page";
-import { articles, getResource } from "@/lib/resources";
+import { getManagedArticleBySlug, managedArticles } from "@/content/articles";
 import { buildMetadata } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return articles.map(({ slug }) => ({ slug }));
+  return managedArticles.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const resource = getResource("article", (await params).slug);
+  const resource = getManagedArticleBySlug((await params).slug);
 
   return resource
     ? buildMetadata({
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ArticleDetail({ params }: Props) {
-  const resource = getResource("article", (await params).slug);
+  const resource = getManagedArticleBySlug((await params).slug);
 
   if (!resource) notFound();
 
