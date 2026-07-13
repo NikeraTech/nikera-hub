@@ -2,6 +2,7 @@ import type { Resource, ResourceTopicSlug } from "@/lib/resource-types";
 import { phase1LanguageMortgageAdviserArticles } from "./phase1-language-mortgage-advisers";
 import { phase2LanguageInsuranceAdviserArticles } from "./phase2-language-insurance-advisers";
 import { phase3SpecialistBorrowingArticles } from "./phase3-specialist-borrowing";
+import { phase4ExpatExpansionArticles } from "./phase4-expat-expansion";
 import { migratedLegacyArticles } from "./legacy-migrated-articles";
 
 const articleTopicBySlug: Record<string, ResourceTopicSlug> = {
@@ -32,6 +33,12 @@ const articleTopicBySlug: Record<string, ResourceTopicSlug> = {
   "expat-remortgage-what-to-check": "expats",
   "buy-to-let-for-uk-expats-what-changes": "expats",
   "using-overseas-income-for-a-uk-mortgage": "cross-border-income",
+  "uk-mortgage-with-overseas-income-what-lenders-look-for": "cross-border-income",
+  "buying-a-uk-property-while-living-in-the-gulf": "expats",
+  "returning-to-the-uk-from-the-gulf-how-to-plan-your-mortgage": "expats",
+  "expat-mortgage-documents-checklist-for-uk-lenders": "cross-border-income",
+  "uk-expat-buy-to-let-from-abroad-what-to-check-first": "expats",
+  "nri-buying-property-in-the-uk-what-to-know-before-applying": "expats",
   "expat-deposit-source-checklist": "cross-border-income",
 };
 
@@ -44,6 +51,7 @@ export const managedArticles = [
   ...phase1LanguageMortgageAdviserArticles,
   ...phase2LanguageInsuranceAdviserArticles,
   ...phase3SpecialistBorrowingArticles,
+  ...phase4ExpatExpansionArticles,
   ...migratedLegacyArticles,
 ].map(withArticleTopic);
 
