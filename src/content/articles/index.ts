@@ -39,6 +39,7 @@ const articleTopicBySlug: Record<string, ResourceTopicSlug> = {
   "expat-mortgage-documents-checklist-for-uk-lenders": "cross-border-income",
   "uk-expat-buy-to-let-from-abroad-what-to-check-first": "expats",
   "nri-buying-property-in-the-uk-what-to-know-before-applying": "expats",
+  "bringing-deposit-funds-from-india-for-a-uk-property-what-to-prepare": "cross-border-income",
   "expat-deposit-source-checklist": "cross-border-income",
 };
 

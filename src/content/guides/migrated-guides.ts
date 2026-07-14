@@ -1,7 +1,169 @@
 import type { Resource } from '@/lib/resource-types';
 
 export const managedGuides: Resource[] = [
-{
+  {
+    slug: "uk-expat-and-nri-mortgage-guide",
+    kind: "guide",
+    category: "Expat mortgages",
+    title: "UK Expat and NRI Mortgage Guide",
+    description:
+      "A practical guide to UK mortgage planning for expats, returning residents, NRIs and overseas buyers.",
+    readTime: "18 min read",
+    published: "2026-07-13",
+    updated: "2026-07-13",
+    relatedCalculatorSlug: "mortgage-affordability",
+    relatedCalculatorEyebrow: "START THE PLAN",
+    relatedCalculatorTitle: "Check an illustrative affordability range before planning an expat or NRI purchase",
+    relatedCalculatorCta: "Check affordability",
+    sections: [
+      {
+        heading: "Why expat and NRI mortgage cases need a different approach",
+        paragraphs: [
+          "A UK mortgage case becomes more specialist when income, residence or deposit funds sit outside a standard UK-resident pattern. That applies to UK expats living abroad, returning residents, NRIs and overseas buyers who want property in Britain.",
+          "The main difference is not only where you live. It is how a lender assesses the whole case. Residency, currency, employment structure, deposit source and property purpose all start to matter more than they do in a straightforward domestic mortgage application.",
+          "That means broad mortgage guides are often not enough on their own. A case that looks strong in headline terms can still run into avoidable friction if the lender does not like the currency, the documentation trail or the way the purchase is being structured.",
+        ],
+        bullets: [
+          "Fewer lenders may fit the case",
+          "Deposit and source-of-funds evidence usually matter more",
+          "Online borrowing estimates should be treated as illustrative only",
+          "Property purpose needs to be clear from the start",
+        ],
+      },
+      {
+        heading: "Start with the real questions lenders will ask",
+        paragraphs: [
+          "Before looking at rates or trying to maximise borrowing, it helps to frame the application the way a lender is likely to see it. Who is the borrower, where do they live, where is the income earned, how stable is it and what is the UK property actually for?",
+          "These questions often shape the lender route more than the headline salary alone. A borrower planning a future move to the UK is different from an expat buying a buy-to-let. An NRI using Indian savings with family support is different from a returning resident with a confirmed UK job offer.",
+        ],
+        subsections: [
+          {
+            heading: "Residency and income are separate issues",
+            paragraphs: [
+              "You may live abroad with UK-linked goals, or plan to return while still being paid overseas. Lenders usually separate residence from income source because each affects a different part of policy.",
+            ],
+          },
+          {
+            heading: "Purpose changes the mortgage route",
+            paragraphs: [
+              "A future home, immediate rental investment and transitional purchase can each point toward a different lender pool or application structure.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Overseas income and affordability",
+        paragraphs: [
+          "Overseas income can be acceptable in many cases, but it is rarely treated in exactly the same way as a simple UK salary. Lenders may consider currency, employer profile, employment continuity, variable pay and how the income is converted into sterling.",
+          "This is why affordability calculators are useful planning tools but not decision tools. The lender may use a more cautious conversion method or apply policy adjustments that reduce the amount of income counted for affordability.",
+          "The practical question is not just how much you earn. It is how much of that income a lender suitable for your case is likely to use.",
+        ],
+        bullets: [
+          "Check whether the income currency is widely accepted",
+          "Do not assume bonuses or allowances count in full",
+          "Expect lender treatment to vary materially",
+          "Use affordability estimates as a baseline, not a promise",
+        ],
+      },
+      {
+        heading: "Deposit preparation and source-of-funds planning",
+        paragraphs: [
+          "Deposit evidence is one of the biggest friction points in expat and NRI cases. The issue is not only whether the money exists. It is whether the path of funds is clear enough for both the lender and the solicitor.",
+          "This becomes more important when funds come from overseas savings, family support, asset sales, business income or multiple accounts. The stronger the documentation, the easier the case usually becomes to assess.",
+        ],
+        bullets: [
+          "Keep statements showing how savings were built up",
+          "Document any major credits or transfers clearly",
+          "Separate gifted funds from personal savings",
+          "Do not assume the solicitor will accept less detail than the lender",
+        ],
+        subsections: [
+          {
+            heading: "Cross-border funds need a clean narrative",
+            paragraphs: [
+              "The best deposit files are usually not the most complicated. They are the easiest to explain. A short, clear money trail supported by statements is often better than a large but fragmented file.",
+            ],
+          },
+          {
+            heading: "Bigger deposit can help, but clarity still matters",
+            paragraphs: [
+              "A larger deposit may strengthen lender flexibility, but it does not remove source-of-funds checks. The evidence trail still needs to hold together.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Common expat and NRI mortgage journeys",
+        paragraphs: [
+          "Most enquiries in this area fall into a few repeat journeys. Recognising which one applies to you usually makes the next planning step clearer.",
+        ],
+        subsections: [
+          {
+            heading: "Buying from the Gulf while still living abroad",
+            paragraphs: [
+              "This often involves overseas income, fast-growing savings and a property plan in the UK that may be part-investment and part-future residence. Lender fit and deposit evidence matter heavily.",
+            ],
+          },
+          {
+            heading: "Returning to the UK in the near future",
+            paragraphs: [
+              "The key issue here is timing. The strongest application window depends on how fixed the return plan is, whether future UK income is documented and whether buying now is genuinely better than waiting.",
+            ],
+          },
+          {
+            heading: "NRI or overseas Indian buyer planning a UK purchase",
+            paragraphs: [
+              "These cases often involve family planning, cross-border savings and questions about whether the property is for future occupation or investment. Deposit source and income structure usually need careful presentation.",
+            ],
+          },
+          {
+            heading: "Expat buy-to-let from abroad",
+            paragraphs: [
+              "In these cases, rental stress testing, deposit level and property strategy become central. The case is usually less about personal affordability alone and more about whether the investment stands up under lender rules.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Documents to organise early",
+        paragraphs: [
+          "A clean document pack often makes as much difference as a strong income profile. Lenders want to trace identity, residence, earnings, banked funds and deposit source in a way that does not require repeated clarification.",
+          "The exact list varies, but most expat and NRI cases benefit from organising the paperwork before house-hunting gets serious.",
+        ],
+        bullets: [
+          "Passport and identity records",
+          "Current address evidence and address history",
+          "Income documents such as payslips, contracts or business records",
+          "Bank statements showing salary and savings trail",
+          "Deposit source evidence including gifts if relevant",
+          "Property details once a target purchase is identified",
+        ],
+      },
+      {
+        heading: "How to use calculators properly in specialist cases",
+        paragraphs: [
+          "Calculators are still valuable in specialist mortgage planning, but they need to be used for the right purpose. They help you frame the numbers, compare scenarios and avoid searching too far outside a realistic range.",
+          "What they do not do is replace lender policy. They do not know whether your currency is acceptable, whether the lender will use all of a foreign salary or whether a complex deposit trail will create delay.",
+          "That is why the best use of a calculator is to create an initial planning range and then pressure-test that range against the realities of the case.",
+        ],
+      },
+      {
+        heading: "When professional advice becomes worth it",
+        paragraphs: [
+          "Professional advice is usually most valuable when the case stops being generic. That happens quickly in expat and NRI borrowing. Overseas income, cross-border deposit funds, mixed residency, buy-to-let strategy and future relocation all make lender choice more policy-sensitive.",
+          "The goal is not simply to get an opinion. It is to narrow the lender route, understand what documents matter most and avoid taking a broad-market assumption into a specialist case.",
+        ],
+      },
+      {
+        heading: "A practical next-step plan",
+        paragraphs: [
+          "A useful sequence is usually: estimate affordability, decide the true property purpose, organise the deposit trail, assemble key documents and then review lender fit. That order creates more clarity than diving straight into property search or headline rates.",
+          "The cleaner the case story is before application, the easier the mortgage conversation becomes.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "first-time-buyer-guide",
     kind: "guide",
     category: "First-time buyers",

@@ -73,6 +73,7 @@ export const phase4ExpatExpansionArticles: Resource[] = [
     ],
     internalLinks: [
       { label: "Explore expat mortgage guidance", href: "/expat-mortgages" },
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
       { label: "Use the mortgage affordability calculator", href: "/calculators/mortgage-affordability" },
       { label: "Estimate deposit requirements", href: "/calculators/deposit" },
       { label: "Read the UK mortgages for expats guide", href: "/blogs/uk-mortgages-for-expats" },
@@ -372,6 +373,7 @@ export const phase4ExpatExpansionArticles: Resource[] = [
     ],
     internalLinks: [
       { label: "Explore expat mortgage guidance", href: "/expat-mortgages" },
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
       { label: "Check mortgage affordability", href: "/calculators/mortgage-affordability" },
       { label: "Estimate your deposit needs", href: "/calculators/deposit" },
       { label: "Read about overseas income lender checks", href: "/blogs/uk-mortgage-with-overseas-income-what-lenders-look-for" },
@@ -673,6 +675,7 @@ export const phase4ExpatExpansionArticles: Resource[] = [
     ],
     internalLinks: [
       { label: "Explore expat mortgage guidance", href: "/expat-mortgages" },
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
       { label: "Check mortgage affordability", href: "/calculators/mortgage-affordability" },
       { label: "Estimate deposit requirements", href: "/calculators/deposit" },
       { label: "Read about overseas income lender checks", href: "/blogs/uk-mortgage-with-overseas-income-what-lenders-look-for" },
@@ -974,6 +977,7 @@ export const phase4ExpatExpansionArticles: Resource[] = [
     ],
     internalLinks: [
       { label: "Explore expat mortgage guidance", href: "/expat-mortgages" },
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
       { label: "Check mortgage affordability", href: "/calculators/mortgage-affordability" },
       { label: "Estimate your deposit requirement", href: "/calculators/deposit" },
       { label: "Read about overseas income checks", href: "/blogs/uk-mortgage-with-overseas-income-what-lenders-look-for" },
@@ -1325,6 +1329,7 @@ export const phase4ExpatExpansionArticles: Resource[] = [
     ],
     internalLinks: [
       { label: "Explore expat mortgage guidance", href: "/expat-mortgages" },
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
       { label: "Check mortgage affordability", href: "/calculators/mortgage-affordability" },
       { label: "Estimate deposit requirements", href: "/calculators/deposit" },
       { label: "Read about buying from the Gulf", href: "/blogs/buying-a-uk-property-while-living-in-the-gulf" },
@@ -1653,6 +1658,7 @@ export const phase4ExpatExpansionArticles: Resource[] = [
     ],
     internalLinks: [
       { label: "Explore expat mortgage guidance", href: "/expat-mortgages" },
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
       { label: "Check mortgage affordability", href: "/calculators/mortgage-affordability" },
       { label: "Estimate deposit requirements", href: "/calculators/deposit" },
       { label: "Read the expat documents checklist", href: "/blogs/expat-mortgage-documents-checklist-for-uk-lenders" },
@@ -1907,6 +1913,288 @@ export const phase4ExpatExpansionArticles: Resource[] = [
         paragraphs: [
           "If you are exploring a UK purchase as an NRI or overseas Indian buyer, start with an illustrative affordability check and then test that against your actual deposit, documents and property purpose.",
           "If the case involves overseas income, family-supported deposit funds or future relocation plans, professional guidance can help you choose a route that is realistic before you commit.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "bringing-deposit-funds-from-india-for-a-uk-property-what-to-prepare",
+    kind: "article",
+    category: "Expat mortgages",
+    title: "Bringing deposit funds from India for a UK property: what to prepare",
+    description:
+      "A practical guide to evidencing, moving and explaining deposit funds from India for a UK property purchase, including lender and solicitor checks.",
+    readTime: "15 min read",
+    published: "2026-07-13",
+    updated: "2026-07-13",
+    keywords: [
+      "bringing deposit funds from India for UK property",
+      "deposit from India to buy house in UK",
+      "India to UK property deposit evidence",
+      "UK mortgage deposit from India",
+      "NRI deposit funds UK property",
+      "source of funds India UK property",
+    ],
+    faq: [
+      {
+        question: "Can deposit funds from India be used to buy property in the UK?",
+        answer:
+          "Potentially yes, but the source of funds, transfer trail and supporting documents usually need to be evidenced clearly for both the lender and the solicitor.",
+      },
+      {
+        question: "Is this only relevant if the deposit is a family gift?",
+        answer:
+          "No. It can also apply to personal savings, business income, asset-sale proceeds or mixed sources, not only gifted money.",
+      },
+      {
+        question: "Will lenders ask where the money came from?",
+        answer:
+          "Yes. Source-of-funds checks are usually important, especially where money has been accumulated or transferred internationally.",
+      },
+      {
+        question: "Do solicitors also check deposit funds from India?",
+        answer:
+          "Usually yes. Conveyancers commonly perform their own anti-money-laundering and source-of-funds checks alongside lender requirements.",
+      },
+      {
+        question: "Are multiple transfers a problem?",
+        answer:
+          "Not automatically, but a more complex transfer path often means more questions. A cleaner and better-explained trail is usually easier to evidence.",
+      },
+      {
+        question: "Should I move the money before I find a property?",
+        answer:
+          "That depends on the case, but it is often sensible to plan the evidence trail early rather than waiting until the purchase becomes urgent.",
+      },
+      {
+        question: "Can a deposit include both personal savings and family support?",
+        answer:
+          "Potentially yes, but each source should usually be documented separately and clearly so the overall trail remains easy to follow.",
+      },
+      {
+        question: "Will an affordability calculator answer this issue?",
+        answer:
+          "No. A calculator can help with planning the amount, but it does not solve source-of-funds or document questions.",
+      },
+      {
+        question: "Is this article legal or tax advice?",
+        answer:
+          "No. It is general educational guidance only. You should speak to a qualified adviser or solicitor for advice on your specific situation.",
+      },
+      {
+        question: "What causes the biggest delays?",
+        answer:
+          "The main causes are unclear source of funds, incomplete statements, unexplained transfers and trying to reconstruct the money trail too late.",
+      },
+    ],
+    internalLinks: [
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
+      { label: "Estimate deposit requirements", href: "/calculators/deposit" },
+      { label: "Read the NRI UK property article", href: "/blogs/nri-buying-property-in-the-uk-what-to-know-before-applying" },
+      { label: "Read the gifted deposit from India article", href: "/blogs/gifted-deposit-from-family-in-india-to-buy-a-uk-home" },
+      { label: "Read the expat documents checklist", href: "/blogs/expat-mortgage-documents-checklist-for-uk-lenders" },
+      { label: "Read the expat deposit source checklist", href: "/blogs/expat-deposit-source-checklist" },
+      { label: "Request professional advice", href: "/request-advice" },
+    ],
+    authorityLinks: [
+      {
+        label: "MoneyHelper: buying a home",
+        href: "https://www.moneyhelper.org.uk/en/homes/buying-a-home",
+      },
+      {
+        label: "GOV.UK guidance on money laundering regulations",
+        href: "https://www.gov.uk/guidance/money-laundering-regulations-your-responsibilities",
+      },
+      {
+        label: "FCA guidance on finding an adviser",
+        href: "https://www.fca.org.uk/consumers/finding-adviser",
+      },
+      {
+        label: "GOV.UK guidance on buying, owning and renting property",
+        href: "https://www.gov.uk/browse/housing-local-services/owning-renting-property",
+      },
+    ],
+    relatedCalculatorSlug: "deposit",
+    relatedCalculatorEyebrow: "PLAN YOUR DEPOSIT",
+    relatedCalculatorTitle: "Estimate an illustrative deposit target before organising funds from India",
+    relatedCalculatorCta: "Estimate deposit",
+    sections: [
+      {
+        heading: "Introduction",
+        paragraphs: [
+          "Using deposit funds from India to buy property in the UK can be entirely workable, but the practical difficulty is usually not the existence of the money. It is the evidence behind the money. Lenders and solicitors typically want to understand where the funds came from, how they have been held and how they moved into the purchase.",
+          "This matters whether the money is personal savings, family support, business income, proceeds from a sale or a combination of several sources. Once funds move across borders, the paper trail becomes a bigger part of the case.",
+          "Many borrowers focus first on affordability, which is understandable, but deposit evidence can be just as important. A clean source-of-funds trail often saves more time than trying to optimise a marginal borrowing figure.",
+          "This guide explains what to prepare when deposit funds are coming from India for a UK property purchase. It is educational and planning-focused. Figures are illustrative only and not financial or legal advice.",
+        ],
+      },
+      {
+        heading: "Why people search for this service",
+        paragraphs: [
+          "People search for this topic because ordinary UK home-buying articles rarely explain cross-border deposit preparation properly. They may explain how much deposit is needed, but not what happens when the money is overseas, has moved through several accounts or needs to be evidenced to both lender and solicitor.",
+          "This is a common issue for NRIs, Indian nationals, UK residents receiving support from India and families planning UK property purchases together. The practical questions are usually straightforward: can this money be used, what documents will be needed and when should the trail be organised?",
+          "The search intent is highly practical. Users are not looking for generic encouragement. They want to avoid delay, confusion and last-minute problems once a purchase starts moving.",
+        ],
+        subsections: [
+          {
+            heading: "This is often a timing issue as much as a compliance issue",
+            paragraphs: [
+              "The same deposit can be manageable when prepared early and stressful when explained late. Timing is a major part of the problem.",
+            ],
+          },
+          {
+            heading: "The amount matters less than the clarity of the trail",
+            paragraphs: [
+              "Borrowers often assume the larger the deposit, the less scrutiny it receives. In practice, larger or more complex deposits can lead to more questions, not fewer.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "What lenders and solicitors usually want to know",
+        paragraphs: [
+          "The basic question is simple: what is the true source of the money? But the answer often needs structure. The professional reviewing the case needs to understand whether the deposit comes from savings, income, gifts, sale proceeds or another legitimate source and how that source can be evidenced.",
+          "The solicitor is also likely to ask similar questions, because source-of-funds checks are not only a lender issue. That is why it helps to think of deposit evidence as part of the purchase plan rather than a separate admin task.",
+        ],
+        bullets: [
+          "Where the money originally came from",
+          "How long it has been held",
+          "Which accounts the money has moved through",
+          "Whether any part is gifted or family-supported",
+          "Whether major transfers can be explained clearly",
+          "Whether statements and identity records line up consistently",
+        ],
+        subsections: [
+          {
+            heading: "A simple narrative is valuable",
+            paragraphs: [
+              "The stronger cases are usually the ones where the path of funds can be explained in a few clear steps, supported by statements and records.",
+            ],
+          },
+          {
+            heading: "The checks do not disappear because the funds are genuine",
+            paragraphs: [
+              "Borrowers sometimes assume that if the money is legitimate, the process should be easy. Legitimate funds still need evidence. That is the practical reality.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Common deposit scenarios involving India",
+        paragraphs: [
+          "Although every case is different, a few patterns come up repeatedly when funds are being used from India for a UK purchase.",
+        ],
+        subsections: [
+          {
+            heading: "Personal savings built up over time",
+            paragraphs: [
+              "This is often the cleanest route, provided statements show how the money accumulated and where it has been held.",
+            ],
+          },
+          {
+            heading: "Family-supported or gifted deposit",
+            paragraphs: [
+              "This is common and often workable, but the donor and source of donor funds usually need to be documented clearly. It should not be blended vaguely into the borrower's own savings trail.",
+            ],
+          },
+          {
+            heading: "Sale proceeds or business-linked funds",
+            paragraphs: [
+              "Where the deposit comes from an asset sale or business-related source, the evidence trail may need to show both the origin of the proceeds and the movement of funds afterward.",
+            ],
+          },
+          {
+            heading: "Mixed-source deposit",
+            paragraphs: [
+              "A deposit made up of personal savings, family help and transferred funds can still work, but the more sources involved, the more important clear separation becomes.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "What documents usually help",
+        paragraphs: [
+          "The exact document list varies, but most cases benefit from the same principle: each part of the money trail should be capable of standing on its own. If the deposit has multiple sources, each source should have its own evidence path.",
+          "This is where many delays begin. The issue is often not missing money. It is missing explanation.",
+        ],
+        bullets: [
+          "Bank statements showing deposit build-up",
+          "Statements showing transfer path where money moved between accounts",
+          "Evidence for major lump sums or credits",
+          "Gift letters or donor records where relevant",
+          "Sale or income evidence where funds came from a specific event",
+          "Identity and address documents that align with the case",
+        ],
+        subsections: [
+          {
+            heading: "Do not rely on one final account balance alone",
+            paragraphs: [
+              "A balance proves the money exists. It does not usually prove where it came from. The source trail is what matters.",
+            ],
+          },
+          {
+            heading: "Cross-border movement should be easy to trace",
+            paragraphs: [
+              "If the funds moved from India into another account or into sterling, those steps should be easy to follow from the records rather than left to assumption.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Things to consider before moving the money",
+        paragraphs: [
+          "A common mistake is moving money first and trying to explain it later. Sometimes that works, but it often creates avoidable friction if the paper trail becomes fragmented or if different sources are mixed together too early.",
+          "A better approach is usually to decide what the source-of-funds story is, check what evidence exists for each part and then move the money in a way that keeps the trail understandable.",
+        ],
+        bullets: [
+          "Avoid unnecessary account hops where possible",
+          "Keep source records before and after transfer",
+          "Separate personal savings from gifts clearly",
+          "Use calculators for amount planning, not compliance planning",
+          "Keep 'illustrative only' wording in mind when assessing deposit targets",
+        ],
+        subsections: [
+          {
+            heading: "Cleaner routes are usually easier than clever routes",
+            paragraphs: [
+              "Trying to optimise the transfer path too aggressively can make the evidence trail harder to follow. Simplicity usually helps.",
+            ],
+          },
+          {
+            heading: "The lender and the solicitor may ask at different times",
+            paragraphs: [
+              "Even if one party is satisfied early, the other may still want more explanation later. Planning for both reduces surprises.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "How this fits with NRI and overseas-buyer cases",
+        paragraphs: [
+          "For NRI and other overseas-buyer cases, deposit preparation is rarely separate from the rest of the mortgage file. It sits alongside overseas income, identity, address history and property purpose. That is why a weak deposit trail can undermine an otherwise strong case.",
+          "The practical takeaway is that deposit evidence should be treated as one of the first planning tasks, not one of the last. A clear funds trail usually improves the whole application conversation.",
+        ],
+      },
+      {
+        heading: "Frequently asked questions",
+        paragraphs: [
+          "The recurring questions are always similar: can the money be used, what proof is needed and when should the explanation be prepared. Those are the right questions because source-of-funds clarity is one of the main things that affects cross-border purchase speed.",
+          "In most cases, the issue is not whether Indian-origin funds are acceptable in principle. The issue is whether the evidence is clear enough for professionals to rely on comfortably.",
+        ],
+      },
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "Deposit funds from India can absolutely be part of a workable UK property purchase, but the case is usually stronger when the money trail is planned early and explained clearly. Personal savings, family support and mixed sources can all work if the path is coherent.",
+          "The main point is straightforward: do not treat source-of-funds evidence as a late-stage formality. In many cross-border cases, it is one of the central parts of the application.",
+          "If the deposit story is clear, the rest of the mortgage conversation usually becomes easier to manage.",
+        ],
+      },
+      {
+        heading: "Call to action",
+        paragraphs: [
+          "If your UK purchase depends on deposit funds from India, start by estimating the amount you need and then map the evidence trail before the property process becomes urgent.",
+          "If the deposit involves multiple sources, gifts or overseas transfers, professional guidance can help you avoid a preventable source-of-funds problem later.",
         ],
       },
     ],

@@ -535,6 +535,7 @@ export const phase3SpecialistBorrowingArticles: Resource[] = [
     ],
     internalLinks: [
       { label: "Use the deposit calculator", href: "/calculators/deposit" },
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
       { label: "Read the expat deposit source checklist", href: "/blogs/expat-deposit-source-checklist" },
       { label: "Read how much deposit you may need", href: "/blogs/how-much-deposit-do-you-need" },
       { label: "Request professional advice", href: "/request-advice" },
@@ -639,6 +640,7 @@ export const phase3SpecialistBorrowingArticles: Resource[] = [
     ],
     internalLinks: [
       { label: "Use the deposit calculator", href: "/calculators/deposit" },
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
       { label: "Read the gifted deposit from India article", href: "/blogs/gifted-deposit-from-family-in-india-to-buy-a-uk-home" },
       { label: "Read the first-time buyer guide", href: "/guides/first-time-buyer-guide" },
       { label: "Request professional advice", href: "/request-advice" },

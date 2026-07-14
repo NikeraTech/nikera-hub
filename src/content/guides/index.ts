@@ -6,6 +6,7 @@ type GuideEnhancement = Pick<Resource, "keywords" | "faq" | "internalLinks" | "a
 
 const commonGuideLinks = [{ label: "Request professional advice", href: "/request-advice" }];
 const guideTopicBySlug: Record<string, ResourceTopicSlug> = {
+  "uk-expat-and-nri-mortgage-guide": "expats",
   "first-time-buyer-guide": "first-time-buyers",
   "remortgaging-explained": "remortgaging",
   "life-insurance-explained": "protection",
@@ -15,6 +16,51 @@ const guideTopicBySlug: Record<string, ResourceTopicSlug> = {
 };
 
 const guideEnhancements: Record<string, GuideEnhancement> = {
+  "uk-expat-and-nri-mortgage-guide": {
+    keywords: [
+      "UK expat mortgage guide",
+      "NRI mortgage guide UK",
+      "UK mortgage for overseas buyers guide",
+      "expat and NRI property guide UK",
+    ],
+    faq: [
+      {
+        question: "Can expats and NRIs get a UK mortgage?",
+        answer:
+          "Potentially yes. Many cases are workable, but lender fit, income source, deposit evidence and property purpose usually matter more than in standard UK resident borrowing.",
+      },
+      {
+        question: "Is overseas income accepted by UK lenders?",
+        answer:
+          "Sometimes yes, but treatment varies by lender, currency, employment structure and the quality of the supporting evidence.",
+      },
+      {
+        question: "Do expat buyers usually need a larger deposit?",
+        answer:
+          "Often they may need a stronger deposit than a straightforward UK resident case, although the exact requirement depends on lender policy and the profile of the case.",
+      },
+      {
+        question: "Are calculator results enough to rely on?",
+        answer:
+          "No. They are useful as illustrative planning tools, but lender-specific policy and documentation still determine what is realistic.",
+      },
+    ],
+    internalLinks: [
+      { label: "Explore expat mortgages", href: "/expat-mortgages" },
+      { label: "Use the mortgage affordability calculator", href: "/calculators/mortgage-affordability" },
+      { label: "Read the NRI UK property article", href: "/blogs/nri-buying-property-in-the-uk-what-to-know-before-applying" },
+      {
+        label: "Read about overseas income lender checks",
+        href: "/blogs/uk-mortgage-with-overseas-income-what-lenders-look-for",
+      },
+      ...commonGuideLinks,
+    ],
+    authorityLinks: [
+      { label: "MoneyHelper: buying a home", href: "https://www.moneyhelper.org.uk/en/homes/buying-a-home" },
+      { label: "FCA guidance on finding an adviser", href: "https://www.fca.org.uk/consumers/finding-adviser" },
+      { label: "GOV.UK guidance for living abroad and returning", href: "https://www.gov.uk/browse/abroad" },
+    ],
+  },
   "first-time-buyer-guide": {
     keywords: [
       "first time buyer guide UK",

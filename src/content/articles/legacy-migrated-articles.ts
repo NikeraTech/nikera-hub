@@ -510,6 +510,12 @@ export const migratedLegacyArticles: Resource[] = [
     relatedCalculatorEyebrow: "CHECK AFFORDABILITY",
     relatedCalculatorTitle: "See an illustrative UK borrowing range",
     relatedCalculatorCta: "Check affordability",
+    internalLinks: [
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
+      { label: "Explore expat mortgages", href: "/expat-mortgages" },
+      { label: "Use the mortgage affordability calculator", href: "/calculators/mortgage-affordability" },
+      { label: "Request professional advice", href: "/request-advice" },
+    ],
     sections: [
       {
         heading: "Why expat mortgage cases are treated differently",
@@ -579,6 +585,12 @@ export const migratedLegacyArticles: Resource[] = [
     relatedCalculatorEyebrow: "PLAN YOUR DEPOSIT",
     relatedCalculatorTitle: "Estimate the deposit you may need",
     relatedCalculatorCta: "Estimate deposit",
+    internalLinks: [
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
+      { label: "Explore expat mortgages", href: "/expat-mortgages" },
+      { label: "Use the mortgage affordability calculator", href: "/calculators/mortgage-affordability" },
+      { label: "Request professional advice", href: "/request-advice" },
+    ],
     sections: [
       {
         heading: "Returning home does not automatically simplify the mortgage",
@@ -648,6 +660,12 @@ export const migratedLegacyArticles: Resource[] = [
     relatedCalculatorEyebrow: "COMPARE SAVINGS",
     relatedCalculatorTitle: "Estimate whether remortgaging could save money",
     relatedCalculatorCta: "Compare remortgage savings",
+    internalLinks: [
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
+      { label: "Explore expat mortgages", href: "/expat-mortgages" },
+      { label: "Use the remortgage savings calculator", href: "/calculators/remortgage-savings" },
+      { label: "Request professional advice", href: "/request-advice" },
+    ],
     sections: [
       {
         heading: "The cheapest-looking deal may not be available to you",
@@ -717,6 +735,12 @@ export const migratedLegacyArticles: Resource[] = [
     relatedCalculatorEyebrow: "CHECK RENTAL COVER",
     relatedCalculatorTitle: "See whether the rent may support the mortgage",
     relatedCalculatorCta: "Check rental cover",
+    internalLinks: [
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
+      { label: "Explore expat mortgages", href: "/expat-mortgages" },
+      { label: "Read the newer expat buy-to-let guide", href: "/blogs/uk-expat-buy-to-let-from-abroad-what-to-check-first" },
+      { label: "Request professional advice", href: "/request-advice" },
+    ],
     sections: [
       {
         heading: "Expat buy-to-let is its own lending niche",
@@ -788,6 +812,12 @@ export const migratedLegacyArticles: Resource[] = [
     relatedCalculatorEyebrow: "TEST THE NUMBERS",
     relatedCalculatorTitle: "Get an illustrative affordability starting point",
     relatedCalculatorCta: "Check affordability",
+    internalLinks: [
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
+      { label: "Explore expat mortgages", href: "/expat-mortgages" },
+      { label: "Read the newer overseas income guide", href: "/blogs/uk-mortgage-with-overseas-income-what-lenders-look-for" },
+      { label: "Request professional advice", href: "/request-advice" },
+    ],
     sections: [
       {
         heading: "Overseas income can be acceptable, but not on the same terms everywhere",
@@ -863,6 +893,12 @@ export const migratedLegacyArticles: Resource[] = [
     relatedCalculatorEyebrow: "ESTIMATE DEPOSIT",
     relatedCalculatorTitle: "Estimate the deposit level you may need",
     relatedCalculatorCta: "Estimate deposit",
+    internalLinks: [
+      { label: "Read the full expat and NRI mortgage guide", href: "/guides/uk-expat-and-nri-mortgage-guide" },
+      { label: "Explore expat mortgages", href: "/expat-mortgages" },
+      { label: "Read the India deposit-funds guide", href: "/blogs/bringing-deposit-funds-from-india-for-a-uk-property-what-to-prepare" },
+      { label: "Request professional advice", href: "/request-advice" },
+    ],
     sections: [
       {
         heading: "The deposit is not only about the amount",

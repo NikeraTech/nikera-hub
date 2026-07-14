@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { Suspense } from "react";
 import { CalculatorCard } from "./calculator-card";
 import { ContactForm } from "./contact-form";
@@ -146,7 +146,28 @@ export function MortgagePage() {
 }
 
 export function ExpatMortgagesPage() {
-  const expatArticles = resourceArticles.filter((article) => article.category.toLowerCase().includes("expat"));
+  const expatGuide = resourceGuides.find((guide) => guide.slug === "uk-expat-and-nri-mortgage-guide");
+  const featuredExpatSlugs = [
+    "buying-a-uk-property-while-living-in-the-gulf",
+    "returning-to-the-uk-from-the-gulf-how-to-plan-your-mortgage",
+    "uk-expat-buy-to-let-from-abroad-what-to-check-first",
+    "nri-buying-property-in-the-uk-what-to-know-before-applying",
+  ];
+  const supportingCrossBorderSlugs = [
+    "uk-mortgage-with-overseas-income-what-lenders-look-for",
+    "expat-mortgage-documents-checklist-for-uk-lenders",
+    "bringing-deposit-funds-from-india-for-a-uk-property-what-to-prepare",
+    "expat-deposit-source-checklist",
+    "using-overseas-income-for-a-uk-mortgage",
+  ];
+
+  const featuredExpatArticles = featuredExpatSlugs
+    .map((slug) => resourceArticles.find((article) => article.slug === slug))
+    .filter((article): article is NonNullable<typeof article> => Boolean(article));
+
+  const supportingExpatArticles = supportingCrossBorderSlugs
+    .map((slug) => resourceArticles.find((article) => article.slug === slug))
+    .filter((article): article is NonNullable<typeof article> => Boolean(article));
 
   return (
     <main id="main">
@@ -183,6 +204,36 @@ export function ExpatMortgagesPage() {
           </div>
         </div>
       </section>
+      {expatGuide ? (
+        <section className="inner-section">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="kicker">PILLAR GUIDE</span>
+                <h2>Start with the full expat and NRI mortgage guide</h2>
+                <p>
+                  If you want one place to understand expat, returning-resident and NRI mortgage
+                  planning before diving into specific articles, start here.
+                </p>
+              </div>
+              <Link href={`/guides/${expatGuide.slug}`}>
+                Read the guide <ArrowIcon />
+              </Link>
+            </div>
+            <article className="resource-tile">
+              <GuideIcon />
+              <small>
+                {expatGuide.category} · {expatGuide.readTime}
+              </small>
+              <h3>{expatGuide.title}</h3>
+              <p>{expatGuide.description}</p>
+              <Link href={`/guides/${expatGuide.slug}`}>
+                Read guide <ArrowIcon />
+              </Link>
+            </article>
+          </div>
+        </section>
+      ) : null}
       <section className="inner-section soft-bg">
         <div className="container">
           <div className="section-heading">
@@ -209,15 +260,47 @@ export function ExpatMortgagesPage() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="kicker">EXPAT ARTICLES</span>
-              <h2>Read the details that matter before you apply</h2>
-            </div>
+              <span className="kicker">CORE EXPAT JOURNEYS</span>
+              <h2>Start with the expat scenarios most people need help with</h2>
+              </div>
             <Link href="/blogs">
               Browse all articles <ArrowIcon />
             </Link>
           </div>
           <div className="feature-grid">
-            {expatArticles.map((article) => (
+            {featuredExpatArticles.map((article) => (
+              <article className="resource-tile" key={article.slug}>
+                <GuideIcon />
+                <small>
+                  {article.category} · {article.readTime}
+                </small>
+                <h3>{article.title}</h3>
+                <p>{article.description}</p>
+                <Link href={`/blogs/${article.slug}`}>
+                  Read article <ArrowIcon />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="inner-section soft-bg">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="kicker">SUPPORTING CHECKLISTS</span>
+              <h2>Then check the lender details that usually shape the case</h2>
+              <p>
+                These supporting articles cover overseas income, documentation and deposit evidence
+                that often decide whether an expat case is actually ready for application.
+              </p>
+            </div>
+            <Link href="/request-advice">
+              Request advice <ArrowIcon />
+            </Link>
+          </div>
+          <div className="feature-grid">
+            {supportingExpatArticles.map((article) => (
               <article className="resource-tile" key={article.slug}>
                 <GuideIcon />
                 <small>
@@ -252,6 +335,7 @@ export function ExpatMortgagesPage() {
 }
 
 export function GuidesPage() {
+  const expatGuide = resourceGuides.find((guide) => guide.slug === "uk-expat-and-nri-mortgage-guide");
   const { liveTopics } = buildContentTopics({
     guides: resourceGuides,
     articles: resourceArticles,
@@ -293,6 +377,36 @@ export function GuidesPage() {
               See supporting articles <ArrowIcon />
             </Link>
           </div>
+          {expatGuide ? (
+            <div className="section-heading">
+              <div>
+                <span className="kicker">FEATURED GUIDE</span>
+                <h2>Start here for expat and NRI mortgage planning</h2>
+                <p>
+                  This pillar guide brings together the main expat, returning-resident and NRI
+                  mortgage questions in one place before you move into the more specific articles.
+                </p>
+              </div>
+              <Link href={`/guides/${expatGuide.slug}`}>
+                Read the expat guide <ArrowIcon />
+              </Link>
+            </div>
+          ) : null}
+          {expatGuide ? (
+            <div className="feature-grid">
+              <article className="resource-tile">
+                <GuideIcon />
+                <small>
+                  {expatGuide.category} · {expatGuide.readTime}
+                </small>
+                <h3>{expatGuide.title}</h3>
+                <p>{expatGuide.description}</p>
+                <Link href={`/guides/${expatGuide.slug}`}>
+                  Read guide <ArrowIcon />
+                </Link>
+              </article>
+            </div>
+          ) : null}
           <div className="architecture-grid">
             {guideTopics.map((topic) => (
               <article className="architecture-card" key={topic.slug}>
@@ -348,6 +462,17 @@ export function BlogsPage() {
       "how-self-employed-borrowers-can-improve-mortgage-affordability",
       "gifted-deposit-from-family-in-india-to-buy-a-uk-home",
       "using-family-support-for-a-uk-deposit-what-lenders-check",
+    ].includes(article.slug),
+  );
+  const phase4ExpatArticles = resourceArticles.filter((article) =>
+    [
+      "uk-mortgage-with-overseas-income-what-lenders-look-for",
+      "buying-a-uk-property-while-living-in-the-gulf",
+      "returning-to-the-uk-from-the-gulf-how-to-plan-your-mortgage",
+      "expat-mortgage-documents-checklist-for-uk-lenders",
+      "uk-expat-buy-to-let-from-abroad-what-to-check-first",
+      "nri-buying-property-in-the-uk-what-to-know-before-applying",
+      "bringing-deposit-funds-from-india-for-a-uk-property-what-to-prepare",
     ].includes(article.slug),
   );
   const { liveTopics, plannedTopics } = buildContentTopics({
@@ -458,7 +583,7 @@ export function BlogsPage() {
                 <article className="resource-tile" key={article.slug}>
                   <GuideIcon />
                   <small>
-                    {article.category} Â· {article.readTime}
+                    {article.category} · {article.readTime}
                   </small>
                   <h3>{article.title}</h3>
                   <p>{article.description}</p>
@@ -492,7 +617,41 @@ export function BlogsPage() {
                 <article className="resource-tile" key={article.slug}>
                   <GuideIcon />
                   <small>
-                    {article.category} Â· {article.readTime}
+                    {article.category} · {article.readTime}
+                  </small>
+                  <h3>{article.title}</h3>
+                  <p>{article.description}</p>
+                  <Link href={`/blogs/${article.slug}`}>
+                    Read article <ArrowIcon />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {phase4ExpatArticles.length > 0 && (
+        <section className="inner-section">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="kicker">PHASE 4 EXPAT CLUSTER</span>
+                <h2>Expat, overseas income and NRI-focused mortgage content</h2>
+                <p>
+                  High-intent articles built around expat planning, cross-border income,
+                  buy-to-let from abroad and NRI-led UK property journeys.
+                </p>
+              </div>
+              <Link href="/expat-mortgages">
+                Explore expat mortgages <ArrowIcon />
+              </Link>
+            </div>
+            <div className="feature-grid">
+              {phase4ExpatArticles.map((article) => (
+                <article className="resource-tile" key={article.slug}>
+                  <GuideIcon />
+                  <small>
+                    {article.category} · {article.readTime}
                   </small>
                   <h3>{article.title}</h3>
                   <p>{article.description}</p>
@@ -775,3 +934,5 @@ export function PrivacyPage() {
 export function TermsPage() {
   return <LegalPage type="terms" />;
 }
+
+
