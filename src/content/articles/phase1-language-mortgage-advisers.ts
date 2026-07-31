@@ -270,6 +270,200 @@ function createLanguageMortgageAdviserArticle({
   };
 }
 
+function createLanguageMortgageFirstTimeBuyerArticle({
+  language,
+  adjective,
+  communityLabel,
+}: LanguageMortgageArticleInput): Resource {
+  const languageLower = language.toLowerCase();
+
+  return {
+    slug: `how-a-${languageLower}-speaking-mortgage-adviser-can-help-first-time-buyers-in-the-uk`,
+    kind: "article",
+    category: "Language-specific mortgage advice",
+    title: `How a ${language}-speaking mortgage adviser can help first-time buyers in the UK`,
+    description: `A practical guide for first-time buyers who want clearer mortgage conversations in ${language} while planning a UK home purchase.`,
+    readTime: "14 min read",
+    published: "2026-07-31",
+    updated: "2026-07-31",
+    keywords: [
+      `${language}-speaking mortgage adviser first-time buyer UK`,
+      `${language} mortgage adviser UK first-time buyer`,
+      `first-time buyer mortgage adviser ${language}`,
+      `${language} mortgage broker for first-time buyers UK`,
+      `${language} home buying advice UK`,
+    ],
+    internalLinks: [
+      {
+        label: `Read the main ${language}-speaking mortgage adviser guide`,
+        href: `/blogs/why-you-need-a-${languageLower}-speaking-mortgage-adviser-in-the-uk`,
+      },
+      { label: "Use the mortgage affordability calculator", href: "/calculators/mortgage-affordability" },
+      { label: "Estimate the deposit you may need", href: "/calculators/deposit" },
+      { label: "Read the first-time buyer guide", href: "/guides/first-time-buyer-guide" },
+      { label: "Request professional advice", href: "/request-advice" },
+    ],
+    authorityLinks: [
+      {
+        label: "MoneyHelper: buying a home",
+        href: "https://www.moneyhelper.org.uk/en/homes/buying-a-home",
+      },
+      {
+        label: "MoneyHelper: mortgage advice and choosing a mortgage",
+        href: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/choosing-a-mortgage-shop-around-or-get-advice",
+      },
+      {
+        label: "FCA guidance on finding an adviser",
+        href: "https://www.fca.org.uk/consumers/finding-adviser",
+      },
+    ],
+    relatedCalculatorSlug: "mortgage-affordability",
+    relatedCalculatorEyebrow: "FIRST-TIME BUYER TOOL",
+    relatedCalculatorTitle: "See an illustrative borrowing range before speaking to an adviser",
+    relatedCalculatorCta: "Check affordability",
+    faq: [
+      {
+        question: `Why might a first-time buyer want a ${language}-speaking mortgage adviser?`,
+        answer: `Many first-time buyers want clearer explanations around deposits, affordability, lender checks and the buying process in the language they are most comfortable using at home.`,
+      },
+      {
+        question: `Can a ${language}-speaking adviser help with deposit planning?`,
+        answer:
+          "Yes. A good adviser can help explain deposit expectations, loan-to-value bands, gifted deposit questions and the difference between minimum and comfortable deposit levels.",
+      },
+      {
+        question: `Does speaking ${language} matter if the buyer already speaks English?`,
+        answer: `It still can. Many people prefer discussing major financial decisions in ${language} because it can feel clearer and easier when comparing options or involving family members.`,
+      },
+      {
+        question: "Can they help with Agreement in Principle questions?",
+        answer:
+          "Yes. First-time buyers often need help understanding what an Agreement in Principle means, what it does not guarantee and when to get one.",
+      },
+      {
+        question: "Is the adviser useful only for straightforward cases?",
+        answer: `No. A ${language}-speaking adviser can also be helpful where the case involves visas, self-employment, family support or a more complex deposit trail, provided they have the right experience.`,
+      },
+      {
+        question: `Should a buyer choose an adviser only because they speak ${language}?`,
+        answer:
+          "No. Language is useful, but the adviser should also be properly authorised, transparent, experienced and suitable for the type of mortgage case involved.",
+      },
+      {
+        question: "Does a mortgage adviser make the advice free?",
+        answer:
+          "Not always. Some advisers charge fees and some do not. It is important to ask clearly how they work, what the cost is and what service is included.",
+      },
+      {
+        question: "Can a first-time buyer request help through Nikera Hub without paying upfront?",
+        answer: "Yes. The initial advice request through Nikera Hub is free of charge and without obligation.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Introduction",
+        paragraphs: [
+          "For many first-time buyers, the most stressful part of buying a home is not only finding the deposit or comparing rates. It is understanding the mortgage process well enough to make confident decisions. When the language of the conversation feels too technical, buyers often end up relying on fragments of advice from friends, WhatsApp groups or assumptions based on somebody else's experience.",
+          `That is one reason a ${language}-speaking mortgage adviser can be valuable. If ${language} is the language you naturally use at home when discussing money, family decisions and long-term plans, the mortgage conversation may feel more practical and easier to trust when it happens in that same language.`,
+          `This does not mean English-speaking advisers cannot explain things well. It means that for many ${communityLabel} first-time buyers, the combination of mortgage expertise and language comfort creates better understanding at the exact point where clarity matters most.`,
+        ],
+      },
+      {
+        heading: "Why first-time buyers search for this service",
+        paragraphs: [
+          `First-time buyers are usually not searching for a ${language}-speaking adviser for cultural reasons alone. They are searching because the UK home-buying process involves unfamiliar concepts: affordability checks, Agreements in Principle, lender criteria, surveys, conveyancing, gifted deposit rules and monthly ownership costs beyond the mortgage.`,
+          "These issues are manageable when explained clearly. But when the buyer is already anxious about affordability or timing, even a simple misunderstanding can feel bigger than it is.",
+        ],
+        subsections: [
+          {
+            heading: "The first purchase usually creates the most questions",
+            paragraphs: [
+              "People buying for the first time often want to ask what may feel like basic questions. How much deposit is enough? Is an Agreement in Principle required before viewings? What exactly does a lender check? How much can I borrow without stretching too far?",
+              `A ${language}-speaking conversation can make those questions easier to ask early rather than leaving them unresolved until later in the process.`,
+            ],
+          },
+          {
+            heading: "Family involvement is often part of the journey",
+            paragraphs: [
+              `In many ${adjective} households, first-home decisions are discussed with spouses, parents or close family members. If the adviser can explain the process in ${language}, it can be easier for everyone involved to understand the plan and ask sensible questions.`,
+            ],
+          },
+        ],
+      },
+      {
+        heading: `How a ${language}-speaking adviser can help with first-time buyer planning`,
+        paragraphs: [
+          "The biggest practical benefit is clarity. A good adviser should help a first-time buyer understand the difference between what a lender may offer and what actually feels manageable each month. That is not a small distinction. Many buyers can technically borrow more than they feel comfortable repaying.",
+          "An adviser can also explain how deposit size changes loan-to-value, why two lenders may assess the same income differently and what documents should be prepared before a live purchase begins.",
+        ],
+        bullets: [
+          "Setting a realistic borrowing range",
+          "Explaining deposit targets and loan-to-value bands",
+          "Clarifying the role of an Agreement in Principle",
+          "Helping buyers prepare documents early",
+          "Reducing confusion around monthly cost planning",
+        ],
+      },
+      {
+        heading: "Common first-time buyer situations where language clarity helps",
+        paragraphs: [
+          "Some buyers are trying to buy with a smaller deposit and want to understand whether waiting longer would materially improve the case. Some are combining personal savings with family help and want clarity on gifted deposit rules. Others are on visas or are self-employed and need help understanding which parts of the market may realistically fit.",
+          "In all of these situations, the key problem is not only eligibility. It is understanding the trade-offs clearly enough to make the right decision.",
+        ],
+        subsections: [
+          {
+            heading: "Gifted deposit or family-supported purchase",
+            paragraphs: [
+              `If parents or relatives are helping, a first-time buyer often needs help understanding how lenders and conveyancers will view those funds. ${language} communication can be especially useful where the wider family wants to understand the process as well.`,
+            ],
+          },
+          {
+            heading: "Budget anxiety before making offers",
+            paragraphs: [
+              `Many buyers worry about offering too early, borrowing too much or underestimating the real costs of ownership. Clear discussion in ${language} can make the budgeting side feel less abstract and more practical.`,
+            ],
+          },
+        ],
+      },
+      {
+        heading: "What to ask the adviser before you rely on them",
+        paragraphs: [
+          "Language comfort is useful, but it is not enough on its own. A buyer should still ask whether the adviser regularly works with first-time buyers, whether fees apply, how broad the lender access is and what kind of cases they usually handle.",
+          "It is also sensible to ask how the adviser would approach the case if the buyer has a smaller deposit, visa status, self-employed income or family deposit support.",
+        ],
+        bullets: [
+          "Do you regularly help first-time buyers in the UK?",
+          "How are you paid and do you charge a fee?",
+          "What documents should I prepare before applying?",
+          "How should I think about a realistic monthly budget?",
+          "Do you often handle cases involving gifts, visas or self-employed income?",
+        ],
+      },
+      {
+        heading: "Things to consider before moving forward",
+        paragraphs: [
+          "No adviser should be treated as a shortcut around lender criteria. The final decision still depends on affordability, credit history, deposit source and the property itself. The adviser's role is to help the buyer understand the route more clearly and avoid mismatching the case to the wrong lender expectations.",
+          `That is why a ${language}-speaking adviser should be seen as a communication advantage inside a proper professional service, not as the only reason to choose someone.`,
+        ],
+      },
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          `For a first-time buyer, better understanding is often the most valuable thing an adviser can provide. A ${language}-speaking mortgage adviser can help make the early stages of the process calmer, clearer and easier to discuss with family, especially when the buyer is trying to weigh affordability, deposit planning and lender expectations at the same time.`,
+          "That does not replace the need for proper authorisation, experience and honest advice. But it can make the whole first-home journey much easier to navigate.",
+        ],
+      },
+      {
+        heading: "Call to action",
+        paragraphs: [
+          "If you are a first-time buyer and want the mortgage process explained more clearly, start by checking affordability and deposit expectations before you rely on assumptions.",
+          "If you want to speak to someone, your initial advice request through Nikera Hub is free of charge and without obligation.",
+        ],
+      },
+    ],
+  };
+}
+
 export const phase1LanguageMortgageAdviserArticles: Resource[] = [
   createLanguageMortgageAdviserArticle({
     language: "Malayalam",
@@ -864,19 +1058,39 @@ export const phase1LanguageMortgageAdviserArticles: Resource[] = [
     adjective: "Tamil",
     communityLabel: "Tamils",
   }),
+  createLanguageMortgageFirstTimeBuyerArticle({
+    language: "Tamil",
+    adjective: "Tamil",
+    communityLabel: "Tamil",
+  }),
   createLanguageMortgageAdviserArticle({
     language: "Hindi",
     adjective: "Hindi-speaking",
     communityLabel: "Hindi speakers",
+  }),
+  createLanguageMortgageFirstTimeBuyerArticle({
+    language: "Hindi",
+    adjective: "Hindi-speaking",
+    communityLabel: "Hindi-speaking",
   }),
   createLanguageMortgageAdviserArticle({
     language: "Punjabi",
     adjective: "Punjabi",
     communityLabel: "Punjabis",
   }),
+  createLanguageMortgageFirstTimeBuyerArticle({
+    language: "Punjabi",
+    adjective: "Punjabi",
+    communityLabel: "Punjabi",
+  }),
   createLanguageMortgageAdviserArticle({
     language: "Telugu",
     adjective: "Telugu-speaking",
     communityLabel: "Telugu speakers",
+  }),
+  createLanguageMortgageFirstTimeBuyerArticle({
+    language: "Telugu",
+    adjective: "Telugu-speaking",
+    communityLabel: "Telugu-speaking",
   }),
 ];
