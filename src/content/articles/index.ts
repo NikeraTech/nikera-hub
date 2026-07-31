@@ -7,6 +7,9 @@ import { migratedLegacyArticles } from "./legacy-migrated-articles";
 
 const articleTopicBySlug: Record<string, ResourceTopicSlug> = {
   "why-you-need-a-malayalam-speaking-mortgage-adviser-in-the-uk": "language-mortgage",
+  "how-a-malayalam-speaking-mortgage-adviser-can-help-first-time-buyers-in-the-uk": "language-mortgage",
+  "questions-to-ask-a-malayalam-speaking-mortgage-adviser-before-applying": "language-mortgage",
+  "malayalam-speaking-mortgage-adviser-for-self-employed-buyers-in-the-uk": "language-mortgage",
   "why-you-need-a-tamil-speaking-mortgage-adviser-in-the-uk": "language-mortgage",
   "why-you-need-a-hindi-speaking-mortgage-adviser-in-the-uk": "language-mortgage",
   "why-you-need-a-punjabi-speaking-mortgage-adviser-in-the-uk": "language-mortgage",

@@ -48,6 +48,7 @@ const trustBadges = [
 const reasons = [
   "Trusted Mortgage & Protection professionals",
   "Clear, jargon-free guidance",
+  "Initial advice request is free of charge",
   "No obligation",
   "We respect your preferred contact preference",
   "No spam",
@@ -228,7 +229,9 @@ export function ProfessionalAdviceForm({
               needs, we&apos;ll connect you with an experienced adviser who can guide you through your
               options.
             </p>
+            <p>Your initial advice request through Nikera Hub is free of charge.</p>
             <div className="professional-advice-points">
+              <span>Free of charge.</span>
               <span>No obligation.</span>
               <span>No pressure.</span>
               <span>Just professional guidance.</span>
@@ -260,7 +263,8 @@ export function ProfessionalAdviceForm({
             <h3>Request a professional review</h3>
             <p>
               Share a few details and one of our trusted Mortgage &amp; Protection advisers will
-              review your enquiry and contact you using your preferred method.
+              review your enquiry and contact you using your preferred method. Your initial request
+              is free of charge and without obligation.
             </p>
           </div>
           <input className="hp-field" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" />

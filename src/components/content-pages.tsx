@@ -449,10 +449,10 @@ export function GuidesPage() {
 
 export function BlogsPage() {
   const phase1LanguageArticles = resourceArticles.filter((article) =>
-    article.slug.includes("speaking-mortgage-adviser-in-the-uk"),
+    article.topicSlug === "language-mortgage",
   );
   const phase2LanguageArticles = resourceArticles.filter((article) =>
-    article.slug.includes("speaking-insurance-adviser-in-the-uk"),
+    article.topicSlug === "language-protection",
   );
   const phase3SpecialistArticles = resourceArticles.filter((article) =>
     [
@@ -832,7 +832,7 @@ export function RequestAdvicePage() {
       <PageHero
         eyebrow="REQUEST ADVICE"
         title="Professional Mortgage & Protection guidance."
-        intro="Tell us what you need help with and we’ll safely pass your enquiry to a trusted adviser for a no-obligation review."
+        intro="Tell us what you need help with and we’ll safely pass your enquiry to a trusted adviser for a free, no-obligation review."
       />
       <section className="inner-section">
         <div className="container">
