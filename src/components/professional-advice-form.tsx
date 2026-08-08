@@ -247,6 +247,17 @@ export function ProfessionalAdviceForm({
             ))}
           </div>
 
+          <div className="professional-disclosure">
+            <b>Important disclosure</b>
+            <p>
+              Nikera Hub provides general information and enquiry routing only. We do not provide
+              personalised mortgage, insurance or financial advice through this website. Where
+              appropriate, your enquiry may be introduced to a trusted Mortgage &amp; Protection
+              professional, and any regulated advice, adviser status, fees and terms should be
+              confirmed with that professional before you proceed.
+            </p>
+          </div>
+
           <div className="professional-why professional-why-overview">
             <b>Why choose Nikera Hub?</b>
             <ul>

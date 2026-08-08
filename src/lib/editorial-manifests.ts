@@ -208,8 +208,8 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
       "Move users from self-employed uncertainty into affordability testing and document-aware advice.",
     primaryCalculatorSlugs: ["mortgage-affordability"],
     preferredCta: {
-      label: "Read self-employed guide",
-      href: "/guides/self-employed-mortgage-guide",
+      label: "Explore self-employed mortgages",
+      href: "/self-employed-mortgages",
     },
     authoritySources: [
       "MoneyHelper",
@@ -240,8 +240,8 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
       "Move users from visa uncertainty into affordability planning and specialist advice around lender fit and documents.",
     primaryCalculatorSlugs: ["mortgage-affordability", "deposit"],
     preferredCta: {
-      label: "Read visa borrowing content",
-      href: "/blogs/getting-a-uk-mortgage-on-a-skilled-worker-visa",
+      label: "Explore visa mortgage guidance",
+      href: "/visa-mortgages",
     },
     authoritySources: [
       "GOV.UK",
@@ -272,7 +272,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     primaryCalculatorSlugs: ["mortgage-affordability"],
     preferredCta: {
       label: "View language mortgage guides",
-      href: "/blogs",
+      href: "/mortgage-adviser-languages",
     },
     authoritySources: [
       "FCA",
@@ -331,8 +331,8 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
       "Move users from deposit uncertainty into cleaner planning and advice before the transaction becomes time-sensitive.",
     primaryCalculatorSlugs: ["deposit", "loan-to-value"],
     preferredCta: {
-      label: "Read family deposit support content",
-      href: "/blogs/gifted-deposit-from-family-in-india-to-buy-a-uk-home",
+      label: "Explore family deposit support",
+      href: "/family-deposit-support",
     },
     authoritySources: [
       "MoneyHelper",

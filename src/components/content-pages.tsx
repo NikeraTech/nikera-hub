@@ -7,7 +7,9 @@ import { ProfessionalAdviceForm } from "./professional-advice-form";
 import { getSuggestedAdviceTopic } from "@/lib/advice";
 import { calculators } from "@/lib/calculators";
 import { buildContentTopics } from "@/lib/content-architecture";
-import { articles as resourceArticles, guides as resourceGuides } from "@/lib/resources";
+import { getEditorialManifest } from "@/lib/editorial-manifests";
+import { articles as resourceArticles, guides as resourceGuides, type Resource } from "@/lib/resources";
+import type { ResourceTopicSlug } from "@/lib/resource-types";
 
 function PageHero({
   eyebrow,
@@ -61,6 +63,265 @@ function CTA() {
         </a>
       </section>
     </div>
+  );
+}
+
+type TopicLandingPageProps = {
+  topicSlug: ResourceTopicSlug;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  leadHeading: string;
+  leadCopy: string[];
+  noteTitle: string;
+  noteCopy: string;
+  pageSlug: string;
+  pageTitle: string;
+  pageCategory: string;
+  calculatorSlugs?: string[];
+  supportingTopicSlugs?: ResourceTopicSlug[];
+};
+
+function getTopicResources(topicSlug: ResourceTopicSlug) {
+  return [...resourceGuides, ...resourceArticles].filter((resource) => resource.topicSlug === topicSlug);
+}
+
+function getResourceHref(resource: Resource) {
+  return `/${resource.kind === "guide" ? "guides" : "blogs"}/${resource.slug}`;
+}
+
+function TopicLandingPage({
+  topicSlug,
+  eyebrow,
+  title,
+  intro,
+  leadHeading,
+  leadCopy,
+  noteTitle,
+  noteCopy,
+  pageSlug,
+  pageTitle,
+  pageCategory,
+  calculatorSlugs,
+  supportingTopicSlugs = [],
+}: TopicLandingPageProps) {
+  const manifest = getEditorialManifest(topicSlug);
+  const primaryResources = getTopicResources(topicSlug);
+  const supportingResources = supportingTopicSlugs.flatMap(getTopicResources);
+  const featuredCalculators = calculators.filter((calculator) =>
+    (calculatorSlugs ?? manifest?.primaryCalculatorSlugs ?? []).includes(calculator.slug),
+  );
+
+  return (
+    <main id="main">
+      <PageHero eyebrow={eyebrow} title={title} intro={intro} />
+      <section className="inner-section">
+        <div className="container">
+          <div className="about-grid">
+            <div>
+              <span className="kicker">WHY THIS MATTERS</span>
+              <h2>{leadHeading}</h2>
+              {leadCopy.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+            <aside>
+              <ShieldIcon />
+              <b>{noteTitle}</b>
+              <p>{noteCopy}</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+      {featuredCalculators.length > 0 ? (
+        <section className="inner-section soft-bg">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="kicker">START WITH THE NUMBERS</span>
+                <h2>Useful calculators for this journey</h2>
+                <p>
+                  Use these tools as planning aids before moving into adviser-specific questions.
+                </p>
+              </div>
+              <Link href="/calculators">
+                View all calculators <ArrowIcon />
+              </Link>
+            </div>
+            <div className="three-grid">
+              {featuredCalculators.map((calculator) => (
+                <CalculatorCard key={calculator.slug} item={calculator} />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+      <section className="inner-section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="kicker">CORE READING</span>
+              <h2>Start with the pages built for this topic</h2>
+              <p>
+                These guides and articles are grouped by user intent so the next step is easier to
+                choose.
+              </p>
+            </div>
+            <Link href="/blogs">
+              Browse all articles <ArrowIcon />
+            </Link>
+          </div>
+          <div className="feature-grid">
+            {primaryResources.map((resource) => (
+              <article className="resource-tile" key={resource.slug}>
+                <GuideIcon />
+                <small>
+                  {resource.category} · {resource.readTime}
+                </small>
+                <h3>{resource.title}</h3>
+                <p>{resource.description}</p>
+                <Link href={getResourceHref(resource)}>
+                  Read {resource.kind === "guide" ? "guide" : "article"} <ArrowIcon />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      {supportingResources.length > 0 ? (
+        <section className="inner-section soft-bg">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="kicker">RELATED JOURNEYS</span>
+                <h2>Supporting content that often affects the same decision</h2>
+              </div>
+              <Link href="/request-advice">
+                Request advice <ArrowIcon />
+              </Link>
+            </div>
+            <div className="feature-grid">
+              {supportingResources.slice(0, 6).map((resource) => (
+                <article className="resource-tile" key={resource.slug}>
+                  <GuideIcon />
+                  <small>
+                    {resource.category} · {resource.readTime}
+                  </small>
+                  <h3>{resource.title}</h3>
+                  <p>{resource.description}</p>
+                  <Link href={getResourceHref(resource)}>
+                    Read {resource.kind === "guide" ? "guide" : "article"} <ArrowIcon />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+      <section className="inner-section">
+        <div className="container">
+          <ProfessionalAdviceForm
+            pageKind="page"
+            pageSlug={pageSlug}
+            pageTitle={pageTitle}
+            pageCategory={pageCategory}
+            defaultTopic={getSuggestedAdviceTopic({
+              slug: pageSlug,
+              title: pageTitle,
+              category: pageCategory,
+              kind: "page",
+            })}
+          />
+        </div>
+      </section>
+    </main>
+  );
+}
+
+export function MortgageAdviserLanguagesPage() {
+  return (
+    <TopicLandingPage
+      topicSlug="language-mortgage"
+      eyebrow="LANGUAGE-SPECIFIC MORTGAGE ADVICE"
+      title="Mortgage adviser guidance by language."
+      intro="Explore UK mortgage adviser content for users who want first-home, affordability and lender conversations explained in a familiar language context."
+      leadHeading="Language clarity can improve the whole mortgage journey."
+      leadCopy={[
+        "Mortgage decisions are technical, time-sensitive and often discussed with family. For many users, language comfort makes it easier to ask questions early, compare options carefully and understand what an adviser can and cannot do.",
+        "This page brings the language-specific mortgage adviser cluster together so users can move from trust-building content into calculators and advice without hunting through the full blog archive.",
+      ]}
+      noteTitle="Professional quality still matters"
+      noteCopy="Language should support proper mortgage advice, not replace it. Users should still confirm adviser authorisation, fees, lender access and suitability for their case."
+      pageSlug="mortgage-adviser-languages"
+      pageTitle="Mortgage Adviser Guidance by Language"
+      pageCategory="Language-specific mortgage advice"
+    />
+  );
+}
+
+export function SelfEmployedMortgagesPage() {
+  return (
+    <TopicLandingPage
+      topicSlug="self-employed"
+      eyebrow="SELF-EMPLOYED MORTGAGES"
+      title="Mortgage planning for self-employed borrowers."
+      intro="Understand how income evidence, business structure and lender interpretation can affect self-employed mortgage cases in the UK."
+      leadHeading="Self-employed cases need evidence-led planning."
+      leadCopy={[
+        "For self-employed borrowers, the key question is rarely just how much the business earns. Lenders may look at tax documents, accounts, dividends, net profit, retained profit and the stability of income over time.",
+        "This hub page groups the self-employed guides, articles and affordability tools so users can prepare a cleaner file before speaking to a professional.",
+      ]}
+      noteTitle="Calculator results are only a starting point"
+      noteCopy="Self-employed affordability can vary materially by lender and document quality. Use calculators for planning, then confirm lender-specific treatment with an authorised adviser."
+      pageSlug="self-employed-mortgages"
+      pageTitle="Self-employed Mortgages"
+      pageCategory="Self-employed mortgages"
+      supportingTopicSlugs={["language-mortgage"]}
+    />
+  );
+}
+
+export function VisaMortgagesPage() {
+  return (
+    <TopicLandingPage
+      topicSlug="visa-borrowing"
+      eyebrow="VISA-SPECIFIC MORTGAGES"
+      title="Mortgage guidance for visa-based borrowing."
+      intro="Explore UK mortgage planning content for Skilled Worker, spouse visa and other policy-sensitive borrowing situations."
+      leadHeading="Visa status can change lender fit."
+      leadCopy={[
+        "Some borrowers assume visa status makes a mortgage impossible. In practice, the answer is usually more specific: lender policy, deposit size, income evidence, time in the UK and application structure all matter.",
+        "This page keeps visa-focused articles and planning tools together so users can separate broad eligibility questions from the details that usually affect an application.",
+      ]}
+      noteTitle="Policy fit matters"
+      noteCopy="Visa-based mortgage cases should be checked against current lender criteria before users rely on a borrowing estimate or informal advice."
+      pageSlug="visa-mortgages"
+      pageTitle="Visa Mortgage Guidance"
+      pageCategory="Visa-specific borrowing"
+      supportingTopicSlugs={["family-deposit-support", "self-employed"]}
+    />
+  );
+}
+
+export function FamilyDepositSupportPage() {
+  return (
+    <TopicLandingPage
+      topicSlug="family-deposit-support"
+      eyebrow="FAMILY DEPOSIT SUPPORT"
+      title="Gifted deposit and family support guidance."
+      intro="Plan UK mortgage cases where a deposit is supported by family, overseas funds or a source-of-funds trail that needs to be explained clearly."
+      leadHeading="Family help is common, but evidence still matters."
+      leadCopy={[
+        "A family-supported deposit can make a home purchase more realistic, but lenders and conveyancers still need a clear explanation of where the money came from and whether it is a gift, loan or something more complex.",
+        "This page brings gifted-deposit and family-support content together with deposit tools so users can prepare the evidence before the process becomes urgent.",
+      ]}
+      noteTitle="Prepare before the transaction is live"
+      noteCopy="Deposit source checks can create delays when documents are unclear. Early preparation usually makes the adviser and solicitor conversations easier."
+      pageSlug="family-deposit-support"
+      pageTitle="Family Deposit Support"
+      pageCategory="Family deposit support"
+      supportingTopicSlugs={["cross-border-income", "first-time-buyers"]}
+    />
   );
 }
 

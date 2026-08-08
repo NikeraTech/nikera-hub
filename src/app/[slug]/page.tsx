@@ -5,11 +5,15 @@ import {
   BlogsPage,
   ContactPage,
   ExpatMortgagesPage,
+  FamilyDepositSupportPage,
   GuidesPage,
   MortgagePage,
+  MortgageAdviserLanguagesPage,
   PrivacyPage,
   RequestAdvicePage,
+  SelfEmployedMortgagesPage,
   TermsPage,
+  VisaMortgagesPage,
 } from "@/components/content-pages";
 import { buildMetadata } from "@/lib/seo";
 
@@ -34,6 +38,60 @@ const pages = {
       "expat remortgage UK",
     ],
     category: "Expat mortgages",
+  },
+  "mortgage-adviser-languages": {
+    title: "Mortgage Adviser Guidance by Language",
+    description:
+      "Language-specific UK mortgage adviser guides for users who want first-time buyer, affordability and lender conversations explained more clearly.",
+    component: MortgageAdviserLanguagesPage,
+    keywords: [
+      "language-specific mortgage adviser UK",
+      "Tamil mortgage adviser UK",
+      "Hindi mortgage adviser UK",
+      "Punjabi mortgage adviser UK",
+      "Telugu mortgage adviser UK",
+      "Malayalam mortgage adviser UK",
+    ],
+    category: "Language-specific mortgage advice",
+  },
+  "self-employed-mortgages": {
+    title: "Self-employed Mortgages",
+    description:
+      "UK self-employed mortgage guidance covering income evidence, affordability, lender interpretation and document preparation.",
+    component: SelfEmployedMortgagesPage,
+    keywords: [
+      "self-employed mortgage UK",
+      "self-employed mortgage documents",
+      "company director mortgage UK",
+      "sole trader mortgage UK",
+    ],
+    category: "Self-employed mortgages",
+  },
+  "visa-mortgages": {
+    title: "Visa Mortgage Guidance",
+    description:
+      "UK mortgage guidance for borrowers on visas, including Skilled Worker and spouse visa mortgage planning.",
+    component: VisaMortgagesPage,
+    keywords: [
+      "visa mortgage UK",
+      "Skilled Worker visa mortgage",
+      "spouse visa mortgage UK",
+      "mortgage on visa UK",
+    ],
+    category: "Visa-specific borrowing",
+  },
+  "family-deposit-support": {
+    title: "Family Deposit Support",
+    description:
+      "UK mortgage guidance for gifted deposits, overseas family support and deposit source-of-funds preparation.",
+    component: FamilyDepositSupportPage,
+    keywords: [
+      "gifted deposit UK mortgage",
+      "family deposit support mortgage",
+      "overseas gifted deposit UK",
+      "deposit source checks mortgage",
+    ],
+    category: "Family deposit support",
   },
   guides: {
     title: "Expert Guides",
