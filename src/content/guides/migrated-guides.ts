@@ -220,6 +220,14 @@ export const managedGuides: Resource[] = [
         ],
       },
       {
+        heading: "Check readiness before the property search accelerates",
+        paragraphs: [
+          "A useful first-time buyer checkpoint is whether the mortgage case would make sense if a suitable property appeared tomorrow. That does not mean you need a full offer before viewing, but it does mean your income, deposit, credit profile and documents should be close enough that you can act without rushing.",
+          "This is where buyers often uncover small issues that are easier to fix early. An old address mismatch, an unused credit account, unclear gifted-deposit paperwork or a missing payslip may not be serious, but each can slow the process if discovered only after an offer is accepted.",
+          "Treat the early preparation stage as risk reduction. The more clearly you can explain your income, spending, deposit and timescale, the easier it becomes to judge which properties and mortgage routes are realistic.",
+        ],
+      },
+      {
         heading: "From offer to completion",
         paragraphs: [
           "Once an offer is accepted, your solicitor handles the legal work while the lender values the property. An independent survey can reveal issues a basic lender valuation may not cover.",
@@ -308,6 +316,14 @@ export const managedGuides: Resource[] = [
           "If a switch still looks worthwhile, gather your documents early and review whether your circumstances are likely to fit the lenders you are considering. That process usually leads to a more confident remortgage decision than reacting only to headline rates.",
         ],
       },
+      {
+        heading: "When advice can change the comparison",
+        paragraphs: [
+          "Professional input can be useful where the comparison is not simply one fixed rate against another. Examples include debt consolidation, additional borrowing, self-employed income, a recent credit issue, a plan to move home or a property that may not fit every lender's criteria.",
+          "In those situations, the cheapest visible product may not be the most realistic or useful option. The better question is which route fits the borrower, the property, the timing and the total cost after fees and charges are included.",
+          "A good remortgage review should therefore produce a decision, not just a rate list. Sometimes the answer is a full remortgage. Sometimes it is a product transfer. Sometimes it is waiting until an early repayment charge ends or until the documents are stronger.",
+        ],
+      },
     ],
   },
   {
@@ -365,6 +381,14 @@ export const managedGuides: Resource[] = [
         paragraphs: [
           "It is also worth thinking about who should receive the proceeds and how smoothly the money would be available if a claim were made. Depending on the arrangement, policy ownership and beneficiary planning can affect how quickly funds are distributed and who ultimately controls them.",
           "These practical questions are often overlooked when people focus only on the premium, but they can matter a great deal if the policy is ever needed.",
+        ],
+      },
+      {
+        heading: "Do not compare policies on price alone",
+        paragraphs: [
+          "Premium matters, but it should not be the only comparison. The value of life insurance depends on the insured amount, term, policy type, underwriting basis, exclusions, optional features and whether the cover is set up in a way that supports the intended beneficiaries.",
+          "A cheaper policy may be perfectly suitable if it meets the need clearly. It may also be cheaper because the cover amount is lower, the term is shorter or the structure is less appropriate for the household. Without checking those details, price comparison can create false confidence.",
+          "The practical approach is to define the financial problem first, then compare policies that solve that problem in broadly similar ways. Only then does the premium comparison become meaningful.",
         ],
       },
       {
@@ -445,6 +469,21 @@ export const managedGuides: Resource[] = [
         paragraphs: [
           "The benefit is usually designed to replace part, not all, of your earnings. The right level depends on your essential monthly commitments, the other resources available to you and the policy limits that apply.",
           "If cover is set too low, it may not materially protect your standard of living. If it is reviewed too rarely, inflation and rising expenses can gradually reduce its effectiveness over time.",
+        ],
+      },
+      {
+        heading: "How income protection fits with other protection",
+        paragraphs: [
+          "Income protection usually sits alongside, rather than replaces, other forms of cover. Life insurance deals with the financial impact of death. Critical illness cover may provide a lump sum after a specified serious illness. Income protection is designed around the continuing loss of earnings while you are unable to work.",
+          "That distinction matters because households often need more than one type of protection, but not always in the same amount or priority. Someone with strong employer sick pay may need a different deferred period from someone with little support. Someone with dependants and a mortgage may also need to think about what happens if income stops for months, not only what happens on death.",
+          "A joined-up protection plan usually starts with the household budget: what must be paid, for how long, and what support already exists if work income is interrupted.",
+        ],
+      },
+      {
+        heading: "Questions to ask before choosing a policy",
+        paragraphs: [
+          "Before choosing cover, ask how long your savings would last, what sick pay your employer provides, whether your occupation is likely to be accepted on standard terms and how much monthly benefit would be enough to keep essential bills paid.",
+          "It is also worth asking how the policy handles changes in occupation, income and inflation. Those details can affect whether the cover remains useful several years after it is arranged.",
         ],
       },
       {
@@ -529,6 +568,14 @@ export const managedGuides: Resource[] = [
           "Understand whether income has risen, fallen or stayed broadly stable",
           "Review personal credit commitments and monthly affordability",
           "Prepare clear evidence for the deposit source and banked funds",
+        ],
+      },
+      {
+        heading: "When waiting for stronger evidence may help",
+        paragraphs: [
+          "Some self-employed applicants benefit from waiting until a newer set of accounts or tax records is complete, especially where the latest year is stronger and sustainable. Others gain little by waiting because the lender will still focus on an average, a lower year or a different income measure.",
+          "The decision should be based on what the extra evidence is likely to change. If waiting produces cleaner records, a stronger trend or a more stable picture, it may improve lender choice. If it only delays the application without improving the figures a lender will use, the benefit may be limited.",
+          "This is why self-employed mortgage planning should happen before the property search becomes urgent. It gives the borrower time to decide whether the case is ready now or whether a specific piece of evidence is worth waiting for.",
         ],
       },
       {

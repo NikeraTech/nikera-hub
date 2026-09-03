@@ -422,8 +422,8 @@ export default async function Home() {
             <span className="kicker">NEXT STEP</span>
             <h2>Explore the area that matches your situation.</h2>
             <p>
-              Browse UK mortgage guides, expat content and practical calculators without hitting a
-              dead-end form.
+              Browse UK mortgage guides, expat content and practical calculators from one clear
+              starting point.
             </p>
           </div>
           <div className="newsletter-actions">
@@ -432,7 +432,7 @@ export default async function Home() {
               href="/blogs"
               label="Browse articles"
               pageType="home"
-              section="newsletter"
+              section="next-step"
             >
               Browse articles <ArrowIcon />
             </TrackedLink>
@@ -441,7 +441,7 @@ export default async function Home() {
               href="/expat-mortgages"
               label="Explore expat mortgages"
               pageType="home"
-              section="newsletter"
+              section="next-step"
             >
               Explore expat mortgages
             </TrackedLink>
@@ -450,7 +450,7 @@ export default async function Home() {
               href="/request-advice"
               label="Request advice"
               pageType="home"
-              section="newsletter"
+              section="next-step"
             >
               Request advice
             </TrackedLink>

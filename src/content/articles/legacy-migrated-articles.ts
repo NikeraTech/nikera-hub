@@ -62,6 +62,7 @@ export const migratedLegacyArticles: Resource[] = [
         paragraphs: [
           "When you see a mortgage-rate headline, ask four questions. What type of product is being discussed? Who is likely to qualify for it? What fees or conditions sit behind it? And what does it mean for someone with your deposit, income and timescale?",
           "Those questions help turn market commentary into something useful. They also make it easier to avoid overreacting to isolated headlines that may not be relevant to your own position.",
+          "It is also worth separating market direction from application readiness. A better rate environment helps most when your deposit, documents and affordability position are ready enough to use it.",
         ],
       },
       {
@@ -315,6 +316,7 @@ export const migratedLegacyArticles: Resource[] = [
         paragraphs: [
           "If your main concern is what happens to your household finances after death, life cover may be the primary need. If your concern is how you would cope financially while living through a serious illness, critical illness cover may deserve more weight. In many cases, the answer is not either-or but how to balance both within a realistic budget.",
           "The right decision usually comes from matching the cover to the specific outcome you want to protect against rather than assuming similar-sounding policies are interchangeable.",
+          "Where the budget cannot cover every risk fully, prioritisation matters. A household with dependants, a mortgage and limited savings may need to decide which event would create the largest immediate financial gap and which existing employer benefits already reduce that gap.",
         ],
       },
       {
@@ -718,6 +720,7 @@ export const migratedLegacyArticles: Resource[] = [
           "Start several months before the current deal ends. Confirm your property use, residency position, income structure and likely loan-to-value. Then compare the current lender’s options with lenders that actively support expat cases matching your profile.",
           "Use the numbers to test whether a switch genuinely saves money after fees, but do not stop at the numbers alone. Also ask whether the chosen route is realistic on evidence, timing and policy fit. That is the difference between a remortgage idea that looks good on paper and one that actually completes cleanly.",
           "In many expat cases, the best outcome comes from balancing three things at once: cost, lender appetite and operational simplicity.",
+          "If the review shows only a small saving, the practical value of simplicity may become more important. If the saving is large, it is still worth checking whether the evidence, valuation and property-use details can support the switch without creating avoidable friction.",
         ],
       },
     ],
@@ -780,6 +783,7 @@ export const migratedLegacyArticles: Resource[] = [
           "Start by testing the rent, the likely loan-to-value and the total deal costs, but also be clear about where you live, how you are paid and what ownership structure you intend to use. Those are all part of the placement, not background details to be dealt with later.",
           "A stronger strategy is usually to narrow the realistic lender universe first, then compare products within that narrower group. That saves time and reduces the risk of overcommitting to a property plan that is harder to finance than expected.",
           "In short, expat buy-to-let decisions work best when the investment idea and the financing route are checked together rather than separately.",
+          "That also means keeping management practical. If you live abroad, the lender and the wider investment plan may both be affected by how the property will be let, managed, insured and maintained once you are not nearby.",
         ],
       },
       {
