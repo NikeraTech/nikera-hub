@@ -191,6 +191,7 @@ function createTransporter() {
   const pass = readEnv("SMTP_PASS");
   const to = readEnv("SMTP_TO_EMAIL");
   const fromName = readEnv("SMTP_FROM_NAME") ?? "Nikera Hub";
+  const secure = readEnv("SMTP_SECURE") === "true" || port === 465;
 
   if (!host || !user || !pass || !to || !Number.isFinite(port)) {
     throw new Error("Email service is not configured.");
@@ -199,8 +200,8 @@ function createTransporter() {
   const transporter = nodemailer.createTransport({
     host,
     port,
-    secure: false,
-    requireTLS: true,
+    secure,
+    requireTLS: !secure,
     auth: { user, pass },
     connectionTimeout: 30000,
     greetingTimeout: 30000,
@@ -421,7 +422,15 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "We could not send your enquiry right now.";
+    const message =
+      error instanceof Error && error.message === "Email service is not configured."
+        ? error.message
+        : "We could not send your enquiry right now. Please contact us directly or try again later.";
+
+    if (error instanceof Error) {
+      console.error("Advice enquiry delivery failed:", error.message);
+    }
+
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
