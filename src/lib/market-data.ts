@@ -23,6 +23,7 @@ const DISPLAY_DATE = new Intl.DateTimeFormat("en-GB", {
   year: "numeric",
   timeZone: "UTC",
 });
+const BOE_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 const SERIES_META: Record<
   BankSeriesCode,
@@ -57,10 +58,7 @@ const SERIES_META: Record<
 };
 
 function formatBoEDate(date: Date) {
-  return `${String(date.getUTCDate()).padStart(2, "0")}/${date.toLocaleString("en-GB", {
-    month: "short",
-    timeZone: "UTC",
-  })}/${date.getUTCFullYear()}`;
+  return `${String(date.getUTCDate()).padStart(2, "0")}/${BOE_MONTHS[date.getUTCMonth()]}/${date.getUTCFullYear()}`;
 }
 
 function parseBoEDate(value: string) {
