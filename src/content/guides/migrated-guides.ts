@@ -126,6 +126,10 @@ export const managedGuides: Resource[] = [
       },
       {
         heading: "Documents to organise early",
+        documentTools: {
+          introduction:
+            "Mortgage applications can involve bank statements, payslips and other PDF documents. If you need to organise files before providing them,",
+        },
         paragraphs: [
           "A clean document pack often makes as much difference as a strong income profile. Lenders want to trace identity, residence, earnings, banked funds and deposit source in a way that does not require repeated clarification.",
           "The exact list varies, but most expat and NRI cases benefit from organising the paperwork before house-hunting gets serious.",
@@ -208,6 +212,10 @@ export const managedGuides: Resource[] = [
       },
       {
         heading: "Prepare your documents before you find the property",
+        documentTools: {
+          introduction:
+            "Mortgage applications can involve bank statements, payslips and other PDF documents. If you need to organise files before providing them,",
+        },
         paragraphs: [
           "The home-buying process usually moves more smoothly when your identification, proof of address, income evidence and bank statements are already organised. This is particularly useful if a property attracts strong interest and you need to move quickly.",
           "You should also keep your financial profile stable while applying where possible. New credit applications, missed payments or unusual account activity can create extra questions during underwriting.",
@@ -289,6 +297,10 @@ export const managedGuides: Resource[] = [
       },
       {
         heading: "Prepare to apply",
+        documentTools: {
+          introduction:
+            "Mortgage applications can involve bank statements, payslips and other PDF documents. If you need to organise files before providing them,",
+        },
         paragraphs: [
           "Lenders typically reassess income, expenditure, credit history and the property. Gather recent evidence of income and bank statements, and avoid assuming an existing mortgage guarantees acceptance elsewhere.",
           "Even if you have managed the mortgage well for years, a new lender still looks at the case through its current lending policy. That means affordability, credit profile, property details and supporting documents all matter again.",
@@ -519,6 +531,10 @@ export const managedGuides: Resource[] = [
       },
       {
         heading: "Evidence to prepare",
+        documentTools: {
+          introduction:
+            "Mortgage applications can involve bank statements, payslips and other PDF documents. If you need to organise files before providing them,",
+        },
         paragraphs: [
           "Clear, consistent records reduce avoidable delays. Exact requirements vary by lender and complexity.",
           "Lenders want to see that the income being relied on is real, supportable and stable enough for the mortgage being requested. The stronger and more organised the records are, the easier it is to compare realistic options and reduce last-minute document chasing.",
@@ -588,106 +604,88 @@ export const managedGuides: Resource[] = [
     ],
   },
   {
-    slug: "buying-your-first-home",
-    kind: "guide",
-    category: "Home buying",
-    title: "Buying Your First Home",
-    description: "A practical journey from building a deposit to collecting the keys.",
-    readTime: "14 min read",
-    published: "2026-06-10",
-    updated: "2026-06-28",
-    relatedCalculatorSlug: "deposit",
-    relatedCalculatorEyebrow: "ESTIMATE DEPOSIT",
-    relatedCalculatorTitle: "See the deposit you may need",
-    relatedCalculatorCta: "Estimate deposit",
-    sections: [
+    "slug": "buying-your-first-home",
+    "kind": "guide",
+    "category": "Home buying",
+    "title": "Buying Your First Home",
+    "description": "A practical journey from building a deposit to collecting the keys.",
+    "readTime": "4 min read",
+    "published": "2026-06-10",
+    "updated": "2026-09-08",
+    "relatedCalculatorSlug": "deposit",
+    "relatedCalculatorEyebrow": "ESTIMATE DEPOSIT",
+    "relatedCalculatorTitle": "See the deposit you may need",
+    "relatedCalculatorCta": "Estimate deposit",
+    "sections": [
       {
-        heading: "Build the foundations",
-        paragraphs: [
+        "heading": "Build the foundations",
+        "paragraphs": [
           "Set a savings target that includes the deposit and purchase costs. Review your credit history, stabilise regular spending and keep evidence showing where the deposit came from.",
           "Buying a first home usually works best when the preparation starts before you begin viewing properties. A stronger foundation makes later decisions easier because you already know your savings position, your likely affordability range and any issues that might need attention.",
-          "This stage is also where many buyers benefit from being realistic rather than optimistic. A workable plan is usually more useful than stretching every assumption in the hope that the numbers improve later.",
-        ],
+          "This stage is also where many buyers benefit from being realistic rather than optimistic. A workable plan is usually more useful than stretching every assumption in the hope that the numbers improve later."
+        ]
       },
       {
-        heading: "Search with a clear brief",
-        paragraphs: [
+        "heading": "Search with a clear brief",
+        "paragraphs": [
           "Separate essential requirements from preferences and investigate the local area as carefully as the property. Running costs, tenure and planned works can change affordability.",
           "A clear brief helps you evaluate homes properly instead of reacting only to appearance or urgency. For some buyers, location and monthly running costs matter more than squeezing into the highest possible purchase price. For others, lease details, transport links or future flexibility may be the bigger issues.",
-          "Understanding those priorities early makes it easier to rule properties in or out quickly once the search becomes active.",
+          "Understanding those priorities early makes it easier to rule properties in or out quickly once the search becomes active."
         ],
-        bullets: [
+        "bullets": [
           "Ask what is included in the sale",
           "Check lease length and service charges where relevant",
-          "Visit at different times if possible",
-        ],
+          "Visit at different times if possible"
+        ]
       },
       {
-        heading: "The legal and mortgage process",
-        paragraphs: [
-          "Your conveyancer checks title and searches while the lender completes underwriting and valuation. Consider an appropriate survey before committing. Do not treat the purchase as certain until contracts are exchanged.",
+        "heading": "The legal and mortgage process",
+        "paragraphs": [
+          "Your conveyancer checks title and searches while the lender completes underwriting and valuation. Consider an appropriate survey before committing. Ask your conveyancer when the purchase becomes legally binding in the UK nation where you are buying.",
           "This is often the stage that feels most frustrating to first-time buyers because progress can seem uneven. Legal enquiries, searches, valuations and lender checks all move at different speeds, and not all delays are visible from the buyer side.",
-          "Patience helps, but so does knowing which parts of the process are still uncertain. Exchange is usually the point at which the transaction becomes legally binding in the standard England and Wales process, so it is wise not to make irreversible decisions too early.",
-        ],
+          "Patience helps, but so does knowing which parts of the process are still uncertain. Exchange is usually the point at which the transaction becomes legally binding in the standard England and Wales process, so it is wise not to make irreversible decisions too early."
+        ]
       },
       {
-        heading: "Budgeting beyond the headline affordability figure",
-        paragraphs: [
+        "heading": "Budgeting beyond the headline affordability figure",
+        "paragraphs": [
           "Even when the mortgage is approved, the wider monthly budget still matters. Council tax, insurance, utilities, commuting, repairs and furnishing can make the real cost of ownership feel very different from the mortgage payment alone.",
-          "A good buying decision usually leaves room for day-to-day living and some resilience after completion rather than using every available pound to secure the purchase.",
-        ],
+          "A good buying decision usually leaves room for day-to-day living and some resilience after completion rather than using every available pound to secure the purchase."
+        ]
       },
       {
-        heading: "Surveys, valuations and what they do not tell you",
-        paragraphs: [
+        "heading": "Surveys, valuations and what they do not tell you",
+        "paragraphs": [
           "A lender’s valuation is primarily for the lender, not for you. It checks whether the property is acceptable security for the loan. Depending on the home, that may not give you enough information about condition, maintenance needs or hidden issues.",
-          "A fuller survey may reveal things that affect the decision, the price negotiation or the budget you need after moving in. That is why buyers should think carefully about what level of inspection is appropriate for the property they are considering.",
-        ],
+          "A fuller survey may reveal things that affect the decision, the price negotiation or the budget you need after moving in. That is why buyers should think carefully about what level of inspection is appropriate for the property they are considering."
+        ]
       },
       {
-        heading: "What often delays first purchases",
-        paragraphs: [
+        "heading": "What often delays first purchases",
+        "paragraphs": [
           "Common delays include incomplete paperwork, slow responses to legal enquiries, chain issues, leasehold complications and valuation or survey findings that need further investigation. Not all of these can be controlled, but some can be reduced with early preparation and realistic timing expectations.",
-          "Where a delay happens, it helps to understand whether it affects the mortgage, the legal position, the property condition or simply the timetable. Those are not always the same problem.",
-        ],
+          "Where a delay happens, it helps to understand whether it affects the mortgage, the legal position, the property condition or simply the timetable. Those are not always the same problem."
+        ]
       },
       {
-        heading: "A practical first-home mindset",
-        paragraphs: [
+        "heading": "A practical first-home mindset",
+        "paragraphs": [
           "The goal is not to make every part of the process feel perfect. It is to make a purchase that is financially sustainable, legally understood and right enough for your life stage. Most buyers have to balance compromise with progress.",
-          "Approaching the process with clear priorities, organised paperwork and a realistic budget usually leads to better decisions than chasing a headline maximum or rushing because a property feels emotionally compelling.",
-        ],
+          "Approaching the process with clear priorities, organised paperwork and a realistic budget usually leads to better decisions than chasing a headline maximum or rushing because a property feels emotionally compelling."
+        ]
       },
       {
-        heading: "Why preparing early saves more than time",
-        paragraphs: [
-          "Early preparation also reduces decision pressure. When you already know how the deposit will be evidenced, you can focus more clearly on the property, the budget and the mortgage route instead of trying to solve documentation problems in the middle of a live transaction.",
-          "That matters because many purchase delays are not caused by one major issue. They come from several smaller uncertainties building up at once. Deposit-source clarity is one of the easier areas to strengthen before the case becomes urgent.",
-          "For expat buyers in particular, smoother evidence usually creates more confidence across both the mortgage and legal sides of the process.",
-        ],
+        "heading": "Keep track of the purchase conditions",
+        "paragraphs": [
+          "Ask your conveyancer what legal enquiries remain open and your adviser what mortgage conditions are outstanding. Keep a record of deadlines, including the mortgage offer expiry date. If the timetable slips, ask what must be rechecked rather than assuming an extension is automatic."
+        ]
       },
       {
-        heading: "What buyers should do before the offer stage",
-        paragraphs: [
-          "Before making an offer, it helps to decide which account will ultimately provide the deposit, whether any money still needs to be transferred and whether any donor documents or translations are still missing. Solving those questions early reduces the chance that the property process moves faster than the evidence pack.",
-          "This is especially relevant where several family members, jurisdictions or currencies are involved. The more moving parts there are, the more valuable early simplification becomes.",
-          "A cleaner fund path is not only easier to evidence. It is also easier to manage when exchange, completion dates and solicitor requests begin to accelerate.",
-        ],
-      },
-      {
-        heading: "Why deposit preparation supports the whole case",
-        paragraphs: [
-          "Good deposit records do more than satisfy a checklist. They help the mortgage, legal and anti-money-laundering parts of the transaction move with less friction. In expat purchases, that joined-up benefit is often underestimated until a delay appears.",
-          "Put simply, the earlier you can make the money trail obvious, the more space you create to focus on the actual buying decision instead of on document recovery under time pressure.",
-        ],
-      },
-      {
-        heading: "What a well-prepared expat deposit file usually includes",
-        paragraphs: [
-          "A strong file usually includes the main account statements, a clear explanation of any large inbound transfers, records of currency conversion where relevant and early identification of any gifted element. If money has moved across several accounts, it helps to map that movement clearly rather than expect the solicitor or lender to infer it from fragmented statements alone.",
-          "That level of preparation may feel administrative, but it often removes the kind of uncertainty that slows otherwise viable cases. For cross-border purchases especially, clarity around funds is one of the simplest ways to strengthen the whole transaction before it becomes time-sensitive.",
-        ],
-      },
-    ],
+        "heading": "Prepare for completion and the first month",
+        "paragraphs": [
+          "Confirm the funds your conveyancer needs, using independently verified bank details before transferring money. Agree when buildings insurance should begin and plan for keys, meter readings, removals and essential bills. Keep your reserve accessible for costs after moving in."
+        ]
+      }
+    ]
   },
 ];

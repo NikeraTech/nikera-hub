@@ -17,13 +17,6 @@ export type ContentTopic = {
   items: TopicLink[];
 };
 
-export type PlannedTopic = {
-  slug: string;
-  title: string;
-  description: string;
-  nextStep: string;
-};
-
 function toTopicLink(resource: Resource): TopicLink {
   return {
     label: resource.title,
@@ -158,25 +151,7 @@ export function buildContentTopics({
     },
   ];
 
-  const plannedTopics: PlannedTopic[] = [
-    {
-      slug: "partner-led-local-pages",
-      title: "Local and partner-led pages",
-      description:
-        "City or community landing pages should only be introduced once there is genuine local differentiation and partner coverage behind them.",
-      nextStep: "Create only when real adviser inventory and trust signals exist.",
-    },
-    {
-      slug: "visa-expansion",
-      title: "Deeper visa scenarios",
-      description:
-        "The next expansion within visa borrowing should cover more specific situations such as returning applicants, dependent visas and mixed-income household structures.",
-      nextStep: "Add narrower high-intent pages only where the search intent is clearly distinct.",
-    },
-  ];
-
-  return {
-    liveTopics,
-    plannedTopics,
+return {
+    liveTopics: liveTopics.filter((topic) => topic.count > 0),
   };
 }

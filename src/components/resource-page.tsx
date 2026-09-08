@@ -23,28 +23,7 @@ export function ResourcePage({ resource }: { resource: Resource }) {
           item.category === resource.category),
     )
     .slice(0, 2);
-  const faqItems =
-    resource.faq && resource.faq.length > 0
-      ? resource.faq
-      : [
-          {
-            question: `What does ${resource.title} explain?`,
-            answer: `${resource.title} explains ${resource.description.toLowerCase()} This content is written for UK users researching ${resource.category.toLowerCase()} decisions.`,
-          },
-          {
-            question: "Is this page personalised financial advice?",
-            answer:
-              "No. This page provides general information only and is not personalised mortgage, insurance, tax or financial advice.",
-          },
-          {
-            question: relatedCalculator
-              ? `Which calculator should I use after reading ${resource.title}?`
-              : `How should I use the information in ${resource.title}?`,
-            answer: relatedCalculator
-              ? `A useful next step is the ${relatedCalculator.shortTitle}. It can help you turn the ideas on this page into an illustrative estimate before requesting advice.`
-              : "Use this page to understand the topic, then compare it with your own circumstances and request professional advice if you need a recommendation tailored to you.",
-          },
-        ];
+  const faqItems = resource.faq ?? [];
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -101,7 +80,7 @@ export function ResourcePage({ resource }: { resource: Resource }) {
         { "@type": "ListItem", position: 3, name: resource.title, item: url },
       ],
     },
-    faqSchema,
+    ...(faqItems.length > 0 ? [faqSchema] : []),
   ];
   const sectionCount = resource.sections.length;
   const inlineConversionIndex = sectionCount > 4 ? 1 : 0;
@@ -150,7 +129,7 @@ export function ResourcePage({ resource }: { resource: Resource }) {
                 pageCategory={resource.category}
                 section="resource-header"
               >
-                {resource.relatedCalculatorCta ?? "Try calculator"}
+                Use the Calculator
               </TrackedLink>
             ) : (
               <TrackedLink
@@ -176,10 +155,15 @@ export function ResourcePage({ resource }: { resource: Resource }) {
               pageCategory={resource.category}
               section="resource-header"
             >
-              Speak with a professional
+              Request Advice
             </TrackedLink>
             <p>
               {conversionCopy.actionNote}
+            </p>
+            <p>
+              Hub provides general information and tools. Any regulated advice comes from the
+              introduced adviser or firm under its own permissions and terms. An enquiry does not
+              guarantee lender acceptance or insurance cover.
             </p>
           </div>
         </div>
@@ -214,9 +198,53 @@ export function ResourcePage({ resource }: { resource: Resource }) {
                   )}
                 </div>
               ))}
+              {section.documentTools && (
+                <aside className="resource-inline-conversion" aria-label="Document preparation tools">
+                  <h3>Preparing your documents?</h3>
+                  <p>
+                    {section.documentTools.introduction}{" "}
+                    <TrackedLink
+                      href="https://pdf-lab.com/"
+                      label="PDF-Lab"
+                      pageType={resource.kind}
+                      pageSlug={resource.slug}
+                      pageTitle={resource.title}
+                      pageCategory={resource.category}
+                      section="document-preparation"
+                    >
+                      PDF-Lab
+                    </TrackedLink>{" "}
+                    provides free tools for merging, compressing and managing PDFs.
+                  </p>
+                  {section.documentTools.links && (
+                    <ul>
+                      {section.documentTools.links.map((tool) => (
+                        <li key={tool.href}>
+                          <TrackedLink
+                            href={tool.href}
+                            label={tool.label}
+                            pageType={resource.kind}
+                            pageSlug={resource.slug}
+                            pageTitle={resource.title}
+                            pageCategory={resource.category}
+                            section="document-preparation"
+                          >
+                            {tool.label}
+                          </TrackedLink>{" "}
+                          {tool.description}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <p>
+                    Follow your adviser&apos;s instructions on file formats and keep the original
+                    documents.
+                  </p>
+                </aside>
+              )}
               {index === inlineConversionIndex && (
                 <aside className="resource-inline-conversion">
-                  <small>NEXT BEST STEP</small>
+                  <small>NEXT STEP</small>
                   <h3>{conversionCopy.inlineHeading}</h3>
                   <p>{conversionCopy.inlineDescription}</p>
                   <div className="resource-inline-actions">
@@ -231,7 +259,7 @@ export function ResourcePage({ resource }: { resource: Resource }) {
                         pageCategory={resource.category}
                         section="resource-inline"
                       >
-                        {resource.relatedCalculatorCta ?? "Try calculator"}
+                        Use the Calculator
                       </TrackedLink>
                     ) : null}
                     <TrackedLink
@@ -261,7 +289,9 @@ export function ResourcePage({ resource }: { resource: Resource }) {
             <p>
               This content is general information, not personalised financial advice. Mortgage and
               insurance eligibility, costs and terms depend on individual circumstances and provider
-              criteria.
+              criteria. Any regulated advice is provided by the introduced adviser or firm, whose
+              permissions, fees and terms you should confirm. Neither an enquiry nor a calculator
+              result guarantees acceptance by a lender or insurer.
             </p>
           </aside>
           {resource.internalLinks && resource.internalLinks.length > 0 && (
@@ -271,9 +301,17 @@ export function ResourcePage({ resource }: { resource: Resource }) {
               <div className="resource-next-grid">
                 {resource.internalLinks.map((item) => (
                   <article className="resource-next-card" key={item.href}>
-                    <small>INTERNAL LINK</small>
+                    <small>HUB RESOURCE</small>
                     <h3>{item.label}</h3>
-                    <Link href={item.href}>Open page</Link>
+                    <Link href={item.href}>
+                      {item.href.startsWith("/calculators/")
+                        ? "Use the Calculator"
+                        : item.href.startsWith("/guides/")
+                          ? "Explore the Guide"
+                          : item.href === "/request-advice"
+                            ? "Request Advice"
+                            : "Explore this topic"}
+                    </Link>
                   </article>
                 ))}
               </div>
@@ -286,7 +324,7 @@ export function ResourcePage({ resource }: { resource: Resource }) {
               <div className="resource-next-grid">
                 {resource.authorityLinks.map((item) => (
                   <article className="resource-next-card" key={item.href}>
-                    <small>AUTHORITY LINK</small>
+                    <small>SOURCE</small>
                     <h3>{item.label}</h3>
                     <a href={item.href} target="_blank" rel="noreferrer">
                       Visit source
@@ -315,7 +353,7 @@ export function ResourcePage({ resource }: { resource: Resource }) {
                       pageCategory={resource.category}
                       section="related-tools"
                     >
-                      {resource.relatedCalculatorCta ?? "Try calculator"}
+                      Use the Calculator
                     </TrackedLink>
                   </article>
                 )}
@@ -367,7 +405,7 @@ export function ResourcePage({ resource }: { resource: Resource }) {
                   pageCategory={resource.category}
                   section="resource-end-cta"
                 >
-                  {resource.relatedCalculatorCta ?? "Try calculator"}
+                  Use the Calculator
                 </TrackedLink>
               ) : null}
               <TrackedLink
@@ -437,7 +475,7 @@ export function ResourcePage({ resource }: { resource: Resource }) {
                 pageCategory={resource.category}
                 section="resource-calculator-promo"
               >
-                {resource.relatedCalculatorCta ?? "Try calculator"}
+                Use the Calculator
               </TrackedLink>
             </aside>
           )}

@@ -1152,6 +1152,17 @@ export const phase4ExpatExpansionArticles: Resource[] = [
       },
       {
         heading: "Property and application documents",
+        documentTools: {
+          introduction:
+            "If your expat mortgage document pack needs organising before you share it,",
+          links: [
+            {
+              label: "Rearrange PDF pages",
+              href: "https://pdf-lab.com/rearrange",
+              description: "to put pages in the requested order while retaining every page your adviser needs.",
+            },
+          ],
+        },
         paragraphs: [
           "Once you move beyond personal finances, lenders usually also want documents or details connected to the property and the type of mortgage being requested. These may be lighter at the early planning stage and fuller once a property is identified.",
           "The important point is that the property purpose should match the application route. A residential plan, a future return-to-UK plan and a buy-to-let plan are not identical from a lender perspective.",

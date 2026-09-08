@@ -161,10 +161,9 @@ function TopicLandingPage({
           <div className="section-heading">
             <div>
               <span className="kicker">CORE READING</span>
-              <h2>Start with the pages built for this topic</h2>
+              <h2>Guides to help you get started</h2>
               <p>
-                These guides and articles are grouped by user intent so the next step is easier to
-                choose.
+                Explore the questions, documents and costs that may matter in your circumstances.
               </p>
             </div>
             <Link href="/blogs">
@@ -194,7 +193,7 @@ function TopicLandingPage({
             <div className="section-heading">
               <div>
                 <span className="kicker">RELATED JOURNEYS</span>
-                <h2>Supporting content that often affects the same decision</h2>
+                <h2>Related questions to explore</h2>
               </div>
               <Link href="/request-advice">
                 Request advice <ArrowIcon />
@@ -244,11 +243,11 @@ export function MortgageAdviserLanguagesPage() {
       topicSlug="language-mortgage"
       eyebrow="LANGUAGE-SPECIFIC MORTGAGE ADVICE"
       title="Mortgage adviser guidance by language."
-      intro="Explore UK mortgage adviser content for users who want first-home, affordability and lender conversations explained in a familiar language context."
+      intro="Prepare to discuss UK mortgages in your preferred language, from buying your first home to comparing lenders and reviewing an existing loan."
       leadHeading="Language clarity can improve the whole mortgage journey."
       leadCopy={[
         "Mortgage decisions are technical, time-sensitive and often discussed with family. For many users, language comfort makes it easier to ask questions early, compare options carefully and understand what an adviser can and cannot do.",
-        "This page brings the language-specific mortgage adviser cluster together so users can move from trust-building content into calculators and advice without hunting through the full blog archive.",
+        "Choose a language guide below for practical questions to ask an adviser, documents to prepare and calculators to help with your budget. These guides are written in English.",
       ]}
       noteTitle="Professional quality still matters"
       noteCopy="Language should support proper mortgage advice, not replace it. Users should still confirm adviser authorisation, fees, lender access and suitability for their case."
@@ -610,14 +609,14 @@ export function GuidesPage() {
   return (
     <main id="main">
       <PageHero
-        eyebrow="EXPERT GUIDES"
+        eyebrow="PRACTICAL GUIDES"
         title="Practical guidance, written clearly."
         intro="Build your understanding with structured, plain-English guides covering mortgages, protection and the home-buying journey."
       />
       <section className="inner-section">
         <div className="container">
           <div className="filter-pills" aria-label="Guide topics">
-            <span>Guide architecture</span>
+            <span>Explore our guides</span>
             {guideTopics.map((topic) => (
               <span key={topic.slug}>
                 {topic.title} · {topic.count}
@@ -627,11 +626,11 @@ export function GuidesPage() {
           </div>
           <div className="section-heading">
             <div>
-              <span className="kicker">TOPIC STRUCTURE</span>
-              <h2>How guide content is organised</h2>
+              <span className="kicker">BROWSE BY TOPIC</span>
+              <h2>Find guidance for your next decision</h2>
               <p>
-                Guides are now grouped around stable decision areas so future content can expand
-                without turning the hub into an unstructured blog archive.
+                Explore mortgages, deposits, remortgaging and protection, with practical explanations
+                to help you prepare for your next step.
               </p>
             </div>
             <Link href="/blogs">
@@ -644,7 +643,7 @@ export function GuidesPage() {
                 <span className="kicker">FEATURED GUIDE</span>
                 <h2>Start here for expat and NRI mortgage planning</h2>
                 <p>
-                  This pillar guide brings together the main expat, returning-resident and NRI
+                  This guide brings together the main expat, returning-resident and NRI
                   mortgage questions in one place before you move into the more specific articles.
                 </p>
               </div>
@@ -672,7 +671,7 @@ export function GuidesPage() {
             {guideTopics.map((topic) => (
               <article className="architecture-card" key={topic.slug}>
                 <small>
-                  {topic.count} LIVE {topic.count === 1 ? "PAGE" : "PAGES"}
+                  {topic.count} {topic.count === 1 ? "RESOURCE" : "RESOURCES"}
                 </small>
                 <h3>{topic.title}</h3>
                 <p>{topic.description}</p>
@@ -687,7 +686,7 @@ export function GuidesPage() {
             ))}
           </div>
           <div className="feature-grid">
-            {resourceGuides.map((guide) => (
+            {resourceGuides.filter((guide) => guide.slug !== expatGuide?.slug).map((guide) => (
               <article className="resource-tile" key={guide.slug}>
                 <GuideIcon />
                 <small>
@@ -736,7 +735,9 @@ export function BlogsPage() {
       "bringing-deposit-funds-from-india-for-a-uk-property-what-to-prepare",
     ].includes(article.slug),
   );
-  const { liveTopics, plannedTopics } = buildContentTopics({
+  const featuredSlugs = new Set([...phase1LanguageArticles, ...phase2LanguageArticles, ...phase3SpecialistArticles, ...phase4ExpatArticles].map((article) => article.slug));
+  const remainingArticles = resourceArticles.filter((article) => !featuredSlugs.has(article.slug));
+  const { liveTopics } = buildContentTopics({
     guides: resourceGuides,
     articles: resourceArticles,
   });
@@ -752,11 +753,11 @@ export function BlogsPage() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="kicker">CONTENT ARCHITECTURE</span>
-              <h2>Explore Hub by topic, not just by publish date</h2>
+              <span className="kicker">EXPLORE OUR ARTICLES</span>
+              <h2>Find answers by topic</h2>
               <p>
-                This structure is designed to support future SEO growth around mortgages,
-                protection, expats, community-language journeys and specialist borrowing cases.
+                Find practical explanations of mortgages, protection, overseas borrowing and
+                speaking to an adviser in your preferred language.
               </p>
             </div>
             <Link href="/request-advice">
@@ -767,7 +768,7 @@ export function BlogsPage() {
             {liveTopics.map((topic) => (
               <article className="architecture-card" key={topic.slug}>
                 <small>
-                  {topic.count} LIVE {topic.count === 1 ? "PAGE" : "PAGES"}
+                  {topic.count} {topic.count === 1 ? "RESOURCE" : "RESOURCES"}
                 </small>
                 <h3>{topic.title}</h3>
                 <p>{topic.description}</p>
@@ -794,11 +795,11 @@ export function BlogsPage() {
           <div className="container">
             <div className="section-heading">
               <div>
-                <span className="kicker">PHASE 1 LANGUAGE GUIDES</span>
+                <span className="kicker">MORTGAGE GUIDES BY LANGUAGE</span>
                 <h2>Mortgage adviser guides by language</h2>
                 <p>
-                  Built for users who want mortgage guidance explained more clearly before speaking
-                  to a professional.
+                  Prepare for a mortgage conversation in Malayalam, Tamil, Hindi, Punjabi or
+                  Telugu, with questions to ask and documents to gather.
                 </p>
               </div>
               <Link href="/request-advice">
@@ -828,11 +829,11 @@ export function BlogsPage() {
           <div className="container">
             <div className="section-heading">
               <div>
-                <span className="kicker">PHASE 2 LANGUAGE GUIDES</span>
+                <span className="kicker">PROTECTION GUIDES BY LANGUAGE</span>
                 <h2>Insurance adviser guides by language</h2>
                 <p>
-                  Built for users who want life insurance and protection guidance explained more
-                  clearly before speaking to a professional.
+                  Understand cover, exclusions and the questions to ask when discussing protection
+                  in a language you feel comfortable using.
                 </p>
               </div>
               <Link href="/calculators/protection-needs">
@@ -862,11 +863,11 @@ export function BlogsPage() {
           <div className="container">
             <div className="section-heading">
               <div>
-                <span className="kicker">PHASE 3 SPECIALIST GUIDES</span>
-                <h2>Visa, self-employed and family-support content</h2>
+                <span className="kicker">SPECIALIST MORTGAGE GUIDES</span>
+                <h2>Visas, self-employment and family deposit support</h2>
                 <p>
-                  Higher-intent articles built around specialist mortgage situations that usually
-                  need more than a broad market explanation.
+                  Understand how visa status, business income and help from family may affect
+                  your mortgage application and the documents you need.
                 </p>
               </div>
               <Link href="/request-advice">
@@ -896,11 +897,11 @@ export function BlogsPage() {
           <div className="container">
             <div className="section-heading">
               <div>
-                <span className="kicker">PHASE 4 EXPAT CLUSTER</span>
-                <h2>Expat, overseas income and NRI-focused mortgage content</h2>
+                <span className="kicker">MORTGAGES FOR EXPATS AND OVERSEAS BUYERS</span>
+                <h2>Buying, letting or returning to a home in the UK</h2>
                 <p>
-                  High-intent articles built around expat planning, cross-border income,
-                  buy-to-let from abroad and NRI-led UK property journeys.
+                  Explore overseas income, buying from the Gulf, returning to the UK and
+                  preparing deposit funds from India.
                 </p>
               </div>
               <Link href="/expat-mortgages">
@@ -925,37 +926,11 @@ export function BlogsPage() {
           </div>
         </section>
       )}
-      <section className="inner-section soft-bg">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <span className="kicker">NEXT EXPANSION PRIORITIES</span>
-              <h2>What should be built next</h2>
-              <p>
-                These are the next content lanes that would improve long-term SEO and lead quality
-                without diluting the current structure.
-              </p>
-            </div>
-            <Link href="/calculators">
-              Browse calculators <ArrowIcon />
-            </Link>
-          </div>
-          <div className="architecture-grid">
-            {plannedTopics.map((topic) => (
-              <article className="architecture-card architecture-card-muted" key={topic.slug}>
-                <small>PLANNED NEXT</small>
-                <h3>{topic.title}</h3>
-                <p>{topic.description}</p>
-                <div className="architecture-note">{topic.nextStep}</div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
       <section className="inner-section">
         <div className="container">
+          <div className="section-heading"><div><span className="kicker">MORE TO EXPLORE</span><h2>Mortgage and protection essentials</h2></div></div>
           <div className="article-grid">
-            {resourceArticles.map((article, i) => (
+            {remainingArticles.map((article, i) => (
               <article className={i === 0 ? "article-tile featured" : "article-tile"} key={article.slug}>
                 <small>
                   {article.category} · {article.readTime}

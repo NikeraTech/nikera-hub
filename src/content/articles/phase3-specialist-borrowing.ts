@@ -23,9 +23,9 @@ function createSpecialistArticle(input: SpecialistArticleInput): Resource {
     category: input.category,
     title: input.title,
     description: input.description,
-    readTime: "12 min read",
+    readTime: `${Math.ceil(JSON.stringify([input.sections, input.faq]).split(/\s+/).length / 200)} min read`,
     published: "2026-07-05",
-    updated: "2026-07-05",
+    updated: "2026-09-08",
     keywords: input.keywords,
     authorityLinks: input.authorityLinks,
     internalLinks: input.internalLinks,
@@ -103,99 +103,95 @@ export const phase3SpecialistBorrowingArticles: Resource[] = [
     ],
     sections: [
       {
-        heading: "Introduction",
-        paragraphs: [
-          "A mortgage on a Skilled Worker visa is often possible in the UK, but it is rarely a completely standard case. The main issue is not simply whether you earn enough. It is whether the lender is comfortable with your visa status, time remaining, deposit and the overall evidence behind the application.",
-          "That matters because many borrowers assume the mortgage process works exactly the same for them as it does for every permanent UK resident. Sometimes the outcome is close. Sometimes the lender pool is much narrower than expected.",
-          "The practical goal is to understand lender fit early, rather than searching on broad mortgage headlines that may not reflect visa-specific policy detail.",
-        ],
+        "heading": "Mortgage planning with a Skilled Worker visa",
+        "paragraphs": [
+          "A Skilled Worker visa does not by itself determine whether a UK mortgage is available. Lenders apply their own criteria to immigration status, income, deposit, credit history and the property. Check the requirements for your circumstances before relying on a borrowing estimate."
+        ]
       },
       {
-        heading: "Why people search for this service",
-        paragraphs: [
+        "heading": "Questions about buying while on a visa",
+        "paragraphs": [
           "Borrowers on a Skilled Worker visa usually search because they want clarity on whether home buying is realistic now, what deposit may be needed and which parts of the case lenders focus on most.",
-          "They are often comparing major life decisions at the same time: job stability, long-term plans in the UK, family commitments and whether to buy now or wait until the case looks simpler.",
+          "They are often comparing major life decisions at the same time: job stability, long-term plans in the UK, family commitments and whether to buy now or wait until the case looks simpler."
         ],
-        subsections: [
+        "subsections": [
           {
-            heading: "Visa status creates policy differences",
-            paragraphs: [
-              "Some lenders are comfortable with certain visa profiles. Others are more selective. The practical result is that two borrowers with similar income can see very different lender choice depending on policy fit.",
-            ],
+            "heading": "Visa status creates policy differences",
+            "paragraphs": [
+              "Some lenders are comfortable with certain visa profiles. Others are more selective. The practical result is that two borrowers with similar income can see very different lender choice depending on policy fit."
+            ]
           },
           {
-            heading: "People want to avoid unrealistic property searches",
-            paragraphs: [
-              "A broad affordability estimate can help planning, but it does not tell you whether a lender is happy with the immigration and residency side of the case. That is why early lender fit matters so much.",
-            ],
-          },
-        ],
+            "heading": "People want to avoid unrealistic property searches",
+            "paragraphs": [
+              "A broad affordability estimate can help planning, but it does not tell you whether a lender is happy with the immigration and residency side of the case. That is why early lender fit matters so much."
+            ]
+          }
+        ]
       },
       {
-        heading: "Benefits of understanding the visa mortgage route properly",
-        paragraphs: [
+        "heading": "Benefits of understanding the visa mortgage route properly",
+        "paragraphs": [
           "The biggest benefit is avoiding wasted time. When you know the likely lender appetite, deposit expectations and document sensitivity early, your property search becomes much more realistic.",
-          "It also becomes easier to judge whether to apply now, improve the case first or wait until more time has passed on the visa or in the job.",
+          "It also becomes easier to judge whether to apply now, improve the case first or wait until more time has passed on the visa or in the job."
         ],
-        bullets: [
+        "bullets": [
           "More realistic budgeting",
           "Less risk of chasing unsuitable lenders",
           "Clearer expectations on documents and timelines",
-          "Better decision-making around deposit and timing",
-        ],
+          "Better decision-making around deposit and timing"
+        ]
       },
       {
-        heading: "Common situations",
-        paragraphs: [
+        "heading": "Common situations",
+        "paragraphs": [
           "A common scenario is a salaried applicant with a stable role but uncertainty around how much deposit is enough. Another is a couple where one or both applicants are on visas and want to know how that affects lender choice.",
-          "Some borrowers also want to buy quickly after moving to the UK, while others have already been in the country for some time and want to know whether that improves the case materially.",
-        ],
+          "Some borrowers also want to buy quickly after moving to the UK, while others have already been in the country for some time and want to know whether that improves the case materially."
+        ]
       },
       {
-        heading: "Things to consider",
-        paragraphs: [
+        "heading": "Things to consider",
+        "paragraphs": [
           "Time remaining on the visa, income structure, deposit source and broader affordability all matter. None of those factors should be considered in isolation.",
-          "It is also important to be realistic about documents. Passport and visa evidence, employment documents, payslips, bank statements and deposit-source records all tend to matter more in specialist cases.",
+          "It is also important to be realistic about documents. Passport and visa evidence, employment documents, payslips, bank statements and deposit-source records all tend to matter more in specialist cases."
         ],
-        subsections: [
+        "subsections": [
           {
-            heading: "Deposit strength still matters",
-            paragraphs: [
-              "A stronger deposit can sometimes widen the lender pool or improve pricing, but it does not override every policy concern. It should be seen as one part of the case rather than the whole answer.",
-            ],
+            "heading": "Deposit strength still matters",
+            "paragraphs": [
+              "A stronger deposit can sometimes widen the lender pool or improve pricing, but it does not override every policy concern. It should be seen as one part of the case rather than the whole answer."
+            ]
           },
           {
-            heading: "Affordability is still lender-specific",
-            paragraphs: [
-              "Even where income looks strong, lenders can still differ on how they treat commitments, joint applicants, bonus income or future plans in the UK. That is why a planning calculator is useful, but not decisive.",
-            ],
-          },
-        ],
+            "heading": "Affordability is still lender-specific",
+            "paragraphs": [
+              "Even where income looks strong, lenders can still differ on how they treat commitments, joint applicants, bonus income or future plans in the UK. That is why a planning calculator is useful, but not decisive."
+            ]
+          }
+        ]
       },
       {
-        heading: "Frequently asked questions",
-        paragraphs: [
+        "heading": "Points to check before applying",
+        "paragraphs": [
           "People often ask whether visa status automatically blocks borrowing. It does not. The real issue is which lenders fit the case and what evidence is needed to support it.",
           "Another common question is whether waiting always helps. Sometimes it does, but not always. The right timing depends on how the whole case looks now versus how it is likely to look later.",
-          "Borrowers should also ask how close the application is to a mainstream case. Stable UK income, a clear employer, a straightforward deposit and enough time remaining on the visa can make the conversation simpler. A shorter visa window, unusual income, recent arrival in the UK or a complex deposit trail can make lender selection more important.",
-        ],
+          "Borrowers should also ask how close the application is to a mainstream case. Stable UK income, a clear employer, a straightforward deposit and enough time remaining on the visa can make the conversation simpler. A shorter visa window, unusual income, recent arrival in the UK or a complex deposit trail can make lender selection more important."
+        ]
       },
       {
-        heading: "Conclusion",
-        paragraphs: [
+        "heading": "Conclusion",
+        "paragraphs": [
           "A Skilled Worker visa mortgage case is usually more about policy fit and preparation than about headline mortgage rates. If you understand that early, you can search more realistically and avoid unnecessary friction.",
-          "The best approach is to combine an initial affordability view with lender-specific judgement before making major commitments.",
-        ],
+          "The best approach is to combine an initial affordability view with lender-specific judgement before making major commitments."
+        ]
       },
       {
-        heading: "Call to action",
-        paragraphs: [
+        "heading": "Request Advice",
+        "paragraphs": [
           "If you are buying on a Skilled Worker visa, use affordability tools for planning, but check the lender route carefully before assuming the broad market is open to you.",
-          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision.",
-          "Looking for a verified professional?",
-          "Find trusted Mortgage and Insurance Advisers on Hub.Nikera.",
-        ],
-      },
+          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision."
+        ]
+      }
     ],
   }),
   createSpecialistArticle({
@@ -238,87 +234,82 @@ export const phase3SpecialistBorrowingArticles: Resource[] = [
     ],
     sections: [
       {
-        heading: "Introduction",
-        paragraphs: [
-          "Mortgage planning on a spouse visa is often more achievable than borrowers fear, but it still needs careful handling. The decision is usually not about one single issue. It is about how visa status, joint income, deposit source and documentation come together.",
-          "That means some spouse visa borrowers can access reasonable options, while others face a narrower lender pool than expected even with similar income.",
-          "The most useful starting point is clarity: what the lender is really assessing, how the application will be structured and whether the supporting documents tell a clean story.",
-          "That clarity should come before the property search becomes emotional. Once buyers are competing for a home, it is harder to step back and fix weak assumptions about income, visa timing or deposit evidence.",
-        ],
+        "heading": "Planning a mortgage with a spouse visa",
+        "paragraphs": [
+          "If you hold a spouse visa, a mortgage assessment may involve both applicants’ income, residence history and immigration circumstances. A British or settled partner does not guarantee acceptance. The useful starting point is to check how a lender would assess the proposed application."
+        ]
       },
       {
-        heading: "Why people search for this service",
-        paragraphs: [
+        "heading": "Deciding how to apply",
+        "paragraphs": [
           "Spouse visa borrowers usually want practical answers. Can we buy now? Should we apply jointly? Does my partner's status change the case? How much deposit do we need?",
-          "These are reasonable questions because spouse visa borrowing often sits between mainstream and specialist lending rather than fitting neatly into one category.",
-        ],
+          "These are reasonable questions because spouse visa borrowing often sits between mainstream and specialist lending rather than fitting neatly into one category."
+        ]
       },
       {
-        heading: "Benefits of getting the structure right early",
-        paragraphs: [
+        "heading": "Benefits of getting the structure right early",
+        "paragraphs": [
           "The better the case is structured at the start, the less likely the application is to drift into delays, unrealistic assumptions or a poor lender match.",
-          "That usually leads to a more useful property search and stronger expectations around what monthly payments and deposit levels are genuinely realistic.",
-        ],
+          "That usually leads to a more useful property search and stronger expectations around what monthly payments and deposit levels are genuinely realistic."
+        ]
       },
       {
-        heading: "Common situations",
-        paragraphs: [
+        "heading": "Common situations",
+        "paragraphs": [
           "One common case is a British citizen or settled partner applying jointly with a spouse visa holder. Another is a spouse visa applicant who has already built stable UK income and wants to know how lenders will treat that income in practice.",
-          "Family deposit support is also common in these cases, which means source-of-funds evidence often becomes part of the planning conversation much earlier than borrowers expect.",
-        ],
+          "Family deposit support is also common in these cases, which means source-of-funds evidence often becomes part of the planning conversation much earlier than borrowers expect."
+        ]
       },
       {
-        heading: "Things to consider",
-        paragraphs: [
+        "heading": "Things to consider",
+        "paragraphs": [
           "Joint affordability, credit profile, time remaining on the visa, employment stability and deposit source all matter. None should be checked in isolation.",
-          "Where family support is involved, deposit evidence and transfer records can be just as important as the affordability calculation.",
+          "Where family support is involved, deposit evidence and transfer records can be just as important as the affordability calculation."
         ],
-        bullets: [
+        "bullets": [
           "Check how the lender treats each applicant's income",
           "Be realistic about the deposit trail",
           "Understand whether the case is truly mainstream or still specialist",
-          "Get clear on the likely documentation before offering on a property",
-        ],
+          "Get clear on the likely documentation before offering on a property"
+        ]
       },
       {
-        heading: "How joint applications are usually framed",
-        paragraphs: [
+        "heading": "How joint applications are usually framed",
+        "paragraphs": [
           "Many spouse visa mortgage plans involve two applicants, but the structure still needs care. The lender may look at each person's income, credit file, residence history and immigration position before deciding how much of the joint case it is comfortable using.",
           "A British or settled spouse can help the overall profile, but it does not make every lender treat the application as completely standard. If the visa holder's income is needed for affordability, the lender still needs confidence that the income is stable, evidenced and likely to continue.",
           "It is also worth checking whether the property, deposit and intended ownership route match the lender's expectations. A case can look strong in one area and still slow down if another part has not been explained properly.",
-          "Where only one income is needed, the planning question can be different. The application may still need to disclose both applicants' positions clearly, but the lender's affordability pressure may be lower if the main applicant can support the borrowing without stretching the case.",
-        ],
+          "Where only one income is needed, the planning question can be different. The application may still need to disclose both applicants' positions clearly, but the lender's affordability pressure may be lower if the main applicant can support the borrowing without stretching the case."
+        ]
       },
       {
-        heading: "Documents that tend to reduce uncertainty",
-        paragraphs: [
+        "heading": "Documents that tend to reduce uncertainty",
+        "paragraphs": [
           "Useful preparation usually includes identity and visa evidence, proof of current address, income documents for both applicants, recent bank statements and a clear deposit trail. Where family support is involved, donor information and gift evidence should be prepared before the application becomes urgent.",
-          "The aim is not to send every document immediately to every party. It is to know whether the main facts can be evidenced cleanly when the lender or conveyancer asks. That saves time and helps avoid repeated questions later in the process.",
-        ],
+          "The aim is not to send every document immediately to every party. It is to know whether the main facts can be evidenced cleanly when the lender or conveyancer asks. That saves time and helps avoid repeated questions later in the process."
+        ]
       },
       {
-        heading: "Frequently asked questions",
-        paragraphs: [
+        "heading": "Joint application assumptions to check",
+        "paragraphs": [
           "Borrowers often ask whether being married to a British citizen removes all complexity. It does not. It may help the case in some situations, but lenders still review the full profile.",
-          "Another common question is whether waiting is better. Sometimes waiting strengthens the case, but sometimes a well-structured application is already viable now.",
-        ],
+          "Another common question is whether waiting is better. Sometimes waiting strengthens the case, but sometimes a well-structured application is already viable now."
+        ]
       },
       {
-        heading: "Conclusion",
-        paragraphs: [
+        "heading": "Conclusion",
+        "paragraphs": [
           "Spouse visa mortgage planning works best when the joint application, deposit route and evidence pack are treated as one connected case rather than separate questions.",
-          "Once those moving parts are understood clearly, the mortgage route becomes easier to judge realistically.",
-        ],
+          "Once those moving parts are understood clearly, the mortgage route becomes easier to judge realistically."
+        ]
       },
       {
-        heading: "Call to action",
-        paragraphs: [
+        "heading": "Request Advice",
+        "paragraphs": [
           "If your mortgage plans involve spouse visa status, check affordability and deposit assumptions early, but do not rely on broad market assumptions alone.",
-          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision.",
-          "Looking for a verified professional?",
-          "Find trusted Mortgage and Insurance Advisers on Hub.Nikera.",
-        ],
-      },
+          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision."
+        ]
+      }
     ],
   }),
   createSpecialistArticle({
@@ -361,85 +352,97 @@ export const phase3SpecialistBorrowingArticles: Resource[] = [
     ],
     sections: [
       {
-        heading: "Introduction",
-        paragraphs: [
-          "Self-employed mortgage cases usually become easier or harder based on evidence quality. The challenge is often not whether the business is successful. It is whether the lender can understand the income clearly enough to rely on it.",
-          "That is why document preparation matters so much. A borrower who knows what the lender is likely to focus on can usually present a much stronger case than one who starts collecting records only after a property offer is accepted.",
-          "The main goal is consistency. The numbers, tax records and bank statements should tell the same story.",
-        ],
+        "heading": "Make your income evidence easy to follow",
+        "paragraphs": [
+          "For a self-employed mortgage application, the lender needs evidence of the income it is being asked to use. Accounts, tax records and bank statements serve different purposes. Prepare the records together and explain differences rather than assuming one headline figure establishes affordability."
+        ]
       },
       {
-        heading: "Why people search for this service",
-        paragraphs: [
+        "heading": "Which income figure will be assessed?",
+        "paragraphs": [
           "Self-employed borrowers often search because they do not know which figure lenders really care about. Is it turnover, net profit, salary, dividends or an average over time?",
-          "They also want to know whether waiting another year, finalising accounts or changing the structure of the application could improve the outcome.",
-        ],
+          "They also want to know whether waiting another year, finalising accounts or changing the structure of the application could improve the outcome."
+        ]
       },
       {
-        heading: "Benefits of preparing the document pack early",
-        paragraphs: [
+        "heading": "Benefits of preparing the document pack early",
+        "paragraphs": [
           "Early preparation reduces avoidable surprises. It becomes easier to see whether the case is strong now, whether some lenders are more likely to fit than others and whether any obvious evidence gaps need solving first.",
-          "That also improves the quality of any affordability conversation, because the numbers being discussed are more likely to reflect what a lender might actually use.",
-        ],
+          "That also improves the quality of any affordability conversation, because the numbers being discussed are more likely to reflect what a lender might actually use."
+        ]
       },
       {
-        heading: "Common situations",
-        paragraphs: [
+        "heading": "Common situations",
+        "paragraphs": [
           "Some applicants are sole traders with straightforward trading history. Others are limited company directors where income can be interpreted in more than one way. Some have rising profits but not much trading history, while others have uneven years and want to know how that will be viewed.",
-          "These differences matter because the same headline income can be treated differently depending on business structure and lender policy.",
-        ],
+          "These differences matter because the same headline income can be treated differently depending on business structure and lender policy."
+        ]
       },
       {
-        heading: "Things to consider",
-        paragraphs: [
+        "heading": "Things to consider",
+        "paragraphs": [
           "Lenders often look for tax documents, accounts, bank statements and evidence of stability over time. The exact mix depends on lender policy and how the business is structured.",
-          "It also matters whether the case is simple and stable or whether there are recent changes in profits, trading history or business extraction strategy.",
+          "It also matters whether the case is simple and stable or whether there are recent changes in profits, trading history or business extraction strategy."
         ],
-        bullets: [
+        "bullets": [
           "Make sure accounts and tax records are consistent",
           "Understand which income figure lenders may use",
           "Be ready to explain any unusual movement in income",
-          "Keep personal and business records easy to follow",
+          "Keep personal and business records easy to follow"
         ],
+        documentTools: {
+          introduction:
+            "If you need to organise accounts, tax records and bank statements before sharing them,",
+          links: [
+            {
+              label: "Merge PDFs",
+              href: "https://pdf-lab.com/merge/",
+              description: "to combine documents when your adviser requests a single file.",
+            },
+            {
+              label: "Compress a PDF",
+              href: "https://pdf-lab.com/compress",
+              description: "if a file exceeds an upload limit. Check that all figures and text remain readable.",
+            },
+          ],
+        },
       },
       {
-        heading: "How different business structures change the evidence",
-        paragraphs: [
+        "heading": "How different business structures change the evidence",
+        "paragraphs": [
           "A sole trader case is often built around tax calculations, tax year overviews and bank statements that support the declared profit. A partnership may need similar tax evidence plus documents showing the applicant's share of profit. A limited company director case can be more nuanced because salary, dividends, retained profit and company accounts may all be relevant in different ways.",
           "That is why self-employed borrowers should avoid assuming that one document proves the full case. The stronger file usually shows how the income is generated, how it is declared, how it reaches the applicant personally and whether recent trading supports the borrowing being requested.",
-          "If there has been a major change in turnover, profit, company structure or income extraction, it is better to prepare the explanation early. A clear explanation does not remove lender policy, but it can stop a normal business change looking like an unexplained risk.",
-        ],
+          "If there has been a major change in turnover, profit, company structure or income extraction, it is better to prepare the explanation early. A clear explanation does not remove lender policy, but it can stop a normal business change looking like an unexplained risk."
+        ]
       },
       {
-        heading: "Why timing matters for accounts and tax records",
-        paragraphs: [
+        "heading": "Why timing matters for accounts and tax records",
+        "paragraphs": [
           "Mortgage timing can be awkward when the latest trading year has ended but accounts or tax submissions are not finalised. Some lenders may want completed records before relying on the new year, while others may consider additional evidence depending on the overall case.",
-          "Before applying, it helps to know which tax years are complete, whether the latest figures improve or weaken the application and whether waiting for finalised accounts would materially change lender choice. That makes the decision about timing more deliberate.",
-        ],
+          "Before applying, it helps to know which tax years are complete, whether the latest figures improve or weaken the application and whether waiting for finalised accounts would materially change lender choice. That makes the decision about timing more deliberate."
+        ]
       },
       {
-        heading: "Frequently asked questions",
-        paragraphs: [
+        "heading": "Document mistakes to avoid",
+        "paragraphs": [
           "A common mistake is assuming every lender will use the same income figure. They do not. Another is assuming that a strong turnover figure proves affordability. In practice, lenders usually care more about sustainable income than raw business activity.",
-          "The better approach is to prepare the evidence first and then judge lender fit from there.",
-        ],
+          "The better approach is to prepare the evidence first and then judge lender fit from there."
+        ]
       },
       {
-        heading: "Conclusion",
-        paragraphs: [
+        "heading": "Conclusion",
+        "paragraphs": [
           "Self-employed borrowing usually rewards preparation. When the documents are clear and the income story is easy to follow, the lender conversation becomes much easier.",
-          "That does not guarantee the same result everywhere, but it makes the realistic lender pool easier to identify.",
-        ],
+          "That does not guarantee the same result everywhere, but it makes the realistic lender pool easier to identify."
+        ]
       },
       {
-        heading: "Call to action",
-        paragraphs: [
+        "heading": "Request Advice",
+        "paragraphs": [
           "If you are self-employed, organise the evidence before the property process becomes urgent. That usually improves both lender fit and the quality of decisions you make early on.",
-          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision.",
-          "Looking for a verified professional?",
-          "Find trusted Mortgage and Insurance Advisers on Hub.Nikera.",
-        ],
-      },
+          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision."
+        ]
+      }
     ],
   }),
   createSpecialistArticle({
@@ -481,86 +484,82 @@ export const phase3SpecialistBorrowingArticles: Resource[] = [
     ],
     sections: [
       {
-        heading: "Introduction",
-        paragraphs: [
-          "Self-employed affordability is often more flexible than borrowers think, but also more dependent on presentation and policy detail. The main question is not only how much you earned. It is how clearly that income can be evidenced and how the lender chooses to interpret it.",
-          "That means improving affordability is not always about earning more. Sometimes it is about cleaner records, stronger consistency, fewer commitments or a better lender fit.",
-          "The strongest starting point is usually to understand which income figure is genuinely lender-usable before searching at the top of an online estimate.",
-        ],
+        "heading": "Understand what could change affordability",
+        "paragraphs": [
+          "Self-employed mortgage affordability depends on the income a lender accepts, your commitments and its wider criteria. Clearer records can help a lender assess the case, but presentation alone does not increase sustainable income or guarantee more borrowing."
+        ]
       },
       {
-        heading: "Why people search for this service",
-        paragraphs: [
+        "heading": "Applying now or waiting for more evidence",
+        "paragraphs": [
           "Borrowers usually search because online calculators feel too broad and they want to know what they can realistically do to strengthen the case.",
-          "They are often deciding whether to apply now, wait for another set of accounts or change the timing of the purchase.",
-        ],
+          "They are often deciding whether to apply now, wait for another set of accounts or change the timing of the purchase."
+        ]
       },
       {
-        heading: "Practical ways the case can improve",
-        paragraphs: [
+        "heading": "Practical ways the case can improve",
+        "paragraphs": [
           "A cleaner document trail, stronger consistency in income, lower committed monthly costs and a realistic deposit plan can all help. None guarantees a better result, but each can improve how the case is viewed.",
-          "In many cases, the most useful change is not dramatic. It is simply making the case easier for the lender to understand and trust.",
+          "In many cases, the most useful change is not dramatic. It is simply making the case easier for the lender to understand and trust."
         ],
-        bullets: [
+        "bullets": [
           "Reduce avoidable personal commitments where realistic",
           "Keep income evidence tidy and consistent",
           "Understand which figures lenders are likely to use",
-          "Stress-test the budget rather than chasing the highest headline number",
-        ],
+          "Stress-test the budget rather than chasing the highest headline number"
+        ]
       },
       {
-        heading: "Common situations",
-        paragraphs: [
+        "heading": "Common situations",
+        "paragraphs": [
           "Some borrowers have good income but too much personal expenditure dragging affordability down. Others have strong profitability but a business structure that needs explaining carefully. Some are deciding whether another year's accounts could improve lender choice.",
-          "These are planning questions, not just borrowing questions, which is why early review is so useful.",
-        ],
+          "These are planning questions, not just borrowing questions, which is why early review is so useful."
+        ]
       },
       {
-        heading: "Things to consider",
-        paragraphs: [
+        "heading": "Things to consider",
+        "paragraphs": [
           "Trying to optimise affordability without understanding lender policy can create the wrong focus. For example, chasing turnover alone is rarely the answer if the lender is not using turnover as the main income measure.",
-          "It is usually better to think in terms of sustainable income, personal commitments, evidence quality and lender fit together.",
-        ],
+          "It is usually better to think in terms of sustainable income, personal commitments, evidence quality and lender fit together."
+        ]
       },
       {
-        heading: "Where affordability can realistically improve",
-        paragraphs: [
+        "heading": "Where affordability can realistically improve",
+        "paragraphs": [
           "For many self-employed borrowers, the most practical improvements are not dramatic. Reducing committed personal borrowing, keeping business and personal records clear, finalising accounts on time and avoiding avoidable account noise can all make the case easier to assess.",
           "A stronger deposit can also help, but it should not be treated as a cure-all. If the income evidence is weak or inconsistent, a bigger deposit may improve the risk position without solving the core affordability question.",
           "The useful test is whether a change would alter how a lender reads the application. Paying down a credit commitment may help if it improves monthly affordability. Waiting for another year's accounts may help if that year is complete, sustainable and lender-usable. Changing drawings at the last minute may not help if it creates tax or evidence questions.",
-          "The same applies to business decisions. Increasing turnover, taking a larger dividend or changing salary can look helpful in isolation, but lenders normally want the figures to be consistent, explainable and supported by records rather than engineered at the last minute.",
-        ],
+          "The same applies to business decisions. Increasing turnover, taking a larger dividend or changing salary can look helpful in isolation, but lenders normally want the figures to be consistent, explainable and supported by records rather than engineered at the last minute."
+        ]
       },
       {
-        heading: "What to avoid while preparing",
-        paragraphs: [
+        "heading": "What to avoid while preparing",
+        "paragraphs": [
           "Avoid making the case harder to understand shortly before applying. Large unexplained transfers, sudden changes in how income is drawn, new personal borrowing or incomplete accounting records can all create more questions than they solve.",
-          "If a change is genuinely needed for business or personal reasons, it should be documented clearly. Lenders do not expect every business to look identical, but they do need enough evidence to understand the risk and the income being used.",
-        ],
+          "If a change is genuinely needed for business or personal reasons, it should be documented clearly. Lenders do not expect every business to look identical, but they do need enough evidence to understand the risk and the income being used."
+        ]
       },
       {
-        heading: "Frequently asked questions",
-        paragraphs: [
+        "heading": "Timing and calculator assumptions",
+        "paragraphs": [
           "Many borrowers ask whether waiting automatically improves the case. Sometimes it does, but only if the extra time leads to stronger evidence or a better profile. Waiting without changing anything important is not always useful.",
-          "Another common question is whether a calculator result equals lender affordability. It does not. It is a useful starting point, not the final answer.",
-        ],
+          "Another common question is whether a calculator result equals lender affordability. It does not. It is a useful starting point, not the final answer."
+        ]
       },
       {
-        heading: "Conclusion",
-        paragraphs: [
+        "heading": "Conclusion",
+        "paragraphs": [
           "Improving self-employed affordability is usually about making the case more sustainable, more consistent and easier for the lender to interpret. That is more useful than chasing a headline figure that does not survive proper underwriting.",
-          "A borrower who understands the evidence route early can make cleaner decisions about timing, commitments and deposit planning before a live application is under pressure.",
-        ],
+          "A borrower who understands the evidence route early can make cleaner decisions about timing, commitments and deposit planning before a live application is under pressure."
+        ]
       },
       {
-        heading: "Call to action",
-        paragraphs: [
+        "heading": "Request Advice",
+        "paragraphs": [
           "If you are self-employed, test the numbers early but focus on the quality of the case as much as the size of the income.",
-          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision.",
-          "Looking for a verified professional?",
-          "Find trusted Mortgage and Insurance Advisers on Hub.Nikera.",
-        ],
-      },
+          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision."
+        ]
+      }
     ],
   }),
   createSpecialistArticle({
@@ -604,86 +603,82 @@ export const phase3SpecialistBorrowingArticles: Resource[] = [
     ],
     sections: [
       {
-        heading: "Introduction",
-        paragraphs: [
-          "A gifted deposit from family in India can be a completely legitimate way to support a UK home purchase, but it needs planning. The amount matters, but the evidence trail often matters just as much.",
-          "The practical challenge is that lenders and conveyancers usually want to understand where the money came from, whether it is genuinely a gift and how it moved from the donor to the purchase.",
-          "If that trail is collected late, a sensible family arrangement can still cause avoidable delay.",
-        ],
+        "heading": "Preparing a deposit gift from India",
+        "paragraphs": [
+          "Family funds from India may be accepted towards a UK home deposit, depending on the lender, the arrangement and the evidence available. Confirm whether the money is a gift or a loan and ask the lender and conveyancer what records they need before relying on it."
+        ]
       },
       {
-        heading: "Why people search for this service",
-        paragraphs: [
+        "heading": "Agreeing the gift and transfer arrangements",
+        "paragraphs": [
           "Buyers usually search because they want to know whether overseas family support is acceptable and what documents will likely be needed.",
-          "They are often balancing urgency around a property purchase with uncertainty about cross-border transfers, donor evidence and anti-money-laundering checks.",
-        ],
+          "They are often balancing urgency around a property purchase with uncertainty about cross-border transfers, donor evidence and anti-money-laundering checks."
+        ]
       },
       {
-        heading: "Benefits of planning the gift properly",
-        paragraphs: [
+        "heading": "Benefits of planning the gift properly",
+        "paragraphs": [
           "The earlier the donor route is made clear, the easier it becomes to judge whether the deposit is ready to rely on and whether any gaps in evidence still need solving.",
-          "That helps reduce the risk that the legal or mortgage process moves faster than the paperwork supporting the deposit.",
+          "That helps reduce the risk that the legal or mortgage process moves faster than the paperwork supporting the deposit."
         ],
-        bullets: [
+        "bullets": [
           "Clearer source-of-funds evidence",
           "Less risk of late-stage delay",
           "Better coordination between buyer, donor and professionals",
-          "More realistic purchase timing",
-        ],
+          "More realistic purchase timing"
+        ]
       },
       {
-        heading: "Common situations",
-        paragraphs: [
+        "heading": "Common situations",
+        "paragraphs": [
           "Some buyers receive one straightforward family gift. Others receive support built from multiple family accounts or cross-border transfers. Some families send money early, while others only finalise the support once a purchase is already progressing.",
-          "These details matter because the cleaner the path of funds, the easier the case usually is to evidence.",
-        ],
+          "These details matter because the cleaner the path of funds, the easier the case usually is to evidence."
+        ]
       },
       {
-        heading: "Things to consider",
-        paragraphs: [
+        "heading": "Things to consider",
+        "paragraphs": [
           "The gift should usually be clearly documented, the donor should be identifiable and the source of the donor funds should be understandable. Transfer records and overseas statements can also matter.",
           "Where the money passes through several accounts or is converted between currencies, the need for tidy evidence usually increases.",
-          "Buyers should also consider whether the timing of the transfer creates avoidable pressure. A gift that is acceptable in principle can still slow a purchase if exchange dates arrive before the funds and documents are fully traceable.",
-        ],
+          "Buyers should also consider whether the timing of the transfer creates avoidable pressure. A gift that is acceptable in principle can still slow a purchase if exchange dates arrive before the funds and documents are fully traceable."
+        ]
       },
       {
-        heading: "What a clean India-to-UK gift trail usually shows",
-        paragraphs: [
+        "heading": "What a clean India-to-UK gift trail usually shows",
+        "paragraphs": [
           "A clean trail normally shows the donor, the donor's source of funds, the account the money came from, the transfer route and the account that received the funds for the purchase. If currency conversion is involved, the exchange and transfer records should be easy to match against the bank statements.",
           "The donor may also need to confirm that the money is a gift, not a loan, and that they will not have a beneficial interest in the property. The exact wording and evidence requirements can vary, but the principle is consistent: the professionals involved need to understand both the legal nature of the gift and the source of the money.",
           "Where several relatives contribute, it is usually better to keep each contribution traceable instead of blending the money through multiple intermediate accounts. Simpler movement is easier to explain and usually easier to evidence.",
-          "Translations, certification and name differences across documents should also be considered early. Small inconsistencies can usually be explained, but they are much easier to handle when the buyer has time to gather supporting evidence calmly.",
-        ],
+          "Translations, certification and name differences across documents should also be considered early. Small inconsistencies can usually be explained, but they are much easier to handle when the buyer has time to gather supporting evidence calmly."
+        ]
       },
       {
-        heading: "Planning the transfer without creating avoidable delays",
-        paragraphs: [
+        "heading": "Planning the transfer without creating avoidable delays",
+        "paragraphs": [
           "Cross-border banking, anti-money-laundering checks and document certification can all take time. If the gift is only organised after an offer is accepted, the purchase timetable can become tighter than expected.",
-          "A better approach is to decide early who is gifting, which account will be used, whether the money needs to be converted and which statements or confirmations are likely to be needed. That does not guarantee a smooth transaction, but it gives the buyer, donor, broker and solicitor a clearer starting point.",
-        ],
+          "A better approach is to decide early who is gifting, which account will be used, whether the money needs to be converted and which statements or confirmations are likely to be needed. That does not guarantee a smooth transaction, but it gives the buyer, donor, broker and solicitor a clearer starting point."
+        ]
       },
       {
-        heading: "Frequently asked questions",
-        paragraphs: [
+        "heading": "Common gaps in the gift records",
+        "paragraphs": [
           "Buyers often ask whether the gift is the problem. Usually it is not. The issue is whether the evidence is clear enough for the professionals involved to rely on it with confidence.",
-          "Another common question is whether the route can be tidied up later. Sometimes it can, but late reconstruction is usually harder than early preparation.",
-        ],
+          "Another common question is whether the route can be tidied up later. Sometimes it can, but late reconstruction is usually harder than early preparation."
+        ]
       },
       {
-        heading: "Conclusion",
-        paragraphs: [
-          "A gifted deposit from family in India can support a strong UK purchase case, but the funding route should be treated as part of the application planning, not just a late-stage legal detail.",
-        ],
+        "heading": "Conclusion",
+        "paragraphs": [
+          "A gifted deposit from family in India can support a strong UK purchase case, but the funding route should be treated as part of the application planning, not just a late-stage legal detail."
+        ]
       },
       {
-        heading: "Call to action",
-        paragraphs: [
+        "heading": "Request Advice",
+        "paragraphs": [
           "If your deposit depends on family support from abroad, estimate the numbers early and make the paper trail clear before the property process becomes urgent.",
-          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision.",
-          "Looking for a verified professional?",
-          "Find trusted Mortgage and Insurance Advisers on Hub.Nikera.",
-        ],
-      },
+          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision."
+        ]
+      }
     ],
   }),
   createSpecialistArticle({
@@ -726,85 +721,83 @@ export const phase3SpecialistBorrowingArticles: Resource[] = [
     ],
     sections: [
       {
-        heading: "Introduction",
-        paragraphs: [
-          "Family support is one of the most common ways buyers strengthen a deposit in the UK, especially where saving the full amount alone would take too long. The real issue is not whether family help exists. It is how that help is structured and evidenced.",
-          "Lenders usually want to understand whether the support is a genuine gift, whether it needs repaying and where the money came from. Those questions become even more important when the support is substantial or cross-border.",
-        ],
+        "heading": "Explain the terms of family support",
+        "paragraphs": [
+          "If family is helping with a UK deposit, explain the terms as well as the amount. Lenders and conveyancers may need to establish who provides the funds, whether repayment or ownership rights are expected and how the money was obtained."
+        ]
       },
       {
-        heading: "Why people search for this service",
-        paragraphs: [
+        "heading": "Gift, loan or ownership contribution?",
+        "paragraphs": [
           "Buyers and families usually search because they want a practical answer to a simple question: if family helps with the deposit, what does the lender actually care about?",
-          "That question matters because many people assume the deposit is only about hitting the percentage. In practice, the structure and proof of the funds can matter almost as much as the amount.",
-        ],
+          "That question matters because many people assume the deposit is only about hitting the percentage. In practice, the structure and proof of the funds can matter almost as much as the amount."
+        ]
       },
       {
-        heading: "Benefits of understanding the checks early",
-        paragraphs: [
+        "heading": "Benefits of understanding the checks early",
+        "paragraphs": [
           "If you know what the lender and conveyancer are likely to ask, you can build a cleaner deposit route and avoid scrambling for documents under time pressure later.",
-          "It also becomes easier to judge whether the deposit plan is genuinely ready to support a live purchase.",
-        ],
+          "It also becomes easier to judge whether the deposit plan is genuinely ready to support a live purchase."
+        ]
       },
       {
-        heading: "Common situations",
-        paragraphs: [
+        "heading": "Common situations",
+        "paragraphs": [
           "Some buyers receive a direct gift from parents. Others combine personal savings with wider family support. Some have domestic donors, while others rely on relatives abroad.",
-          "These routes can all work, but the more moving parts involved, the more valuable early simplification becomes.",
-        ],
+          "These routes can all work, but the more moving parts involved, the more valuable early simplification becomes."
+        ]
       },
       {
-        heading: "Things to consider",
-        paragraphs: [
+        "heading": "Things to consider",
+        "paragraphs": [
           "Clarity on donor identity, source of funds, gift status and transfer trail is usually essential. The mortgage still needs to work on affordability and lender criteria as well.",
-          "A family-supported deposit should therefore be seen as one part of the overall case, not a substitute for the rest of the assessment.",
+          "A family-supported deposit should therefore be seen as one part of the overall case, not a substitute for the rest of the assessment."
         ],
-        bullets: [
+        "bullets": [
           "Be clear whether the support is a gift or something else",
           "Keep the money trail easy to follow",
           "Prepare donor paperwork before the process becomes urgent",
-          "Treat deposit evidence and affordability as linked parts of the same case",
-        ],
+          "Treat deposit evidence and affordability as linked parts of the same case"
+        ]
       },
       {
-        heading: "Gift, loan or informal family arrangement",
-        paragraphs: [
+        "heading": "Gift, loan or informal family arrangement",
+        "paragraphs": [
           "One of the first questions is whether the family support is a true gift, a loan, or another informal arrangement. That distinction matters because repayable support can affect affordability and because lenders usually need to know whether anyone else expects an interest in the property.",
           "Families sometimes describe support casually, but mortgage and legal checks require more precision. If the money must be repaid, that should be disclosed and assessed. If it is a gift, the donor may need to confirm that clearly in writing and provide evidence showing the funds are available and legitimately sourced.",
           "Getting this clear early avoids a common problem: the buyer assumes the deposit is solved, then later discovers that the way the support is documented does not match lender or conveyancer expectations.",
-          "This is especially important where parents or relatives expect the money to be protected informally. If there is any expectation of repayment, ownership rights or future control, that should be discussed properly before the mortgage route is chosen.",
-        ],
+          "This is especially important where parents or relatives expect the money to be protected informally. If there is any expectation of repayment, ownership rights or future control, that should be discussed properly before the mortgage route is chosen."
+        ]
       },
       {
-        heading: "How family support affects the wider application",
-        paragraphs: [
+        "heading": "How family support affects the wider application",
+        "paragraphs": [
           "A stronger deposit may reduce the loan-to-value and sometimes improve product access, but lenders still assess income, commitments, credit history and the property itself. Family help can strengthen one part of the case without replacing the rest of the underwriting process.",
-          "That is why the best preparation links the deposit plan with affordability planning. Buyers should know how much they need, how much support is available, where the money is coming from and whether the resulting mortgage payment is still comfortable after completion costs are included.",
-        ],
+          "That is why the best preparation links the deposit plan with affordability planning. Buyers should know how much they need, how much support is available, where the money is coming from and whether the resulting mortgage payment is still comfortable after completion costs are included."
+        ]
       },
       {
-        heading: "Frequently asked questions",
-        paragraphs: [
+        "heading": "Evidence mistakes to avoid",
+        "paragraphs": [
           "A common mistake is assuming that because the family relationship is genuine, the paper trail is less important. In practice, the professionals involved still need formal evidence.",
-          "Another is focusing on the deposit amount but not on how the money got there. That can create more friction than buyers expect.",
-        ],
+          "Another is focusing on the deposit amount but not on how the money got there. That can create more friction than buyers expect."
+        ]
       },
       {
-        heading: "Conclusion",
-        paragraphs: [
+        "heading": "Conclusion",
+        "paragraphs": [
           "Family support can make home buying more realistic, but only when the deposit route is structured clearly enough for the lender and conveyancer to rely on it.",
-          "The practical lesson is to treat family support as part of the mortgage case from the beginning. When the gift status, donor evidence, transfer trail and affordability position are all clear, the buyer is less likely to lose time answering basic questions after a property has already been found.",
-        ],
+          "The practical lesson is to treat family support as part of the mortgage case from the beginning. When the gift status, donor evidence, transfer trail and affordability position are all clear, the buyer is less likely to lose time answering basic questions after a property has already been found."
+        ]
       },
       {
-        heading: "Call to action",
-        paragraphs: [
+        "heading": "Request Advice",
+        "paragraphs": [
           "If your deposit plan includes family support, estimate the numbers and organise the evidence before the purchase becomes time-sensitive.",
-          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision.",
-          "Looking for a verified professional?",
-          "Find trusted Mortgage and Insurance Advisers on Hub.Nikera.",
-        ],
-      },
+          "If you are unsure, speak to a qualified mortgage adviser before making a mortgage decision."
+        ]
+      }
     ],
   }),
+
 ];

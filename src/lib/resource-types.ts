@@ -9,6 +9,10 @@ export type ResourceSection = {
   paragraphs: string[];
   bullets?: string[];
   subsections?: ResourceSubsection[];
+  documentTools?: {
+    introduction: string;
+    links?: (ResourceLink & { description: string })[];
+  };
 };
 
 export type ResourceFaq = {

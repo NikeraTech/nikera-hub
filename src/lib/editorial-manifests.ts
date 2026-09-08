@@ -33,7 +33,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "mortgage-basics",
     title: "Mortgages",
     description:
-      "Core mortgage content focused on rates, affordability and practical planning before users move into more specific decisions.",
+      "Understand mortgage rates, monthly repayments and how lenders assess affordability.",
     audience: [
       "UK mortgage researchers",
       "buyers comparing borrowing routes",
@@ -66,7 +66,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "first-time-buyers",
     title: "First-time buyers",
     description:
-      "Entry-point content for deposits, affordability, budgeting and the practical buying process for first-time buyers in the UK.",
+      "Plan your deposit, buying costs and the steps towards purchasing your first UK home.",
     audience: [
       "first-time buyers in the UK",
       "buyers planning deposits and affordability",
@@ -77,7 +77,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
       "Move users from first-home education into deposit and affordability tools, then into advice when they are approaching a live purchase.",
     primaryCalculatorSlugs: ["mortgage-affordability", "deposit", "loan-to-value"],
     preferredCta: {
-      label: "Read first-time buyer content",
+      label: "Explore the first-time buyer guide",
       href: "/guides/first-time-buyer-guide",
     },
     authoritySources: [
@@ -100,7 +100,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "remortgaging",
     title: "Remortgaging",
     description:
-      "Decision-support content for reviewing deals, comparing total cost and deciding whether a remortgage is truly worthwhile.",
+      "Compare the costs of switching your mortgage and understand what to check before your current deal ends.",
     audience: [
       "existing mortgage holders",
       "users nearing product expiry",
@@ -132,7 +132,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "protection",
     title: "Protection",
     description:
-      "Plain-English protection content covering life insurance, income protection and common misunderstandings around cover types.",
+      "Explore life insurance, income protection and the differences between types of cover.",
     audience: [
       "homeowners reviewing protection",
       "families comparing life and income protection",
@@ -164,7 +164,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "expats",
     title: "Expats",
     description:
-      "Specialist UK mortgage content for expats, returning residents and overseas borrowers where lender policy differs materially from mainstream cases.",
+      "Prepare for a UK mortgage while living abroad or planning your return to the UK.",
     audience: [
       "UK expats",
       "returning UK residents",
@@ -197,7 +197,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "self-employed",
     title: "Self-employed",
     description:
-      "Focused mortgage content for self-employed borrowers where documents, business structure and lender interpretation matter heavily.",
+      "Understand the income records and business documents lenders may request from self-employed applicants.",
     audience: [
       "sole traders",
       "company directors",
@@ -229,7 +229,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "visa-borrowing",
     title: "Visa-specific borrowing",
     description:
-      "Specialist mortgage content for borrowers whose visa status affects lender fit, deposit expectations and application structure.",
+      "Learn how visa status may affect mortgage options, deposits and the evidence lenders request.",
     audience: [
       "Skilled Worker visa borrowers",
       "spouse visa borrowers",
@@ -260,7 +260,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "language-mortgage",
     title: "Languages: mortgages",
     description:
-      "Language-specific mortgage adviser content for users who want major borrowing decisions explained more clearly in a preferred language context.",
+      "Prepare for a mortgage discussion in your preferred language, with questions to ask and documents to gather.",
     audience: [
       "Indian-origin users in the UK",
       "native-language mortgage researchers",
@@ -290,7 +290,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "language-protection",
     title: "Languages: protection",
     description:
-      "Language-specific insurance adviser content for users who want life and protection choices explained more clearly in a preferred language context.",
+      "Find practical questions for discussing life insurance and protection in your preferred language.",
     audience: [
       "Indian-origin users in the UK",
       "families comparing cover types",
@@ -320,7 +320,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "family-deposit-support",
     title: "Family deposit support",
     description:
-      "Deposit-planning content for gifted deposits, overseas family support and the source-of-funds checks that often create delay.",
+      "Understand gifted deposits, family loans and the records you may need when relatives help fund a purchase.",
     audience: [
       "buyers using gifted deposits",
       "families supporting UK property purchases",
@@ -351,7 +351,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
     topicSlug: "cross-border-income",
     title: "Overseas income",
     description:
-      "Cross-border planning content for users relying on overseas income, overseas savings and more complex document trails.",
+      "Prepare overseas income and savings records, and understand how currency and lender requirements may affect your plans.",
     audience: [
       "overseas earners",
       "expats using foreign income",
@@ -362,7 +362,7 @@ export const editorialManifests: Record<ResourceTopicSlug, EditorialManifest> = 
       "Move users from broad eligibility questions into realistic affordability planning and specialist advice where lender treatment differs.",
     primaryCalculatorSlugs: ["mortgage-affordability", "deposit"],
     preferredCta: {
-      label: "Read overseas income content",
+      label: "Explore overseas income guides",
       href: "/blogs/using-overseas-income-for-a-uk-mortgage",
     },
     authoritySources: [
