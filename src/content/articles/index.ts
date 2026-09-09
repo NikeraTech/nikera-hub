@@ -4,6 +4,7 @@ import { phase2LanguageInsuranceAdviserArticles } from "./phase2-language-insura
 import { phase3SpecialistBorrowingArticles } from "./phase3-specialist-borrowing";
 import { phase4ExpatExpansionArticles } from "./phase4-expat-expansion";
 import { migratedLegacyArticles } from "./legacy-migrated-articles";
+import { documentPreparationArticles } from "./document-preparation";
 
 const articleTopicBySlug: Record<string, ResourceTopicSlug> = {
   "why-you-need-a-malayalam-speaking-mortgage-adviser-in-the-uk": "language-mortgage",
@@ -56,6 +57,7 @@ function withArticleTopic(resource: Resource): Resource {
 }
 
 export const managedArticles = [
+  ...documentPreparationArticles,
   ...phase1LanguageMortgageAdviserArticles,
   ...phase2LanguageInsuranceAdviserArticles,
   ...phase3SpecialistBorrowingArticles,
