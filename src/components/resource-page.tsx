@@ -479,6 +479,33 @@ export function ResourcePage({ resource }: { resource: Resource }) {
               </TrackedLink>
             </aside>
           )}
+          <aside className="resource-aside promo-card document-promo">
+            <TrackedLink
+              className="document-promo-link"
+              href="https://pdf-lab.com/"
+              label="Preparing your documents? Visit PDF-Lab"
+              pageType={resource.kind}
+              pageSlug={resource.slug}
+              pageTitle={resource.title}
+              pageCategory={resource.category}
+              section="resource-document-promo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="document-promo-eyebrow">FREE PDF TOOLS</span>
+              <h2>Preparing your documents?</h2>
+              <p>
+                Mortgage applications can involve bank statements, payslips and other PDF
+                documents. If you need to organise files before providing them, PDF-Lab.com
+                provides free tools for merging, compressing and managing PDFs.
+              </p>
+              <p>
+                Follow your adviser&apos;s instructions on file formats and keep the original
+                documents.
+              </p>
+              <span className="button button-primary">Visit PDF-Lab</span>
+            </TrackedLink>
+          </aside>
         </div>
       </div>
       <section className="resource-advice-section" id="professional-advice">
